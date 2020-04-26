@@ -1,8 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
 title = "Gilligan on Data"
-theme = "hugo-lithium"
-googleAnalytics = ""
+theme = "hugo-tanka"
+googleAnalytics = "UA-2629617-13"
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
