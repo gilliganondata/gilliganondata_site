@@ -12,6 +12,9 @@ googleAnalytics = "UA-2629617-13"
 # Add your Disqus shortname here.
 disqusShortname = ""    
 
+# Files to ignore (recommended for blogdown)
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
 [taxonomies]
   tag = "tags"
 
@@ -43,11 +46,11 @@ disqusShortname = ""
   github = "https://github.com/gilliganondata"
 
 # Menu links along the sidebar navigation.
-[[menu.main]]
-	identifier = "about"
-	name = "About"
-	url = "/about/"
-	weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
+# [[menu.main]]
+#	identifier = "about"
+#	name = "About"
+#	url = "/about/"
+#	weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
 
 [[menu.main]]
 	identifier = "tags"
