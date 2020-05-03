@@ -1,6 +1,6 @@
 baseURL = "https://gilliganondata.netlify.com"
 languageCode = "en-us"
-title = "Gilliganon on Data"
+title = "Gilligan on Data"
 theme = "hugo-theme-noteworthy"
 enableRobotsTXT = true
 paginate = 4 # Set the number of posts to show before overflowing to the next page.
