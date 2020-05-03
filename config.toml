@@ -25,7 +25,7 @@ disqusShortname = ""
 [params]
 	math = true
 	# Blog description at the top of the homepage. Supports markdown.
-	description = "Noteworthy is a minimalist Hugo theme, perfect for writers and bloggers."
+	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past and now occasionally scratches idle analysis itches."
 
     showReadMore = false
 
@@ -55,11 +55,11 @@ disqusShortname = ""
 	url = "/tags/"
 	weight = 2
 
-[[menu.main]]
-	name = "Archives"
-	identifier = "archives"
-	url = "/archives/"
-	weight = 3
+# [[menu.main]]
+#	name = "Archives"
+#	identifier = "archives"
+#	url = "/archives/"
+#	weight = 3
 
 # Privacy configurations: https://gohugo.io/about/hugo-and-gdpr/
 [privacy]
