@@ -1,9 +1,12 @@
 ---
-title: "Scheduling, Logging, and Visualizing SpeedTest Data"
-author: "Tim Wilson"
-date: 2020-04-26
-categories: ["R"]
-tags: ["SpeedTest", "Shiny"]
+title: Scheduling, Logging, and Visualizing SpeedTest Data
+author: Tim Wilson
+date: '2020-05-03'
+slug: scheduling-logging-and-visualizing-speedtest-data
+categories:
+  - R
+tags:
+  - SpeedTest
 ---
 
 ```{r setup, include=FALSE}
@@ -135,33 +138,3 @@ if(nrow(upload_data_check) == 0){
 Running the script, if all goes well, will populate the Google Sheet with something like the following:
 
 ![](post_images/speedtest_google_sheet.png)
-
-## Scheduling the Tests to Run
-
-Once `run-speedtest.R` is configured and working, it can be scheduled using the `cronR` package on the Mac or using Task Scheduler on Windows. The schedule can be set up for any frequency. I set it up for hourly, but it could be daily or weekly or even be changed over time.
-
-## Output - RNotebook
-
-The output of the `visualize-speedtest.Rmd` file will include both time-series charts and histograms of the recorded data.
-
-The time-series plots look something like the following:
-
-![](post_images/download_ex.png)
-
-![](post_images/upload_ex.png)
-
-The histograms look something like the following:
-
-![](post_images/download_hist_ex.png)
-
-![](post_images/upload_hist_ex.png)
-
-## Output - Shiny
-
-The Shiny app is more interactive and allows subsetting the data using a simple slider. And, it supports some simple adjustments to the visualization: turning on/off the quartile bands.
-
-It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).
-
-![](post-images/shiny-download.png)
-
-![](post_images/shiny-upload.png)

@@ -1,9 +1,12 @@
 ---
-title: "Scheduling, Logging, and Visualizing SpeedTest Data"
-author: "Tim Wilson"
-date: 2020-04-26
-categories: ["R"]
-tags: ["SpeedTest", "Shiny"]
+title: Scheduling, Logging, and Visualizing SpeedTest Data
+author: Tim Wilson
+date: '2020-05-03'
+slug: scheduling-logging-and-visualizing-speedtest-data
+categories:
+  - R
+tags:
+  - SpeedTest
 ---
 
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
@@ -107,25 +110,4 @@ if(nrow(upload_data_check) == 0){
 }</code></pre>
 <p>Running the script, if all goes well, will populate the Google Sheet with something like the following:</p>
 <p><img src="post_images/speedtest_google_sheet.png" /></p>
-</div>
-<div id="scheduling-the-tests-to-run" class="section level2">
-<h2>Scheduling the Tests to Run</h2>
-<p>Once <code>run-speedtest.R</code> is configured and working, it can be scheduled using the <code>cronR</code> package on the Mac or using Task Scheduler on Windows. The schedule can be set up for any frequency. I set it up for hourly, but it could be daily or weekly or even be changed over time.</p>
-</div>
-<div id="output---rnotebook" class="section level2">
-<h2>Output - RNotebook</h2>
-<p>The output of the <code>visualize-speedtest.Rmd</code> file will include both time-series charts and histograms of the recorded data.</p>
-<p>The time-series plots look something like the following:</p>
-<p><img src="post_images/download_ex.png" /></p>
-<p><img src="post_images/upload_ex.png" /></p>
-<p>The histograms look something like the following:</p>
-<p><img src="post_images/download_hist_ex.png" /></p>
-<p><img src="post_images/upload_hist_ex.png" /></p>
-</div>
-<div id="output---shiny" class="section level2">
-<h2>Output - Shiny</h2>
-<p>The Shiny app is more interactive and allows subsetting the data using a simple slider. And, it supports some simple adjustments to the visualization: turning on/off the quartile bands.</p>
-<p>It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).</p>
-<p><img src="post-images/shiny-download.png" /></p>
-<p><img src="post_images/shiny-upload.png" /></p>
 </div>

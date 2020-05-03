@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>Tags | Gilliganon on Data</title>
+    <title>Scheduling, Logging, and Visualizing SpeedTest Data | Gilliganon on Data</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,8 +28,6 @@
     
     
  
-    
-    <link rel="alternate" type="application/rss+xml" href="https://gilliganondata.netlify.com/tags/index.xml" title="Gilliganon on Data" />
     
 <script type="application/javascript">
 var doNotTrack = false;
@@ -159,20 +157,131 @@ if (!doNotTrack) {
         <div id="content" class="content-container">
         
 
-<h1>Tags</h1>
-<ul>
+<h1 class="post-title">Scheduling, Logging, and Visualizing SpeedTest Data</h1>
     
-        <li><a href="https://gilliganondata.netlify.com/tags/plot/">plot</a> 1</li>
+    <time>May 3, 2020</time>
     
-        <li><a href="https://gilliganondata.netlify.com/tags/r-markdown/">R Markdown</a> 1</li>
-    
-        <li><a href="https://gilliganondata.netlify.com/tags/regression/">regression</a> 1</li>
-    
-        <li><a href="https://gilliganondata.netlify.com/tags/speedtest/">SpeedTest</a> 1</li>
-    
-</ul>
+    <div>
+        <p>
+        
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
-<div class="page-footer"></div>
+
+<p>It’s all well and good to go to <a href="https://www.speedtest.net/" class="uri">https://www.speedtest.net/</a> and run a SpeedTest. But, that’s just one server at one point in time.</p>
+<p>This project has two parts and is intended to track bandwidth speed over time by repeatedly running a speed test and then visualizing the results. This is useful to get a read on what a specific device’s actual download and upload speeds are and how much they fluctuate.</p>
+<p>There are two parts to this:</p>
+<ul>
+<li><code>run-speedtest.R</code> – a script that can be scheduled to run on any schedule and record the results of the speed tests (upload and download) to a Google Sheet</li>
+<li><code>visualize-speedtest.Rmd</code> (RNotebook) and/or <code>visualize-speedtest-flex.Rmd</code> – an RNotebook and/or a Shiny app that will read the results from that Google Sheet and provide plots of the recorded bandwidth over time.</li>
+</ul>
+<p>The source code for these components is available <a href="https://github.com/gilliganondata/speedtest-log">on Github</a>. In this post, we’ll walk through the code to actually run the speed test (<code>run-speedtest.R</code>) and will then simply show examples of the result of the Shiny app.</p>
+<div id="requirements" class="section level2">
+<h2>Requirements</h2>
+<p>In addition to the packages used (as commented in the <code>run-speedtest.R</code> file, they are not all on CRAN as of this writing), a Google Sheet needs to be created with two tabs:</p>
+<ul>
+<li><strong>Download Data</strong> – this is where the results of the download speed tests will be stored and read</li>
+<li><strong>Upload Data</strong> – this is where the results of the upload speed tests will be stored and read</li>
+</ul>
+<p>The ID for that Google Sheet will need to be recorded (see the <a href="https://googlesheets4.tidyverse.org/">googlesheets4 documentation</a> for details). The “visualize” notebook and Shiny app assume that the Google Sheet has been made public (view only / available to anyone with the link) because, well, this seems like particularly non-sensitive data, and it makes for being able to read the data without having to jump through any auth hoops.</p>
+<p>Because it’s horrible form to store such an ID in public code, both of the files above read that value from an environment variable called <code>SPEEDTEST_GSHEET</code>.</p>
+<p>You can create the same variable by opening your <code>.Renviron</code> file and adding a line to it:</p>
+<p><code>SPEEDTEST_GSHEET = "[the ID for your Google Sheet]"</code></p>
+</div>
+<div id="running-the-speedtest" class="section level2">
+<h2>Running the SpeedTest</h2>
+<p>The code to run the speed tests pulled heavily from the base material posted at <a href="https://github.com/hrbrmstr/speedtest" class="uri">https://github.com/hrbrmstr/speedtest</a>.</p>
+<p>The <code>speedtest</code> package is not on CRAN, and <code>googlesheets4</code> version v0.2.0.9000 or later is needed, so these packages may need to be installed from Github.</p>
+<pre><code>devtools::install_github(&quot;hrbrmstr/speedtest&quot;)
+devtools::install_github(&quot;tidyverse/googlesheets4&quot;)</code></pre>
+<p>Once that’s done, load a few libraries and configure the Google Sheets ID (see note above), how many servers to run on, and whether you want the “smaller Google Sheet” (fewer columns; mostly just the columns being used later for the visualizations, but those visualizations have to download the data from Google Sheets, so it’s more of a bandwidth issue, ironically, than a storage issue):</p>
+<pre><code>library(speedtest)
+library(tidyverse)
+library(googlesheets4)
+
+gsheet &lt;- Sys.getenv(&quot;SPEEDTEST_GSHEET&quot;)
+
+# Set the number of servers to run on. There will be 10 tests per server run for the download tests
+# and 6 tests per server run for the upload tests. 
+num_servers = 3
+
+# Set whether you want to store *all* of the data returned for the test or just as subset of columns
+# that will be used for subsequent visualization (and a couple extra). 
+smaller_file &lt;- TRUE
+</code></pre>
+<p>Determine which servers to run the tests with.</p>
+<pre><code># Get the client configuration for the test
+config &lt;- spd_config()
+
+# Get a a list of SpeedTest servers and then the num_servers &quot;best&quot; ones from that list.
+servers &lt;- spd_servers(config=config) 
+best_servers &lt;- spd_best_servers(servers = servers, config = config, max = num_servers)</code></pre>
+<p>Run the tests and compile the results in a couple of data frames: one for download speeds and one for upload speeds.</p>
+<pre><code># Run the upload and download tests on each of those servers. The test will run 10 tests on
+# a single server at a time. 
+upload_test &lt;- best_servers %&gt;%
+  rowwise() %&gt;%
+  do(spd_upload_test(as_tibble(.), config, summarise = FALSE) %&gt;%
+       mutate(test_time = Sys.time())
+  ) %&gt;%
+  ungroup()
+
+download_test &lt;- best_servers %&gt;%
+  rowwise() %&gt;%
+  do(spd_download_test(as_tibble(.), config, summarise = FALSE) %&gt;%
+       mutate(test_time = Sys.time())
+  ) %&gt;%
+  ungroup()
+
+# Add a timestamp for when the tests were run
+download_test &lt;- download_test %&gt;% mutate(test_time = Sys.time())
+upload_test &lt;- upload_test %&gt;% mutate(test_time = Sys.time())
+
+# Select the smaller number of columns if smaller_file is set to true.
+if(smaller_file == TRUE){
+  download_test &lt;- download_test %&gt;% 
+    select(host, test, secs, size, bw, test_time)
+  upload_test &lt;- upload_test %&gt;% 
+    select(host, test, secs, size, bw, test_time)
+}
+</code></pre>
+<p>Add the data to the Google Sheets.</p>
+<pre><code># Eventually, this should be updated to use error checking to determine if the sheet
+# exists AND if there is any data in each one. But, for now, it&#39;s counting on a clean setup.
+download_data_check &lt;- read_sheet(gsheet, &quot;Download Data&quot;)
+upload_data_check &lt;- read_sheet(gsheet, &quot;Upload Data&quot;)
+
+# If this is the first time to add data, then write the data (which will include the columns).; 
+# Otherwise, just append the new data to what is already there.
+if(nrow(download_data_check) == 0){
+  sheet_write(gsheet, download_test, &quot;Download Data&quot;)
+} else {
+  sheet_append(gsheet, download_test, &quot;Download Data&quot;)
+}
+
+if(nrow(upload_data_check) == 0){
+  sheet_write(gsheet, upload_test, &quot;Upload Data&quot;)
+} else {
+  sheet_append(gsheet, upload_test, &quot;Upload Data&quot;)
+}</code></pre>
+<p>Running the script, if all goes well, will populate the Google Sheet with something like the following:</p>
+<p><img src="post_images/speedtest_google_sheet.png" /></p>
+</div>
+
+        </p>
+    </div>
+    
+
+    
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/speedtest">#SpeedTest</a>
+        
+      
+    </div>
+
 
         
 
