@@ -22,7 +22,9 @@ There are two parts to this:
 * `run-speedtest.R` -- a script that can be scheduled to run on any schedule and record the results of the speed tests (upload and download) to a Google Sheet
 * `visualize-speedtest.Rmd` (RNotebook) and/or `visualize-speedtest-flex.Rmd` -- an RNotebook and/or a Shiny app that will read the results from that Google Sheet and provide plots of the recorded bandwidth over time.
 
-The source code for these components is available [on Github](https://github.com/gilliganondata/speedtest-log). In this post, we'll walk through the code to actually run the speed test (`run-speedtest.R`) and will then simply show examples of the result of the Shiny app.
+The source code for these components is available [on Github](https://github.com/gilliganondata/speedtest-log). In this post, we'll walk through the code to actually run the speed test (`run-speedtest.R`) and will then simply show examples of the results of the Shiny app:
+
+![](/post/post_images/shiny-download.png)
 
 ## Requirements
 
@@ -137,4 +139,44 @@ if(nrow(upload_data_check) == 0){
 
 Running the script, if all goes well, will populate the Google Sheet with something like the following:
 
-![](post_images/speedtest_google_sheet.png)
+![](/post/post_images/speedtest_google_sheet.png)
+
+## Scheduling the Tests to Run
+
+Once `run-speedtest.R` is configured and working, it can be scheduled using the `cronR` package on the Mac or using Task Scheduler on Windows. The schedule can be set up for any frequency. I set it up for hourly, but it could be daily or weekly or even be changed over time.
+
+This does wind up building a data set stored in Google Sheets that grows indefinitely over time. The larger the Google Sheet, the longer it takes the RNotebook to run or the Shiny app to load. There are two settings in `run-speedtest.R` to limit the growth of this data:
+
+* `num_servers` -- this controls how many tests are run; technically, it controls how many different servers the standard set of SpeedTest tests get run on. If you just run SpeedTest from [speedtest.net](https://www.speedtest.net/), the system picks the "best" server and just runs the test on that. This script lets you specify how many servers to run the tests on just to get a broader read on your device's bandwidth.
+
+* `smaller_file` -- this is a simple TRUE/FALSE. If this is set to `TRUE`, then the script removes a number of columns from the SpeedTest data before pushing the results to the Google Sheet. This cuts the size of the dataset by ~2/3.
+
+## Output - RNotebook
+
+The output of the `visualize-speedtest.Rmd` file will include both time-series charts and histograms of the recorded data.
+
+The time-series plots look something like the following:
+
+![](/post/post_images/download_ex.png)
+
+![](/post/post_images/upload_ex.png)
+
+The histograms look something like the following:
+
+![](/post/post_images/download_hist_ex.png)
+
+![](/post/post_images/upload_hist_ex.png)
+
+## Output - Shiny
+
+The Shiny app is more interactive and allows subsetting the data using a simple slider. And, it supports some simple adjustments to the visualization: turning on/off the quartile bands.
+
+It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).
+
+![](/post/post_images/shiny-download.png)
+
+![](/post/post_images/shiny-upload.png)
+
+## Source Code
+
+The source code for both running the SpeedTest, as well as analyzing the results via an RNotebook or a Shiny app are available [on Github](https://github.com/gilliganondata/speedtest-log).

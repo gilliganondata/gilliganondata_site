@@ -19,7 +19,8 @@ tags:
 <li><code>run-speedtest.R</code> – a script that can be scheduled to run on any schedule and record the results of the speed tests (upload and download) to a Google Sheet</li>
 <li><code>visualize-speedtest.Rmd</code> (RNotebook) and/or <code>visualize-speedtest-flex.Rmd</code> – an RNotebook and/or a Shiny app that will read the results from that Google Sheet and provide plots of the recorded bandwidth over time.</li>
 </ul>
-<p>The source code for these components is available <a href="https://github.com/gilliganondata/speedtest-log">on Github</a>. In this post, we’ll walk through the code to actually run the speed test (<code>run-speedtest.R</code>) and will then simply show examples of the result of the Shiny app.</p>
+<p>The source code for these components is available <a href="https://github.com/gilliganondata/speedtest-log">on Github</a>. In this post, we’ll walk through the code to actually run the speed test (<code>run-speedtest.R</code>) and will then simply show examples of the results of the Shiny app:</p>
+<p><img src="/post/post_images/shiny-download.png" /></p>
 <div id="requirements" class="section level2">
 <h2>Requirements</h2>
 <p>In addition to the packages used (as commented in the <code>run-speedtest.R</code> file, they are not all on CRAN as of this writing), a Google Sheet needs to be created with two tabs:</p>
@@ -109,5 +110,35 @@ if(nrow(upload_data_check) == 0){
   sheet_append(gsheet, upload_test, &quot;Upload Data&quot;)
 }</code></pre>
 <p>Running the script, if all goes well, will populate the Google Sheet with something like the following:</p>
-<p><img src="post_images/speedtest_google_sheet.png" /></p>
+<p><img src="/post/post_images/speedtest_google_sheet.png" /></p>
+</div>
+<div id="scheduling-the-tests-to-run" class="section level2">
+<h2>Scheduling the Tests to Run</h2>
+<p>Once <code>run-speedtest.R</code> is configured and working, it can be scheduled using the <code>cronR</code> package on the Mac or using Task Scheduler on Windows. The schedule can be set up for any frequency. I set it up for hourly, but it could be daily or weekly or even be changed over time.</p>
+<p>This does wind up building a data set stored in Google Sheets that grows indefinitely over time. The larger the Google Sheet, the longer it takes the RNotebook to run or the Shiny app to load. There are two settings in <code>run-speedtest.R</code> to limit the growth of this data:</p>
+<ul>
+<li><p><code>num_servers</code> – this controls how many tests are run; technically, it controls how many different servers the standard set of SpeedTest tests get run on. If you just run SpeedTest from <a href="https://www.speedtest.net/">speedtest.net</a>, the system picks the “best” server and just runs the test on that. This script lets you specify how many servers to run the tests on just to get a broader read on your device’s bandwidth.</p></li>
+<li><p><code>smaller_file</code> – this is a simple TRUE/FALSE. If this is set to <code>TRUE</code>, then the script removes a number of columns from the SpeedTest data before pushing the results to the Google Sheet. This cuts the size of the dataset by ~2/3.</p></li>
+</ul>
+</div>
+<div id="output---rnotebook" class="section level2">
+<h2>Output - RNotebook</h2>
+<p>The output of the <code>visualize-speedtest.Rmd</code> file will include both time-series charts and histograms of the recorded data.</p>
+<p>The time-series plots look something like the following:</p>
+<p><img src="/post/post_images/download_ex.png" /></p>
+<p><img src="/post/post_images/upload_ex.png" /></p>
+<p>The histograms look something like the following:</p>
+<p><img src="/post/post_images/download_hist_ex.png" /></p>
+<p><img src="/post/post_images/upload_hist_ex.png" /></p>
+</div>
+<div id="output---shiny" class="section level2">
+<h2>Output - Shiny</h2>
+<p>The Shiny app is more interactive and allows subsetting the data using a simple slider. And, it supports some simple adjustments to the visualization: turning on/off the quartile bands.</p>
+<p>It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).</p>
+<p><img src="/post/post_images/shiny-download.png" /></p>
+<p><img src="/post/post_images/shiny-upload.png" /></p>
+</div>
+<div id="source-code" class="section level2">
+<h2>Source Code</h2>
+<p>The source code for both running the SpeedTest, as well as analyzing the results via an RNotebook or a Shiny app are available <a href="https://github.com/gilliganondata/speedtest-log">on Github</a>.</p>
 </div>
