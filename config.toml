@@ -28,7 +28,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [params]
 	math = true
 	# Blog description at the top of the homepage. Supports markdown.
-	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past and now occasionally scratches idle analysis itches."
+	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, [podcasts regularly now](https://analyticshour.io), and now occasionally scratches idle analysis itches."
 
     showReadMore = false
 
