@@ -1,0 +1,26 @@
+---
+title: Daily SmugMug Image Selection, Manipulation, and Posting
+author: Tim Wilson
+date: '2021-11-01'
+slug: daily-smugmug-image-selection-manipulation-posting
+categories:
+  - R
+tags:
+  - SmugMug
+  - ImageMagick
+  - Twitter
+  - Github Actions
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+We'll get to writing out the details later, but this is really about making a few different things work together to see what happens:
+
+* Pulling an image from a SmugMug site at random (via the SmugMug API)
+* Applying a random number of manipulations in a random order with random settings to that image
+* Publishing the before and after as a new web page on this site
+* Adding a link to that page to a master web page listing links to all of the times it's been run
+* Tweeting the before/after in a single tweet and linking back to that web page
+* Doing the above on a daily basis via Github actions
