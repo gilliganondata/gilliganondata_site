@@ -1,7 +1,7 @@
 ---
 title: Daily SmugMug Image Selection, Manipulation, and Posting
 author: Tim Wilson
-date: '2021-11-01'
+date: '2021-10-30'
 slug: daily-smugmug-image-selection-manipulation-posting
 categories:
   - R
