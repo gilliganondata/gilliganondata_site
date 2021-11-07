@@ -1,20 +1,16 @@
 ---
-title: Daily SmugMug Image Selection, Manipulation, and Posting
+title: Random Manipulation of a Random SmugMug Image
 author: Tim Wilson
-date: '2021-10-30'
-slug: daily-smugmug-image-selection-manipulation-posting
+date: '2021-11-07'
+slug: random-image-manipulation
 categories:
   - R
 tags:
-  - SmugMug
-  - ImageMagick
-  - Twitter
   - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 We'll get to writing out the details later, but this is really about making a few different things work together to see what happens:
 

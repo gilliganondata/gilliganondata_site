@@ -13,7 +13,7 @@ googleAnalytics = "UA-2629617-13"
 # disqusShortname = ""    
 
 # Files to ignore (recommended for blogdown)
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
 [taxonomies]
   tag = "tags"
@@ -94,3 +94,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   [privacy.youtube]
     disable = false
     privacyEnhanced = true
+
+# Format for the slugs
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
