@@ -9,7 +9,7 @@ tags:
   - SpeedTest
 ---
 
-[Adjusted] It's all well and good to go to https://www.speedtest.net/ and run a SpeedTest. But, that's just one server at one point in time. 
+It's all well and good to go to https://www.speedtest.net/ and run a SpeedTest. But, that's just one server at one point in time. 
 
 This project has two parts and is intended to track bandwidth speed over time by repeatedly running a speed test and then visualizing the results. This is useful to get a read on what a specific device's actual download and upload speeds are and how much they fluctuate.
 
