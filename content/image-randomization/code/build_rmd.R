@@ -1,0 +1,45 @@
+# Script to actually build the .Rmd file that will be a new page for the specific
+# image
+
+# Create an image ID that can be used as a unique identifier
+img_id <- gsub("(^.*images\\/)(.*)(_original.*$)", "\\2", img_out_path)
+
+# Create the YAML header
+yaml <- paste("---",
+              "title: Random Manipulation of a Random SmugMug Image",
+              "author: Tim Wilson",
+              paste0("date: ", Sys.Date()),
+              paste0("slug: random-image-", img_id),
+              "categories:",
+              "  - R",
+              "tags:",
+              "  - Github Actions",
+              "  - SmugMug",
+              "  - Twitter",
+              "  - ImageMagick",
+              "---\n\n",
+              sep = "\n")
+
+
+# Create a string for the original image. 
+orig_loc <- paste0("Original image source: ", img_url, "\n\n")
+
+# Show the original image. 
+orig_img <- paste0("![](../",gsub(rel_path,"",img_out_path),")\n")
+
+# List the transformations performed
+trans_perf <- paste("Transformations performed:",
+                    trans_description,
+                    sep = "\n\n")
+
+# Show the final image
+final_img <- paste0("![](../",gsub(rel_path,"",img_trans_out_path),")\n")
+
+# Create the output file
+write(paste(yaml, 
+            orig_loc, 
+            orig_img,
+            trans_perf,
+            final_img),
+      file = paste0(rel_path, "output/", Sys.Date(), "-", img_id, ".Rmd"),
+      append = FALSE)
