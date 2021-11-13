@@ -8,7 +8,7 @@ img_id <- gsub("(^.*images\\/)(.*)(_original.*$)", "\\2", img_out_path)
 yaml <- paste("---",
               "title: Random Manipulation of a Random SmugMug Image",
               "author: Tim Wilson",
-              paste0("date: ", Sys.Date()),
+              paste0("date: ", as.character(Sys.Date())),
               paste0("slug: random-image-", img_id),
               "categories:",
               "  - R",

@@ -3,7 +3,6 @@
 .RData
 .Ruserdata
 .DS_Store
-*DS_Store
 Thumbs.db
 /public/
 /resources/
