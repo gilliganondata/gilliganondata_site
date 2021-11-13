@@ -8,7 +8,7 @@ mgk_hue <- sample(0:200, 1)                  # Hue. 100 is "current"
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
-msg_settings <- paste("Modulation (magick) -> Brightness:", mgk_brightness,
+msg_settings <- paste("* Modulation (magick) -> Brightness:", mgk_brightness,
                       "| Saturation:", mgk_saturation,
                       "| Hue:", mgk_hue)
 message(msg_settings)

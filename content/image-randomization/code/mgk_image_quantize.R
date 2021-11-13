@@ -6,7 +6,7 @@ mgk_max_colors <- sample(4:16, 1)
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
-msg_settings <- paste("Quantize (magick) -> Max Colors in Image:", mgk_max_colors)
+msg_settings <- paste("* Quantize (magick) -> Max Colors in Image:", mgk_max_colors)
 message(msg_settings)
 trans_description <<- paste(trans_description, msg_settings, "\n")
 

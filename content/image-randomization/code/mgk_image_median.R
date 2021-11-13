@@ -6,7 +6,7 @@ mgk_radius <- sample(15:50, 1)          # Radius for the median calcuation (pixe
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
-msg_settings <- paste("Median (magick) -> Pixels:", mgk_radius)
+msg_settings <- paste("* Median (magick) -> Pixels:", mgk_radius)
 message(msg_settings)
 trans_description <<- paste(trans_description, msg_settings, "\n")
 

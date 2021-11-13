@@ -10,7 +10,7 @@ sk_gain <- runif(1)             # Gain for sketch; will be between 0 and 1
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
-msg_settings <- paste("Sketching (sketcher) -> Style:", sk_style,
+msg_settings <- paste("* Sketching (sketcher) -> Style:", sk_style,
                       "| Lineweight:", sk_lineweight,
                       "| Contrast:", sk_contrast,
                       "| Shadow:", sk_shadow,

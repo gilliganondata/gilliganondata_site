@@ -109,3 +109,6 @@ if(nchar(trans_description) == 0){trans_description <- "None"}
 
 # Create the output .Rmd
 source(paste0(rel_path,"code/build_rmd.R"))
+
+# Write the final URL out to the console for debugging
+cat("https://gilliganondata.netlify.app/image-randomization/random-image-", img_id, "/", sep = "")

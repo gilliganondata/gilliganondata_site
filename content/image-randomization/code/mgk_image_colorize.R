@@ -24,7 +24,7 @@ rm(val_r, val_g, val_b)
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
-msg_settings <- paste("Colorize (magick) -> Color:", mgk_color,
+msg_settings <- paste("* Colorize (magick) -> Color:", mgk_color,
                       "| Opacity", percent(mgk_opacity/100))
 message(msg_settings)
 trans_description <<- paste(trans_description, msg_settings, "\n")
