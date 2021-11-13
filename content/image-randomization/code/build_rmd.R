@@ -25,16 +25,16 @@ yaml <- paste("---",
 orig_loc <- paste0("Original image source: ", img_url, "\n\n")
 
 # Show the original image. 
-orig_img <- paste0("![](../",gsub(rel_path,"",img_out_path),"){width=80%}\n")
+orig_img <- paste0("![](../",gsub(rel_path,"",img_out_path),"){width=100%}\n")
 
 # List the transformations performed
-trans_perf <- paste("Transformations performed:",
+trans_perf <- paste("Transformations performed:\n",
                     trans_description,
                     "\n",
                     sep = "\n")
 
 # Show the final image
-final_img <- paste0("![](../",gsub(rel_path,"",img_trans_out_path),"){width=80%}\n")
+final_img <- paste0("![](../",gsub(rel_path,"",img_trans_out_path),"){width=100%}\n")
 
 # Create the output file
 write(paste(yaml, 

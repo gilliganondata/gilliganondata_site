@@ -1,0 +1,24 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-13
+slug: random-image-i-jbgGKBV-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+---
+
+ Original image source: https://photos.smugmug.com/photos/i-jbgGKBV/0/X5/i-jbgGKBV-X5.jpg
+
+ ![](../images/i-jbgGKBV-X5_original_2021-11-13.jpg){width=100%}
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 143 | Saturation: 114 | Hue: 85 
+
+
+ ![](../images/i-jbgGKBV-X5_transformed_2021-11-13.jpg){width=100%}
+
