@@ -43,8 +43,8 @@ trans_perf <- paste("Transformations performed:\n",
 final_img <- paste0("![transformed](../",gsub(rel_path,"",img_trans_out_path),"){width=100%}\n")
 
 # Create the output file
-write(paste(intro,
-            yaml, 
+write(paste(yaml, 
+            intro,
             orig_loc, 
             orig_img,
             trans_perf,

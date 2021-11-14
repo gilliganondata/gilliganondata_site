@@ -1,0 +1,31 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-14
+slug: random-image-i-zNj3zV5-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+---
+
+ For details on the nuts and bolts behind this project, see ![this post](2021/11/07/random-image-manipulation/){target = "_blank"} Original image source: https://photos.smugmug.com/photos/i-zNj3zV5/0/X5/i-zNj3zV5-X5.jpg
+
+ ![orig](../images/i-zNj3zV5-X5_original_2021-11-14.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 70 | Saturation: 86 | Hue: 18 
+ * Median (magick) -> Pixels: 15 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 3 | Contrast: 10 | Shadow: 0.609864264028147 | Gain: 0.87746975151822 
+
+
+
+The resulting image:
+
+ ![transformed](../images/i-zNj3zV5-X5_transformed_2021-11-14.jpg){width=100%}
+
