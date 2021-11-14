@@ -21,6 +21,9 @@ yaml <- paste("---",
               sep = "\n")
 
 
+# Intro text
+intro <- "For details on the nuts and bolts behind this project, see ![this post](2021/11/07/random-image-manipulation/){target = \"_blank\"}"
+
 # Create a string for the original image. 
 orig_loc <- paste0("Original image source: ", img_url, "\n\n")
 
