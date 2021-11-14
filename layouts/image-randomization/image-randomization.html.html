@@ -11,7 +11,7 @@
         <article>
             <h2>
                 <a href="{{ .Permalink }}">
-                    {{ .Title }}
+                    {{ .Date.Format "2006-01-02" }}: {{ .Title }}
                 </a>
             </h2>
             <div>
@@ -20,17 +20,6 @@
                 <p><a href="{{ .RelPermalink }}">Read more...</a></p>
                 {{ end }}
             </div>
-            <div class="post-footer">
-            <time>{{ .Date.Format "January 2, 2006" }}</time>
-
-            <!-- Display tags -->
-            {{if .Params.tags}}
-                {{ range .Params.tags }}
-                    <a class="tag" href="/tags/{{ . | urlize }}">#{{.}}</a>
-                {{ end }}
-            {{ end }}
-            </div> 
-           
         </article>
         {{ end }}
     </div>
