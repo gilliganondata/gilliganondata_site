@@ -6,7 +6,40 @@
     <description>Recent content in Github Actions on Gilligan on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gilliganondata.netlify.com/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://gilliganondata.netlify.com/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Random Manipulation of a Random SmugMug Image</title>
+      <link>https://gilliganondata.netlify.com/image-randomization/random-image-i-9vkhcgm-5k/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gilliganondata.netlify.com/image-randomization/random-image-i-9vkhcgm-5k/</guid>
+      <description>Original image source: https://photos.smugmug.com/photos/i-9vKhcGm/0/5K/i-9vKhcGm-5K.jpg
+Transformations performed:
+ Sketching (sketcher) -&amp;gt; Style: 1 | Lineweight: 2 | Contrast: 36 | Shadow: 0.</description>
+    </item>
+    
+    <item>
+      <title>Random Manipulation of a Random SmugMug Image</title>
+      <link>https://gilliganondata.netlify.com/image-randomization/random-image-i-pf3cgsf-x5/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gilliganondata.netlify.com/image-randomization/random-image-i-pf3cgsf-x5/</guid>
+      <description>Original image source: https://photos.smugmug.com/photos/i-PF3CgSF/0/X5/i-PF3CgSF-X5.jpg
+Transformations performed:
+ Median (magick) -&amp;gt; Pixels: 43 Modulation (magick) -&amp;gt; Brightness: 148 | Saturation: 136 | Hue: 123 Quantize (magick) -&amp;gt; Max Colors in Image: 11 Sketching (sketcher) -&amp;gt; Style: 1 | Lineweight: 3 | Contrast: 22 | Shadow: 0.</description>
+    </item>
+    
+    <item>
+      <title>Random Manipulation of a Random SmugMug Image</title>
+      <link>https://gilliganondata.netlify.com/image-randomization/random-image-i-tczncdk-5k/</link>
+      <pubDate>Sat, 13 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://gilliganondata.netlify.com/image-randomization/random-image-i-tczncdk-5k/</guid>
+      <description>Original image source: https://photos.smugmug.com/photos/i-tcZnCDk/0/5K/i-tcZnCDk-5K.jpg
+Transformations performed:
+ Sketching (sketcher) -&amp;gt; Style: 2 | Lineweight: 2 | Contrast: 29 | Shadow: 0.</description>
+    </item>
+    
     <item>
       <title>Random Manipulation of a Random SmugMug Image</title>
       <link>https://gilliganondata.netlify.com/2021/11/07/random-image-manipulation/</link>

@@ -17,6 +17,7 @@ yaml <- paste("---",
               "  - SmugMug",
               "  - Twitter",
               "  - ImageMagick",
+              "type: image-randomization",
               "---\n\n",
               sep = "\n")
 
@@ -28,19 +29,22 @@ intro <- "For details on the nuts and bolts behind this project, see ![this post
 orig_loc <- paste0("Original image source: ", img_url, "\n\n")
 
 # Show the original image. 
-orig_img <- paste0("![](../",gsub(rel_path,"",img_out_path),"){width=100%}\n")
+orig_img <- paste0("![orig](../",gsub(rel_path,"",img_out_path),"){width=100%}\n\n")
 
 # List the transformations performed
 trans_perf <- paste("Transformations performed:\n",
                     trans_description,
                     "\n",
+                    "The resulting image:",
+                    "\n",
                     sep = "\n")
 
 # Show the final image
-final_img <- paste0("![](../",gsub(rel_path,"",img_trans_out_path),"){width=100%}\n")
+final_img <- paste0("![transformed](../",gsub(rel_path,"",img_trans_out_path),"){width=100%}\n")
 
 # Create the output file
-write(paste(yaml, 
+write(paste(intro,
+            yaml, 
             orig_loc, 
             orig_img,
             trans_perf,
