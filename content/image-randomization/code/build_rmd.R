@@ -19,8 +19,8 @@ yaml <- paste("---",
               "  - Twitter",
               "  - ImageMagick",
               "type: image-randomization",
-              paste0("img-original: ", gsub(rel_path,"",img_out_path)),
-              paste0("img-transformed: ", gsub(rel_path,"",img_trans_out_path)),
+              paste0("img_original: ", gsub(rel_path,"",img_out_path)),
+              paste0("img_transformed: ", gsub(rel_path,"",img_trans_out_path)),
               "---\n\n",
               sep = "\n")
 
