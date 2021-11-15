@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-15
+slug: random-image-i-dbk9SsJ-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-dbk9SsJ-5K_original_2021-11-15.jpg
+img_transformed: images/i-dbk9SsJ-5K_transformed_2021-11-15.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-dbk9SsJ/0/5K/i-dbk9SsJ-5K.jpg
+
+ ![](../images/i-dbk9SsJ-5K_original_2021-11-15.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 16 
+ * Modulation (magick) -> Brightness: 57 | Saturation: 71 | Hue: 38 
+ * Median (magick) -> Pixels: 32 
+
+
+
+The resulting image:
+
+ ![](../images/i-dbk9SsJ-5K_transformed_2021-11-15.jpg){width=100%}
+
