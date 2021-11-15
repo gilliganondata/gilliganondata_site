@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-14
+slug: random-image-i-vDFTHxb-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img-original: images/i-vDFTHxb-5K_original_2021-11-14.jpg
+img-transformed: images/i-vDFTHxb-5K_transformed_2021-11-14.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-vDFTHxb/0/5K/i-vDFTHxb-5K.jpg
+
+ ![](../images/i-vDFTHxb-5K_original_2021-11-14.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 4 | Contrast: 42 | Shadow: 0.787081611109897 | Gain: 0.91749495267868 
+ * Modulation (magick) -> Brightness: 119 | Saturation: 143 | Hue: 144 
+ * Colorize (magick) -> Color: #83a913 | Opacity 56% 
+
+
+
+The resulting image:
+
+ ![](../images/i-vDFTHxb-5K_transformed_2021-11-14.jpg){width=100%}
+

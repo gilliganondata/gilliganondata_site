@@ -1,0 +1,31 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-14
+slug: random-image-i-VN83CG2-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+---
+
+ For details on the nuts and bolts behind this project, see <a href="post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-VN83CG2/0/5K/i-VN83CG2-5K.jpg
+
+ ![](../images/i-VN83CG2-5K_original_2021-11-14.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 66 | Saturation: 129 | Hue: 94 
+ * Colorize (magick) -> Color: #e812ac | Opacity 41% 
+
+
+
+The resulting image:
+
+ ![](../images/i-VN83CG2-5K_transformed_2021-11-14.jpg){width=100%}
+

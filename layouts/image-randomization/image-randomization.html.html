@@ -20,6 +20,16 @@
                 <p><a href="{{ .RelPermalink }}">Read more...</a></p>
                 {{ end }}
             </div>
+            <table>
+                <tr>
+                    <td>Original</td>
+                    <td>Transformed</td>
+                </tr>
+                <tr>
+                    <td><img src = "{{ .Params.img-original }}" style = "width:150px"></td>
+                    <td><img src = "{{ .Params.img-transformed }}" style = "width:150px"></td>
+                </tr>
+            </table>
         </article>
         {{ end }}
     </div>
