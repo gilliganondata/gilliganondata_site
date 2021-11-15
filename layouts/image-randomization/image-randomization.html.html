@@ -1,32 +1,30 @@
 {{ define "main" }}
 <div class = "article-content">
-        {{ if isset .Site.Params "description" }}
-        <div class="description">
-            <p>{{ .Site.Params.Description | markdownify }}</p>
-        </div>
-        {{ end }}
+        <h2>Randomly Manipulated Images from SmugMug</h2>
+        <p>Below are images that have been generated randomly applying a random number of
+        image transformations in a random order with random settings to a random photo
+        I took. The results are mostly terrible, but if we give a room of monkeys a bunch of paint,
+        occasionally they will produce something interesting. Details on the approach
+        and process are in <a href="../post/2021/11/07/random-image-manipulation/">this post</a>.</p>
         <!-- Range over the pages and only include the ones that are a post type -->
         {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
         {{ range (.Paginate $pages).Pages }}
         <article>
            <table style = "border: 0px">
              <tr>
-                 <td style = "padding: 2px" rowspan="2">
+                 <td style = "border: 0px; padding: 2px">
                     <h3>
                          <a href="{{ .Permalink }}">
-                             {{ .Date.Format "2006-01-02" }}: Randomized Image
+                             {{ .Date.Format "2006-01-02" }}<br>Randomized Image
                         </a>
                     </h3>
                 </td>
-                <td style = "padding: 2px">Original</td>
-                <td style = "padding: 2px">Transformed</td>
-             </tr>
-             <tr>
-                <td style = "padding: 2px"><a href="{{ .Permalink }}">
+                <td style = "border: 0px; padding: 2px"><a href="{{ .Permalink }}">
                     <img src = "{{ .Params.img_original }}" style = "width:150px">
                     </a>
                 </td>
-                <td style = "padding: 2px"><a href="{{ .Permalink }}">
+                <td style = "border: 0px; padding: 2px">--&gt;</td>
+                <td style = "border: 0px; padding: 2px"><a href="{{ .Permalink }}">
                     <img src = "{{ .Params.img_transformed }}" style = "width:150px">
                     </a>
                 </td>
