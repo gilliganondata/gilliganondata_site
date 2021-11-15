@@ -2,10 +2,11 @@
 <div class = "article-content">
         <h2>Randomly Manipulated Images from SmugMug</h2>
         <p>Below are images that have been generated randomly applying a random number of
-        image transformations in a random order with random settings to a random photo
-        I took. The results are mostly terrible, but if we give a room of monkeys a bunch of paint,
-        occasionally they will produce something interesting. Details on the approach
-        and process are in <a href="../post/2021/11/07/random-image-manipulation/">this post</a>.</p>
+        image transformations in a random order with random settings to a <a href="https://twilson.smugmug.com/" 
+        target = "_blank">random photo I took</a>. The results are mostly terrible, but if 
+        we give a room of monkeys a bunch of paint, occasionally they will produce something 
+        interesting. Details on the approach and process are in 
+        <a href="../post/2021/11/07/random-image-manipulation/">this post</a>.</p>
         <!-- Range over the pages and only include the ones that are a post type -->
         {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
         {{ range (.Paginate $pages).Pages }}
