@@ -14,20 +14,20 @@
                     {{ .Date.Format "2006-01-02" }}: Randomized Image
                 </a>
             </h2>
-            <div>
-                <p>{{ .Summary }}</p>
-                {{ if (and (.Site.Params.showReadMore) (.Truncated)) }}
-                <p><a href="{{ .RelPermalink }}">Read more...</a></p>
-                {{ end }}
-            </div>
-            <table>
+            <table style = "border: 0; padding: 2px">
                 <tr>
                     <td>Original</td>
                     <td>Transformed</td>
                 </tr>
                 <tr>
-                    <td><img src = "{{ .Params.img_original }}" style = "width:150px"></td>
-                    <td><img src = "{{ .Params.img_transformed }}" style = "width:150px"></td>
+                    <td><a href="{{ .Permalink }}">
+                        <img src = "{{ .Params.img_original }}" style = "width:150px">
+                        </a>
+                    </td>
+                    <td><a href="{{ .Permalink }}">
+                        <img src = "{{ .Params.img_transformed }}" style = "width:150px">
+                        </a>
+                    </td>
                 </tr>
             </table>
         </article>
