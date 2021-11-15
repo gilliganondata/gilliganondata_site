@@ -9,26 +9,28 @@
         {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
         {{ range (.Paginate $pages).Pages }}
         <article>
-            <h2>
-                <a href="{{ .Permalink }}">
-                    {{ .Date.Format "2006-01-02" }}: Randomized Image
-                </a>
-            </h2>
-            <table style = "border: 0; padding: 2px">
-                <tr>
-                    <td>Original</td>
-                    <td>Transformed</td>
-                </tr>
-                <tr>
-                    <td><a href="{{ .Permalink }}">
-                        <img src = "{{ .Params.img_original }}" style = "width:150px">
+           <table style = "border: 0px">
+             <tr>
+                 <td style = "padding: 2px" rowspan="2">
+                    <h3>
+                         <a href="{{ .Permalink }}">
+                             {{ .Date.Format "2006-01-02" }}: Randomized Image
                         </a>
-                    </td>
-                    <td><a href="{{ .Permalink }}">
-                        <img src = "{{ .Params.img_transformed }}" style = "width:150px">
-                        </a>
-                    </td>
-                </tr>
+                    </h3>
+                </td>
+                <td style = "padding: 2px">Original</td>
+                <td style = "padding: 2px">Transformed</td>
+             </tr>
+             <tr>
+                <td style = "padding: 2px"><a href="{{ .Permalink }}">
+                    <img src = "{{ .Params.img_original }}" style = "width:150px">
+                    </a>
+                </td>
+                <td style = "padding: 2px"><a href="{{ .Permalink }}">
+                    <img src = "{{ .Params.img_transformed }}" style = "width:150px">
+                    </a>
+                </td>
+             </tr>
             </table>
         </article>
         {{ end }}
