@@ -21,4 +21,4 @@ We'll get to writing out the details later, but this is really about making a fe
 * Tweeting the before/after in a single tweet and linking back to that web page
 * Doing the above on a daily basis via Github actions
 
-See a [list of examples](/image-randomization/) that are currently available.
+See a [list of examples](/imgrandomize/) that are currently available.
