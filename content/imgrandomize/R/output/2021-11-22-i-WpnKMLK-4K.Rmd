@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-22
+slug: random-image-i-WpnKMLK-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-WpnKMLK-4K_original_2021-11-22.jpg
+img_transformed: images/i-WpnKMLK-4K_transformed_2021-11-22.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-WpnKMLK/0/4K/i-WpnKMLK-4K.jpg
+
+ ![](../images/i-WpnKMLK-4K_original_2021-11-22.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #32f055 | Opacity 30% 
+ * Quantize (magick) -> Max Colors in Image: 9 
+ * Median (magick) -> Pixels: 37 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 1 | Contrast: 32 | Shadow: 0.509221155196428 | Gain: 0.182274935068563 
+
+
+
+The resulting image:
+
+ ![](../images/i-WpnKMLK-4K_transformed_2021-11-22.jpg){width=100%}
+
