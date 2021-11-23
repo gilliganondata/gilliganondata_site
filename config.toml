@@ -102,4 +102,4 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 # Format for the slugs
 [permalinks]
     post = "/post/:year/:month/:day/:slug/"
-    image-randomization = "/image-randomization/:slug/"
+    imgrandomize = "/image-randomization/:slug/"
