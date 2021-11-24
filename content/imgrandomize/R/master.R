@@ -19,7 +19,8 @@
 #                jpeg,
 #                magick,
 #                sketcher,
-#                scales)
+#                scales,
+#                blogdown)
 library(dplyr)     # We don't need the entire Tidyverse
 library(purrr)
 library(httr)
@@ -28,6 +29,7 @@ library(jpeg)      # For reading and writing images
 library(magick)    # For playing with the images
 library(sketcher)  # Line art / sketching of the images
 library(scales)    # Show some percentages cleanly
+library(blogdown)  # Added so can run serve_site() at the end
 
 # The client ID and secret are stored in .Renviron
 sm_key <- Sys.getenv("SMUGMUG_KEY")

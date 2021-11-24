@@ -17,4 +17,5 @@ Imports:
     jpeg (> 0.1-9),
     magick (> 2.7.2),
     sketcher (> 0.1.3),
-    scales (> 1.1.1)
+    scales (> 1.1.1),
+    blogdown (> 1.6)
