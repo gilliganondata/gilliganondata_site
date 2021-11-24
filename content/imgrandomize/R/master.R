@@ -12,21 +12,22 @@
 # 4. (Not done) Publish that HTML file and generate a tweet about it
 
 # Setup / Package Load
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse,
-               httr,
-               knitr,
-               jpeg,
-               magick,
-               sketcher,
-               scales)
-# library(tidyverse)
-# library(httr)
-# library(knitr)
-# library(jpeg)      # For reading and writing images
-# library(magick)    # For playing with the images
-# library(sketcher)  # Line art / sketching of the images
-# library(scales)    # Show some percentages cleanly
+# if (!require("pacman")) install.packages("pacman")
+# pacman::p_load(tidyverse,
+#                httr,
+#                knitr,
+#                jpeg,
+#                magick,
+#                sketcher,
+#                scales)
+library(dplyr)     # We don't need the entire Tidyverse
+library(purrr)
+library(httr)
+library(knitr)
+library(jpeg)      # For reading and writing images
+library(magick)    # For playing with the images
+library(sketcher)  # Line art / sketching of the images
+library(scales)    # Show some percentages cleanly
 
 # The client ID and secret are stored in .Renviron
 sm_key <- Sys.getenv("SMUGMUG_KEY")
