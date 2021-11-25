@@ -31,6 +31,9 @@ library(sketcher)  # Line art / sketching of the images
 library(scales)    # Show some percentages cleanly
 library(blogdown)  # Added so can run serve_site() at the end
 
+# Needed for Github actions run
+install_hugo("0.88.1")
+
 # The client ID and secret are stored in .Renviron
 sm_key <- Sys.getenv("SMUGMUG_KEY")
 sm_secret <- Sys.getenv("SMUGMUG_SECRET")
@@ -121,4 +124,4 @@ if(nchar(trans_description) == 0){trans_description <- "None"}
 source(paste0(rel_path,"build_rmd.R"))
 
 # Serve the site to generate the HTML
-serve_site()
+build_site()
