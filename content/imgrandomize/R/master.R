@@ -124,4 +124,4 @@ if(nchar(trans_description) == 0){trans_description <- "None"}
 source(paste0(rel_path,"build_rmd.R"))
 
 # Serve the site to generate the HTML
-build_site()
+serve_site()
