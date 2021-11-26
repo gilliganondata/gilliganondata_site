@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-11-26
+slug: random-image-i-5hrGsxV-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-5hrGsxV-X5_original_2021-11-26.jpg
+img_transformed: images/i-5hrGsxV-X5_transformed_2021-11-26.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-5hrGsxV/0/X5/i-5hrGsxV-X5.jpg
+
+ ![](/imgrandomize/R/images/i-5hrGsxV-X5_original_2021-11-26.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 21 
+ * Colorize (magick) -> Color: #c5bb0e | Opacity 50% 
+ * Quantize (magick) -> Max Colors in Image: 14 
+ * Modulation (magick) -> Brightness: 92 | Saturation: 91 | Hue: 197 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 4 | Contrast: 42 | Shadow: 0.474122685147449 | Gain: 0.931035278365016 
+
+
+
+The resulting image:
+
+ ![](/imgrandomize/R/images/i-5hrGsxV-X5_transformed_2021-11-26.jpg){width=100%}
+
