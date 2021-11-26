@@ -31,6 +31,9 @@ library(sketcher)  # Line art / sketching of the images
 library(scales)    # Show some percentages cleanly
 library(blogdown)  # Added so can run serve_site() at the end
 
+# This is just for GitHub Actions
+options(blogdown.files_filter = filter_newfile("/content/imgrandomize/output"))
+
 # Needed for Github actions run
 install_hugo("0.88.1")
 
