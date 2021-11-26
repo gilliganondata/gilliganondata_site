@@ -64,6 +64,13 @@ jobs:
         run: |
           source("content/imgrandomize/R/master.R")
         shell: Rscript {0}
+
+      - name: Build Site
+        run: |
+          options(blogdown.files_filter = filter_newfile)
+          blogdown::build_site(run_hugo = FALSE, 
+                               build_rmd = TRUE)
+        shell: Rscript {0}        
         
       - name: Commit files
         run: |
