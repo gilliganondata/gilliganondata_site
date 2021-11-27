@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 * * * *"
     
 jobs:
   generate-data:
@@ -29,21 +29,6 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@master
 
-      - name: Query dependencies
-        run: |
-          install.packages('remotes')
-          install.packages('sessioninfo')
-          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v1
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-          
       - name: Install system dependencies
         if: runner.os == 'Linux'
         run: |
@@ -52,9 +37,9 @@ jobs:
             eval sudo $cmd
           done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
 
-      - name: Install dependencies
+      - name: Install R packages
         run: |
-          remotes::install_deps(dependencies = TRUE)
+          install.packages(c("dplyr", "purrr", "httr", "knitr", "jpeg", "magick", "sketcher", "scales", "blogdown")
         shell: Rscript {0}
 
       - name: Generate Image
