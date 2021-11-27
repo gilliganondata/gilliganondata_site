@@ -39,7 +39,7 @@ jobs:
 
       - name: Install R packages
         run: |
-          install.packages(c("dplyr", "purrr", "httr", "knitr", "jpeg", "magick", "sketcher", "scales", "blogdown")
+          install.packages(c("dplyr", "purrr", "httr", "knitr", "jpeg", "magick", "sketcher", "scales", "blogdown"), Ncpus = 2)
         shell: Rscript {0}
 
       - name: Generate Image
