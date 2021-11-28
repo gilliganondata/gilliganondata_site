@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "0 * * * *"
     
 jobs:
   generate-data:
@@ -29,27 +29,9 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@master
 
-      - name: Query dependencies
+      - name: Install libcurl
         run: |
-          install.packages('remotes')
-          install.packages('sessioninfo')
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
-
-      - name: Cache R packages
-        uses: actions/cache@v1
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-
-      - name: Install System Dependencies (gets curl to be able to install)
-        if: runner.os == 'Linux'
-        run: |
-          while read -r cmd
-          do
-            eval sudo $cmd
-          done < <(Rscript -e 'cat(remotes::system_requirements("ubuntu", "20.04"), sep = "\n")')
+          sudo apt-get install libcurl4-openssl-dev -y
 
       - name: Install R packages
         run: |
