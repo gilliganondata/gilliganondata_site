@@ -31,6 +31,7 @@ jobs:
 
       - name: Query dependencies
         run: |
+          install.packages('remotes')
           install.packages('sessioninfo')
           writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
         shell: Rscript {0}
