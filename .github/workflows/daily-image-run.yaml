@@ -47,7 +47,7 @@ jobs:
           SMUGMUG_KEY: ${{ secrets.SMUGMUG_KEY }}
           SMUGMUG_SECRET: ${{ secrets.SMUGMUG_SECRET }}
         run: |
-          source("content/imgrandomize/R/master.R")
+          source("content/image-randomize/master.R")
         shell: Rscript {0}
 
       - name: Build Site
