@@ -27,6 +27,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 
 [params]
 	math = true
+	# Google Tag Manager ID
+	gtm_id = "GTM-MDWQCZC"
+	
 	# Blog description at the top of the homepage. Supports markdown.
 	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, [podcasts regularly now](https://analyticshour.io), and now occasionally scratches idle analysis itches."
 
