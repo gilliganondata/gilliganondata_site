@@ -22,7 +22,7 @@ img_transformed: images/i-WKx34Nn-4K_transformed_2021-11-29.jpg
 
  Transformations performed:
 
- * Sketching (sketcher) -> Style: 2 | Lineweight: 4 | Contrast: 52 | Shadow: 0.433774553705007 | Gain: 0.287547846324742 
+ * Quantize (magick) -> Max Colors in Image: 16 
 
 
 
