@@ -3,6 +3,8 @@
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
     {{ partial "head.html" . }}
     <body>
+        <!-- Google Tag Manager -->
+        {{ if .Site.Params.gtm_id}}<noscript><iframe src="//www.googletagmanager.com/ns.html?id={{ .Site.Params.gtm_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>{{ end }}
         {{ partial "nav.html" . }}
         <div id="content" class="content-container">
         {{ block "main" . }}
