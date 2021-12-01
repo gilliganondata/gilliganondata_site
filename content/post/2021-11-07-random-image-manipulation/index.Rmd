@@ -12,13 +12,48 @@ tags:
   - ImageMagick
 ---
 
+This is a process that runs daily and applies a random set of transformations to a randomly selected image from my [SmugMug site](https://twilson.smugmug.com/). You can see a [list of the results](/image-randomize/) that are currently available.
+
+High-level, this is what happens:
+
+![Image Randomizer Flowchart](images/image-randomizer-flowchart.png "Image Randomizer Flowchart")
+
+Read on for details!
+
+## The Motivation
+
+* It's not generative art...but it kinda' is: the input is a real photo; the transformations are nowhere near as fancy as https://deepdreamgenerator.com/
+* Opportunity to combine my interest in photography with my interest in R
+* Opportunity to learn about cloud-based automation
+* Opportunity to explore using APIs without the help of a package
+* Opportunity to learn about static site generation (Hugo)
+
+## Pulling a Random Image from SmugMug
+
+* Key package: `httr`
+* Even though it's pulling public data, had to generate an API token
+* That led to learning how to use GitHub Secrets to store tokens safely in a GitHub repo (this worked amazingly smoothly; `Sys.getenv()` just worked!)
+* Had to pull a list of all of the albums and then cycle through all of the albums to get all of the images
+* Then, had a data frame with all of the images and...simply randomly selected one.
+* [Link to the specific .R file]
+
+## Creating and Applying a Random Set of Transformations
+
+
+## Creating a Web Page with the Before/After
+
+
+## Tweeting the Result
+
+
+## Automating All of This
+
+
 We'll get to writing out the details later, but this is really about making a few different things work together to see what happens:
 
-* Pulling an image from a SmugMug site at random (via the SmugMug API)
-* Applying a random number of manipulations in a random order with random settings to that image
-* Publishing the before and after as a new web page on this site
-* Adding a link to that page to a master web page listing links to all of the times it's been run
-* Tweeting the before/after in a single tweet and linking back to that web page
-* Doing the above on a daily basis via Github actions
-
-See a [list of examples](/image-randomize/) that are currently available.
+-   Pulling an image from a SmugMug site at random (via the SmugMug API)
+-   Applying a random number of manipulations in a random order with random settings to that image
+-   Publishing the before and after as a new web page on this site
+-   Adding a link to that page to a master web page listing links to all of the times it's been run
+-   Tweeting the before/after in a single tweet and linking back to that web page
+-   Doing the above on a daily basis via Github actions
