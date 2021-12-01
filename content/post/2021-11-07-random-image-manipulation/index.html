@@ -12,8 +12,48 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
+<p>This is a process that runs daily and applies a random set of transformations to a randomly selected image from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available.</p>
+<p>High-level, this is what happens:</p>
+<div class="figure">
+<img src="images/image-randomizer-flowchart.png" title="Image Randomizer Flowchart" alt="" />
+<p class="caption">Image Randomizer Flowchart</p>
+</div>
+<p>Read on for details!</p>
+<div id="the-motivation" class="section level2">
+<h2>The Motivation</h2>
+<ul>
+<li>It’s not generative art…but it kinda’ is: the input is a real photo; the transformations are nowhere near as fancy as <a href="https://deepdreamgenerator.com/" class="uri">https://deepdreamgenerator.com/</a></li>
+<li>Opportunity to combine my interest in photography with my interest in R</li>
+<li>Opportunity to learn about cloud-based automation</li>
+<li>Opportunity to explore using APIs without the help of a package</li>
+<li>Opportunity to learn about static site generation (Hugo)</li>
+</ul>
+</div>
+<div id="pulling-a-random-image-from-smugmug" class="section level2">
+<h2>Pulling a Random Image from SmugMug</h2>
+<ul>
+<li>Key package: <code>httr</code></li>
+<li>Even though it’s pulling public data, had to generate an API token</li>
+<li>That led to learning how to use GitHub Secrets to store tokens safely in a GitHub repo (this worked amazingly smoothly; <code>Sys.getenv()</code> just worked!)</li>
+<li>Had to pull a list of all of the albums and then cycle through all of the albums to get all of the images</li>
+<li>Then, had a data frame with all of the images and…simply randomly selected one.</li>
+<li>[Link to the specific .R file]</li>
+</ul>
+</div>
+<div id="creating-and-applying-a-random-set-of-transformations" class="section level2">
+<h2>Creating and Applying a Random Set of Transformations</h2>
+</div>
+<div id="creating-a-web-page-with-the-beforeafter" class="section level2">
+<h2>Creating a Web Page with the Before/After</h2>
+</div>
+<div id="tweeting-the-result" class="section level2">
+<h2>Tweeting the Result</h2>
+</div>
+<div id="automating-all-of-this" class="section level2">
+<h2>Automating All of This</h2>
 <p>We’ll get to writing out the details later, but this is really about making a few different things work together to see what happens:</p>
 <ul>
 <li>Pulling an image from a SmugMug site at random (via the SmugMug API)</li>
@@ -23,4 +63,4 @@ tags:
 <li>Tweeting the before/after in a single tweet and linking back to that web page</li>
 <li>Doing the above on a daily basis via Github actions</li>
 </ul>
-<p>See a <a href="/image-randomize/">list of examples</a> that are currently available.</p>
+</div>
