@@ -16,7 +16,7 @@ This is a process that runs daily and applies a random set of transformations to
 
 High-level, this is what happens:
 
-![Image Randomizer Flowchart](images/image-randomizer-flowchart.png "Image Randomizer Flowchart"){width=800px}
+![Image Randomizer Flowchart](images/image-randomizer-flowchart.png "Image Randomizer Flowchart"){width=700px}
 
 Read on for details!
 
