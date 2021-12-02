@@ -22,26 +22,26 @@ Read on for details!
 
 ## The Motivation
 
-I don't think this project qualifies as generative art (or generative aRt, specifically, but check out [Danielle Navarro's amazing work](https://art.djnavarro.net/) or (Claus O. Wilke's work)[https://clauswilke.com/art/] (including his (NFTs)[https://objkt.com/profile/clauswilke/created?search=&sortBy=askAsc]!) or [Koen Derks's aRtsy package that is specifically ggplot-oriented](https://koenderks.github.io/aRtsy/). 
+I don't think this project qualifies as generative art (or generative aRt, specifically, but check out [Danielle Navarro's amazing work](https://art.djnavarro.net/) or [Claus O. Wilke's work](https://clauswilke.com/art/) (including his [NFTs](https://objkt.com/profile/clauswilke/created?search=&sortBy=askAsc)!) or [Koen Derks's aRtsy package that is specifically ggplot-oriented](https://koenderks.github.io/aRtsy/). 
 
-Rather, it was an opportunity for me to combine a few of my hobbies into a single project and learn along the way! Specifically, there are two hobbies: [nature photography](https://twilson.smugmug.com/) and R. When it comes to doing programmatic (machine?) manipulation of photos, this is nothing nearly as involved as the neural nets employed by (Deep Dream Generator)[https://deepdreamgenerator.com/], although, hey, this is me combined with Starry Night in an AI's dream:
+Rather, it was an opportunity for me to combine a few of my hobbies into a single project and learn along the way! Specifically, there are two hobbies: [nature photography](https://twilson.smugmug.com/) and R. When it comes to doing programmatic (machine?) manipulation of photos, this is nothing nearly as involved as the neural nets employed by [Deep Dream Generator](https://deepdreamgenerator.com/), although, hey, this is me combined with Starry Night in an AI's dream:
 
 ![](images/tim_wilson_starry_night.jpeg "Tim Wilson Dreamt of with Starry Night"){width=400px}
 
 The learning that came along with the effort was:
 
 * **Cloud-based automation:** I initially thought this would be Docker and the Google Cloud Platform, but, ultimately, it wound up just being GitHub Actions, which turned out to be cheaper and, arguably, simpler
-* **Using APIs without a platform-specific package:** I've know that (`httr`)[https://httr.r-lib.org/] is the go-to package for working with any REST API, but I had never used it directly from authentication through GETs 
+* **Using APIs without a platform-specific package:** I've know that [`httr`](https://httr.r-lib.org/) is the go-to package for working with any REST API, but I had never used it directly from authentication through GETs 
 * **Image manipulation:** Raster-based images are, at their core, just matrices, with each pixel being represented by a value in the matrix. It turns out that it's fun to think about exactly what the underlying matrix manipulation is that adds different effects to an image
-* **Static site generation:** This wound up being (Hugo)[https://gohugo.io/] along with (Netlify)[https://www.netlify.com/] (with GitHub along the way)
+* **Static site generation:** This wound up being [Hugo](https://gohugo.io/) along with [Netlify](https://www.netlify.com/) (with GitHub along the way)
 
-Somewhere in all of that, (GitHub Secrets)[https://docs.github.com/en/actions/security-guides/encrypted-secrets] to securely store API tokens for SmugMug and Twitter!
+Somewhere in all of that, [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets) to securely store API tokens for SmugMug and Twitter!
 
 Below, I've broken down the different components of the work, linking to specific resources for additional details. But, the full set of code really comes down to:
 
-* A (folder in the GitHub repository that serves this site)[https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize] (`master.R` is really the key file; it sources all the other files)
+* A [folder in the GitHub repository that serves this site](https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize) (`master.R` is really the key file; it sources all the other files)
 
-* The (GitHub Action workflow YAML)[https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml] that is also part of the repository that serves this site
+* The [GitHub Action workflow YAML](https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml) that is also part of the repository that serves this site
 
 We can dig in a little deeper to explain the what's what there.
 
