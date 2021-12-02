@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-02
+slug: random-image-i-QttCGsN-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-QttCGsN-4K_original_2021-12-02.jpg
+img_transformed: images/i-QttCGsN-4K_transformed_2021-12-02.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-QttCGsN/0/4K/i-QttCGsN-4K.jpg
+
+ ![](/image-randomize/images/i-QttCGsN-4K_original_2021-12-02.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 4 
+ * Colorize (magick) -> Color: #68a6cd | Opacity 55% 
+ * Modulation (magick) -> Brightness: 62 | Saturation: 71 | Hue: 39 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-QttCGsN-4K_transformed_2021-12-02.jpg){width=100%}
+
