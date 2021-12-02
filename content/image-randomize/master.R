@@ -11,16 +11,6 @@
 # 3. Generate an HTML file with the before and after
 # 4. (Not done) Publish that HTML file and generate a tweet about it
 
-# Setup / Package Load
-# if (!require("pacman")) install.packages("pacman")
-# pacman::p_load(tidyverse,
-#                httr,
-#                knitr,
-#                jpeg,
-#                magick,
-#                sketcher,
-#                scales,
-#                blogdown)
 library(dplyr)     # We don't need the entire Tidyverse
 library(purrr)
 library(httr)
@@ -117,15 +107,5 @@ writeJPEG(img_trans, img_trans_out_path)
 
 if(nchar(trans_description) == 0){trans_description <- "None"}
 
-# # Knit the output file
-# rmarkdown::render(paste0(rel_path,"result_output.Rmd"),
-#                   output_file = paste0("output/daily_image_", Sys.Date(), "_",
-#                                        gsub("^.*\\/(.*)\\.jpg", "\\1", img_url),
-#                                       ".html"))
-
 # Create the output .Rmd
 source(paste0(rel_path,"build_rmd.R"))
-
-# # Serve the site to generate the HTML
-# build_site(run_hugo = FALSE,
-#            build_rmd = TRUE)
