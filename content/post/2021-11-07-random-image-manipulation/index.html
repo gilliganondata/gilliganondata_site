@@ -12,6 +12,7 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me.</p>
@@ -78,7 +79,7 @@ tags:
 <li>Pulls that number of rows from the tibble.</li>
 <li>Runs the scripts (the paths) that were pulled.</li>
 </ol>
-<p>I think it’s actually pretty elegant. All that is required for me to add another transformation is to create a new file for that transformation and add the path to that file to the original tibble.</p>
+<p>I think it’s actually reasonably elegant design-wise (if I do say so myself). All that is required for me to add another transformation is to create a new file for that transformation and add the path to that file to the original tibble.</p>
 </div>
 <div id="creating-a-web-page-with-the-beforeafter" class="section level2">
 <h2>Creating a Web Page with the Before/After</h2>
@@ -88,13 +89,27 @@ tags:
 </div>
 <div id="automating-all-of-this" class="section level2">
 <h2>Automating All of This</h2>
-<p>We’ll get to writing out the details later, but this is really about making a few different things work together to see what happens:</p>
-<ul>
-<li>Pulling an image from a SmugMug site at random (via the SmugMug API)</li>
-<li>Applying a random number of manipulations in a random order with random settings to that image</li>
-<li>Publishing the before and after as a new web page on this site</li>
-<li>Adding a link to that page to a master web page listing links to all of the times it’s been run</li>
-<li>Tweeting the before/after in a single tweet and linking back to that web page</li>
-<li>Doing the above on a daily basis via Github actions</li>
-</ul>
+<p>The automation, as already noted, used GitHub Actions. This turned out to be a little bit easier than I expected, but it still took quite a bit of trial and error and Googling. The end result is simply having a <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml">YAML file</a> posted in a <code>.github/workflows</code> folder of the repository used to build this website.</p>
+<p>My primary source for figuring out how to get this working was a <a href="https://blog--simonpcouch.netlify.app/blog/r-github-actions-commit/">detailed post by Simon Couch</a>. The main way I wound up diverging from Simon’s post is that, ultimately, I did <em>not</em> make the script into a package. I actually initially did…sort of…and it worked, but it wound up being unnecessarily clunky.</p>
+<p>I suspect that, in many cases, the package route is the way to go. But, in my case, I was trying to run the script in a repo that actually generates and publishes content to a website (this website). It felt…weird…to try to nest a package inside that repo. I gave it a shot, but, ultimately, realized that I was really only using the <code>DESCRIPTION</code> file to get the requisite packages installed. That’s it. I didn’t seem to be getting any other benefit out of packagifying the work. And I’d introduced filename restrictions and a slightly messy file hierarchy in the process!</p>
+<p>Additional digging turned up a <a href="https://drmowinckels.io/blog/2021-03-23-using-github-actions-to-build-your-hugo-website/">helpful post by Athanasia Monika Mowinckel</a> that included details on how to install packages directly within the GitHub Actions workflow.</p>
+<p>I still ran into a few wrinkles with, for instance, <code>libcurl</code>-dependent packages (including <code>httr</code>!) not installing until I had manually installed <code>libcurl</code> first (within the workflow). I had the same issue with <code>libmagick</code>. So, that section of the YAML looked like the following. Ultimately, the <code>install.packages()</code> was really the only reason, I think, for setting the script up as a package…and that seemed like overkill (admitting that I have no control over the <em>version</em> of each package being installed withe the approach below; we’ll assume backward compatibility of future CRAN versions).</p>
+<pre><code>      - name: Install libcurl (for curl/httr)
+        run: |
+          sudo apt-get install libcurl4-openssl-dev -y
+
+      - name: Install libmagick (for the magick package)
+        run: |
+          sudo apt-get install libmagick++-dev
+
+      - name: Install R packages
+        run: |
+          install.packages(c(&quot;dplyr&quot;, &quot;purrr&quot;, &quot;httr&quot;, &quot;knitr&quot;, &quot;jpeg&quot;, &quot;magick&quot;, &quot;sketcher&quot;, &quot;scales&quot;, &quot;blogdown&quot;), Ncpus = 2)
+        shell: Rscript {0}</code></pre>
+<p>My debugging process for the workflow was to change the cron schedule to be <code>0 * * * *</code>, which had it run hourly. It would takes ~20 minutes to run if it doesn’t error out, so that then gave me a solid 20-30 minutes to debug (the workflow logs on GitHub were <em>super</em> helpful there—very easy to track down exactly where in the workflow the error occurred and what the error was, which was then generally readily Google-able), tweak/debug and commit and push updates.</p>
+<p>The “20 minutes to run” initially surprised me, as the script itself runs in 1-3 minutes locally (depending on the transformations being applied). But, I then realized it makes sense: each time the job runs, it’s <em>installing R</em> and then <em>installing the requisite packages</em> (this is why I’m installing and loading simply <strong>dplyr</strong> and <strong>purrr</strong> rather than <strong>tidyverse</strong>), and then actually running the script. I suspect this is one of those things that would be more efficient if I was actually doing this through Google Cloud Platform with a containerized image. But that’s an exploration for another day.</p>
+<p>There are definitely still some aspects of the YAML that I don’t fully understand. I tried to selectively remove things that I didn’t think were necessary for my purposes, but the overall syntax is still a bit beyond me.</p>
+</div>
+<div id="some-examples" class="section level2">
+<h2>Some Examples</h2>
 </div>

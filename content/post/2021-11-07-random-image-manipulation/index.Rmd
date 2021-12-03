@@ -92,9 +92,10 @@ The question remains: what transformations are applied and in what order? This i
 3. Pulls that number of rows from the tibble.
 4. Runs the scripts (the paths) that were pulled.
 
-I think it's actually pretty elegant. All that is required for me to add another transformation is to create a new file for that transformation and add the path to that file to the original tibble.
+I think it's actually reasonably elegant design-wise (if I do say so myself). All that is required for me to add another transformation is to create a new file for that transformation and add the path to that file to the original tibble.
 
 ## Creating a Web Page with the Before/After
+
 
 
 ## Tweeting the Result
@@ -102,12 +103,36 @@ I think it's actually pretty elegant. All that is required for me to add another
 
 ## Automating All of This
 
+The automation, as already noted, used GitHub Actions. This turned out to be a little bit easier than I expected, but it still took quite a bit of trial and error and Googling. The end result is simply having a [YAML file](https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml) posted in a `.github/workflows` folder of the repository used to build this website.
 
-We'll get to writing out the details later, but this is really about making a few different things work together to see what happens:
+My primary source for figuring out how to get this working was a [detailed post by Simon Couch](https://blog--simonpcouch.netlify.app/blog/r-github-actions-commit/). The main way I wound up diverging from Simon's post is that, ultimately, I did _not_ make the script into a package. I actually initially did...sort of...and it worked, but it wound up being unnecessarily clunky.
 
--   Pulling an image from a SmugMug site at random (via the SmugMug API)
--   Applying a random number of manipulations in a random order with random settings to that image
--   Publishing the before and after as a new web page on this site
--   Adding a link to that page to a master web page listing links to all of the times it's been run
--   Tweeting the before/after in a single tweet and linking back to that web page
--   Doing the above on a daily basis via Github actions
+I suspect that, in many cases, the package route is the way to go. But, in my case, I was trying to run the script in a repo that actually generates and publishes content to a website (this website). It felt...weird...to try to nest a package inside that repo. I gave it a shot, but, ultimately, realized that I was really only using the `DESCRIPTION` file to get the requisite packages installed. That's it. I didn't seem to be getting any other benefit out of packagifying the work. And I'd introduced filename restrictions and a slightly messy file hierarchy in the process!
+
+Additional digging turned up a [helpful post by Athanasia Monika Mowinckel](https://drmowinckels.io/blog/2021-03-23-using-github-actions-to-build-your-hugo-website/) that included details on how to install packages directly within the GitHub Actions workflow.
+
+I still ran into a few wrinkles with, for instance, `libcurl`-dependent packages (including `httr`!) not installing until I had manually installed `libcurl` first (within the workflow). I had the same issue with `libmagick`. So, that section of the YAML looked like the following. Ultimately, the `install.packages()` was really the only reason, I think, for setting the script up as a package...and that seemed like overkill (admitting that I have no control over the _version_ of each package being installed withe the approach below; we'll assume backward compatibility of future CRAN versions).
+
+```
+      - name: Install libcurl (for curl/httr)
+        run: |
+          sudo apt-get install libcurl4-openssl-dev -y
+
+      - name: Install libmagick (for the magick package)
+        run: |
+          sudo apt-get install libmagick++-dev
+
+      - name: Install R packages
+        run: |
+          install.packages(c("dplyr", "purrr", "httr", "knitr", "jpeg", "magick", "sketcher", "scales", "blogdown"), Ncpus = 2)
+        shell: Rscript {0}
+```
+
+My debugging process for the workflow was to change the cron schedule to be `0 * * * *`, which had it run hourly. It would takes ~20 minutes to run if it doesn't error out, so that then gave me a solid 20-30 minutes to debug (the workflow logs on GitHub were _super_ helpful there—very easy to track down exactly where in the workflow the error occurred and what the error was, which was then generally readily Google-able), tweak/debug and commit and push updates. 
+
+The "20 minutes to run" initially surprised me, as the script itself runs in 1-3 minutes locally (depending on the transformations being applied). But, I then realized it makes sense: each time the job runs, it's _installing R_ and then _installing the requisite packages_ (this is why I'm installing and loading simply **dplyr** and **purrr** rather than **tidyverse**), and then actually running the script. I suspect this is one of those things that would be more efficient if I was actually doing this through Google Cloud Platform with a containerized image. But that's an exploration for another day.
+
+There are definitely still some aspects of the YAML that I don't fully understand. I tried to selectively remove things that I didn't think were necessary for my purposes, but the overall syntax is still a bit beyond me.
+
+## Some Examples
+
