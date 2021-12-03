@@ -54,17 +54,6 @@ trans_df <- tibble(source_loc = c("mgk_image_modulate.R",
                                   "skc_sketch.R")) %>% 
   mutate(source_loc = paste0(rel_path, source_loc))
 
-# Get the list of albums for the user.
-albums <- GET(url ="http://www.smugmug.com",
-              query = list(APIKey = sm_key),
-              path = sprintf("/api/v2/user/%s!albums", sm_user),
-              accept_json()) %>% 
-  content()
-
-# List (character vector) of the albums
-albums_list <- albums$Response$Album %>% 
-  map_chr(~ .x$AlbumKey)
-
 # Get the list of images
 source(paste0(rel_path,"init_get_list_of_images.R"))
 

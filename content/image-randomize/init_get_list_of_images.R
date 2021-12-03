@@ -1,3 +1,14 @@
+# Get the list of albums for the user.
+albums <- GET(url ="http://www.smugmug.com",
+              query = list(APIKey = sm_key),
+              path = sprintf("/api/v2/user/%s!albums", sm_user),
+              accept_json()) %>% 
+  content()
+
+# List (character vector) of the albums
+albums_list <- albums$Response$Album %>% 
+  map_chr(~ .x$AlbumKey)
+
 # Nested functions. Final sequence is:
 # 1. Cycle through the list of albums (get_album_images) to get the list of images
 # 2. Cycle through the list of images within each album to be the image details

@@ -12,45 +12,74 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>This is a process that runs daily and applies a random set of transformations to a randomly selected image from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available.</p>
+<p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me.</p>
 <p>High-level, this is what happens:</p>
 <p><img src="images/image-randomizer-flowchart.png" title="Image Randomizer Flowchart" width="700" /></p>
 <p>Read on for details!</p>
 <div id="the-motivation" class="section level2">
 <h2>The Motivation</h2>
-<p>I don’t think this project qualifies as generative art (or generative aRt, specifically, but check out <a href="https://art.djnavarro.net/">Danielle Navarro’s amazing work</a> or <a href="https://clauswilke.com/art/">Claus O. Wilke’s work</a> (including his <a href="https://objkt.com/profile/clauswilke/created?search=&amp;sortBy=askAsc">NFTs</a>!) or <a href="https://koenderks.github.io/aRtsy/">Koen Derks’s aRtsy package that is specifically ggplot-oriented</a>.</p>
-<p>Rather, it was an opportunity for me to combine a few of my hobbies into a single project and learn along the way! Specifically, there are two hobbies: <a href="https://twilson.smugmug.com/">nature photography</a> and R. When it comes to doing programmatic (machine?) manipulation of photos, this is nothing nearly as involved as the neural nets employed by <a href="https://deepdreamgenerator.com/">Deep Dream Generator</a>, although, hey, this is me combined with Starry Night in an AI’s dream:</p>
+<p>I don’t think this project qualifies as generative art (or generative “aRt,” specifically, but if you’re interested in that sort of thing, check out <a href="https://art.djnavarro.net/">Danielle Navarro’s amazing work</a> or <a href="https://clauswilke.com/art/">Claus O. Wilke’s work</a>—including his <a href="https://objkt.com/profile/clauswilke/created?search=&amp;sortBy=askAsc">NFTs</a>!—or <a href="https://koenderks.github.io/aRtsy/">Koen Derks’s aRtsy package that is specifically ggplot-oriented</a>).</p>
+<p>Rather, it was an opportunity for me to combine a couple of my hobbies—<a href="https://twilson.smugmug.com/">nature photography</a> and R—into a single project and learn along the way! When it comes to doing programmatic (machine?) manipulation of photos, this is nothing nearly as involved as the neural networks employed by <a href="https://deepdreamgenerator.com/">Deep Dream Generator</a>, but, hey, this is me combined with Starry Night in an AI’s dream:</p>
 <p><img src="images/tim_wilson_starry_night.jpeg" title="Tim Wilson Dreamt of with Starry Night" width="400" /></p>
 <p>The learning that came along with the effort was:</p>
 <ul>
-<li><strong>Cloud-based automation:</strong> I initially thought this would be Docker and the Google Cloud Platform, but, ultimately, it wound up just being GitHub Actions, which turned out to be cheaper and, arguably, simpler</li>
-<li><strong>Using APIs without a platform-specific package:</strong> I’ve know that <a href="https://httr.r-lib.org/"><code>httr</code></a> is the go-to package for working with any REST API, but I had never used it directly from authentication through GETs</li>
-<li><strong>Image manipulation:</strong> Raster-based images are, at their core, just matrices, with each pixel being represented by a value in the matrix. It turns out that it’s fun to think about exactly what the underlying matrix manipulation is that adds different effects to an image</li>
-<li><strong>Static site generation:</strong> This wound up being <a href="https://gohugo.io/">Hugo</a> along with <a href="https://www.netlify.com/">Netlify</a> (with GitHub along the way)</li>
+<li><strong>Cloud-based automation:</strong> I initially thought this would be Docker and the Google Cloud Platform, but, ultimately, it wound up just being GitHub Actions, which turned out to be cheaper and, arguably, simpler.</li>
+<li><strong>Using APIs without a platform-specific package:</strong> I’ve known that <a href="https://httr.r-lib.org/"><code>httr</code></a> is the go-to package for working with REST APIs, but I had never used it directly from authentication through actual GETs.</li>
+<li><strong>Image manipulation:</strong> Raster-based images are, at their core, just matrices with each pixel being represented by a value in the matrix. It turns out that it’s fun to think about exactly what the underlying matrix manipulation is that adds different effects to an image.</li>
+<li><strong>Static site generation:</strong> This wound up being <a href="https://gohugo.io/">Hugo</a> along with <a href="https://www.netlify.com/">Netlify</a> (with GitHub along the way).</li>
 </ul>
-<p>Somewhere in all of that, <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">GitHub Secrets</a> to securely store API tokens for SmugMug and Twitter!</p>
+<p>Somewhere in all of that, I got to work with <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">GitHub Secrets</a> to securely store API tokens for SmugMug and Twitter!</p>
 <p>Below, I’ve broken down the different components of the work, linking to specific resources for additional details. But, the full set of code really comes down to:</p>
 <ul>
-<li><p>A <a href="https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize">folder in the GitHub repository that serves this site</a> (<code>master.R</code> is really the key file; it sources all the other files)</p></li>
-<li><p>The <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml">GitHub Action workflow YAML</a> that is also part of the repository that serves this site</p></li>
+<li>A <a href="https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize">folder in the GitHub repository that serves this site</a> (<code>master.R</code> is really the key file; it sources all the other files)</li>
+<li>The <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml">GitHub Action workflow YAML</a> that is also part of the repository that serves this site</li>
 </ul>
 <p>We can dig in a little deeper to explain the what’s what there.</p>
 </div>
 <div id="pulling-a-random-image-from-smugmug" class="section level2">
 <h2>Pulling a Random Image from SmugMug</h2>
-<ul>
-<li>Key package: <code>httr</code></li>
-<li>Even though it’s pulling public data, had to generate an API token</li>
-<li>That led to learning how to use GitHub Secrets to store tokens safely in a GitHub repo (this worked amazingly smoothly; <code>Sys.getenv()</code> just worked!)</li>
-<li>Had to pull a list of all of the albums and then cycle through all of the albums to get all of the images</li>
-<li>Then, had a data frame with all of the images and…simply randomly selected one.</li>
-<li>[Link to the specific .R file]</li>
-</ul>
+<p>As of this writing, there is not yet a package built specifically for connecting to SmugMug, so I worked through their pretty comprehensive <a href="https://api.smugmug.com/api/v2/doc">API documentation</a> and then used the <a href="https://httr.r-lib.org/"><code>httr</code></a> to actually query the API.</p>
+<p>Although I was only pulling public images (from <a href="https://twilson.smugmug.com/">my personal SmugMug site</a>, using the API still requires creating and using an API token (specifically, a key and a secret). While doing the initial development, I simply put these in my <code>.Renviron</code> file as <code>SMUGMUG_KEY</code> and <code>SMUGMUG_SECRET</code> and then accessed them using <code>Sys.getenv()</code>. When I shifted to running the script via a GitHub Actions workflow, I simply created <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">GitHub Secrets</a> with the exact same name. And…it worked! I was expecting that I was going to need to update the R script to actually access those values differently when they were set as GitHub Secrets, but, nope! As the workflow ran and established an environment, those values were there and were accessible with the exact same code.</p>
+<p><em>Side note: Ultimately, the R script itself is something I can run locally and make <strong>no</strong> changes to when I check it in for use in the GitHub Actions workflow. The <strong>only</strong> “not needed for local but needed for the workflow run” is an <code>options()</code> setting for blogdown. This is one line in <code>master.R</code> and causes no harm whatsoever when running locally. Overall, I was pretty tickled that this is how things worked out.</em></p>
+<p>What I wanted from SmugMug was pretty simple: a data frame that lists every image on my site.</p>
+<p>What it took to do that was a two-step process:</p>
+<ol style="list-style-type: decimal">
+<li>Pull all of the <em>albums</em> on the site</li>
+<li>Go through each album and pull each image in the album</li>
+</ol>
+<p>I accomplished this with a little bit of recursion. The code is pretty straightforward and contained in the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/init_get_list_of_images.R">init_get_list_of_images.R</a> script.</p>
+<p>The result was a data frame with one row for each image on the site. So, then it was just a matter of picking a row at random from that data frame using <code>sample()</code> and then tracking down the actual URL for that image and download and save it. I wound up capping the max width of the images to work with at 4,096 pixels just for file size and consistency reasons (since I record the exact transformations performed, it would be reasonably easy to recreate the same effect with a larger file if I wanted to).</p>
+<p>This was actually a little messier than I expected, so it got its own script called <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/init_get_random_image.R">init_get_random_image.R</a> to perform that work.</p>
+<p>Now it’s time to apply some transformations.</p>
 </div>
 <div id="creating-and-applying-a-random-set-of-transformations" class="section level2">
 <h2>Creating and Applying a Random Set of Transformations</h2>
+<p>I set this up to be reasonably extensible, in that it is modular with one script file for each possible transformation. Most of the transformations were ones available in Jeroen Ooms’s <a href="https://cran.r-project.org/web/packages/magick/vignettes/intro.html"><code>magick</code> package</a>, which is a wrapper for <a href="https://www.imagemagick.org/Magick++/STL.html">ImageMagick STL</a>. But, I also have a soft spot for Hiroyuki Tsuda’s <a href="https://htsuda.net/sketcher/"><code>sketcher</code> package</a>, as that was the first package I used to do any image manipulation, so I included <code>sketch</code> as one of the transformations, too.</p>
+<p>The <em>possible</em> transformations that I’ve included so far are (each is in it’s own <code>.R</code> file):</p>
+<ul>
+<li>[magick] <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/mgk_image_modulate.R"><strong>Modulate</strong></a>—this adjusts the hue, saturation, and brightness of the image. The image starts with each of these three values as “100,” and then the script randomly selects values between 50 and 150 to apply to the transformation</li>
+<li>[magick] <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/mgk_image_median.R"><strong>Median</strong></a>—this is an interesting one. The only input is a “radius” value, which I use a random value between 15 and 50. Then, for <em>each</em> pixel in the image, the transformation looks at <em>all</em> of the pixels within that radius of the pixel and changes that pixel’s color to be the median color of all of those pixels. This winds up <em>mostly</em> blurring the image…except not quite. If there is a very hard, high contrast edge, that tends to stick around (it’s median and not mean!). This is one of the more time-consuming transformations, which makes sense.</li>
+<li>[magick] <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/mgk_image_colorize.R"><strong>Colorize</strong></a>—this takes a color (which I randomly set by choosing random R, G, and B values) and an opacity and overlays that on the image. It, essentially, tints the image with a random color and to a random degree.</li>
+<li>[magick] <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/mgk_image_quantize.R"><strong>Quantize</strong></a>—this reduces the image to a limited number of total colors, which I’ve set to be somewhere between 4 and 16. In some cases, earlier transformations will have already converted the image to be grayscale and this has no actual effect. In other cases, it does!</li>
+<li>[magick] <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/skc_sketch.R"><strong>Sketch</strong></a>—this is another somewhat process-intensive operation that makes a “sketch” of the image. The settings for it are the overall style (1 or 2), the lineweight (1 to 6), the contrast level (10 to 60), the amount of shadow (a real number between 0 and 1), and the gain (a real number between 0 and 1)</li>
+</ul>
+<p>The scripts for each of the above do a few things:</p>
+<ul>
+<li>Select random values to be used for the settings</li>
+<li>Apply the transformation to the current version of the image and then update that as the current version</li>
+<li>Add to a string that records the specific settings that were used</li>
+</ul>
+<p>The question remains: what transformations are applied and in what order? This is simply a case where there is a tibble with the paths to each of these transformation scripts in the <code>master.R</code> script. The script:</p>
+<ol style="list-style-type: decimal">
+<li>Shuffles the order of the rows in the tibble.</li>
+<li>Selects a random number between 1 and the number of rows in that tibble.</li>
+<li>Pulls that number of rows from the tibble.</li>
+<li>Runs the scripts (the paths) that were pulled.</li>
+</ol>
+<p>I think it’s actually pretty elegant. All that is required for me to add another transformation is to create a new file for that transformation and add the path to that file to the original tibble.</p>
 </div>
 <div id="creating-a-web-page-with-the-beforeafter" class="section level2">
 <h2>Creating a Web Page with the Before/After</h2>

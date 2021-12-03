@@ -2,7 +2,7 @@
 # Median It (Magick)
 
 # Image median random values
-mgk_radius <- sample(15:50, 1)          # Radius for the median calcuation (pixels)
+mgk_radius <- sample(15:50, 1)          # Radius for the median calculation (pixels)
 
 # Output what is being done to the console and add it to the overall 
 # description of the transformations
