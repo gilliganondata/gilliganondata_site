@@ -96,10 +96,21 @@ I think it's actually reasonably elegant design-wise (if I do say so myself). Al
 
 ## Creating a Web Page with the Before/After
 
+This is a pretty vanilla Hugo site, although it's built and managed with blogdown, so the main references I used were the [blogdown site](https://bookdown.org/yihui/blogdown/) and the [Hugo site](https://gohugo.io/).
 
+The main things that took me a while to figure out were:
+
+* I could just make a [dedicated folder under the 'content' folder](https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize) and put all of the scripts and details there. This is a sibling folder of the default `post` folder, which is where straight-up posts (like the one your reading now get built)
+
+* I could create an R script that would actually build the .Rmd file that would display the before and after images and the transformations applied. That script is [here](https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/build_rmd.R), but [this short video](https://www.youtube.com/watch?v=nBIzgdUBDOk) from CradleToGraveR was really helpful in getting the details right on that.
+
+* When building that .Rmd file, I included a couple of handy things in the YAML header for when I built my list template (see the next item): a `type` parameter that simply populated with "image-randomization," and then `img_original` and `img_transformed` parameter that contained the relative paths to the original and output images.
+
+* I had to read/watch the Hugo documentation on [list templates](https://gohugo.io/templates/lists/) a few times to fully grok them, but this allowed me to make the [page(s) of thumbnails](https://gilliganondata.netlify.app/image-randomize/) showing before and after images. The source for that is in the [`/layouts/image-randomize`](https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html) folder, and the path and the filename for that are key. There is logic in that template that says to "just use the files that are of "type" (from the YAML header) of "image-randomization" and then use the `img_original` and `img_transformed` values to actually create the thumbnails. This...is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but is loading the full images, so the page weight is heavier than it needs to be; that's a fix for another day)
 
 ## Tweeting the Result
 
+(I'll add this in a bit—it's a little circular, in that I have to get that working first, and once it's working, someone may be following links in it and coming to this page. I _seriously_ doubt anyone is reading down this far, though, so I should be able to buy myself some time to actually write this piece up!)
 
 ## Automating All of This
 
@@ -135,4 +146,6 @@ The "20 minutes to run" initially surprised me, as the script itself runs in 1-3
 There are definitely still some aspects of the YAML that I don't fully understand. I tried to selectively remove things that I didn't think were necessary for my purposes, but the overall syntax is still a bit beyond me.
 
 ## Some Examples
+
+(To be added when I get a few that seem worth sharing!)
 

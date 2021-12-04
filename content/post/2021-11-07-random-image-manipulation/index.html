@@ -83,9 +83,18 @@ tags:
 </div>
 <div id="creating-a-web-page-with-the-beforeafter" class="section level2">
 <h2>Creating a Web Page with the Before/After</h2>
+<p>This is a pretty vanilla Hugo site, although it’s built and managed with blogdown, so the main references I used were the <a href="https://bookdown.org/yihui/blogdown/">blogdown site</a> and the <a href="https://gohugo.io/">Hugo site</a>.</p>
+<p>The main things that took me a while to figure out were:</p>
+<ul>
+<li><p>I could just make a <a href="https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize">dedicated folder under the ‘content’ folder</a> and put all of the scripts and details there. This is a sibling folder of the default <code>post</code> folder, which is where straight-up posts (like the one your reading now get built)</p></li>
+<li><p>I could create an R script that would actually build the .Rmd file that would display the before and after images and the transformations applied. That script is <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/build_rmd.R">here</a>, but <a href="https://www.youtube.com/watch?v=nBIzgdUBDOk">this short video</a> from CradleToGraveR was really helpful in getting the details right on that.</p></li>
+<li><p>When building that .Rmd file, I included a couple of handy things in the YAML header for when I built my list template (see the next item): a <code>type</code> parameter that simply populated with “image-randomization,” and then <code>img_original</code> and <code>img_transformed</code> parameter that contained the relative paths to the original and output images.</p></li>
+<li><p>I had to read/watch the Hugo documentation on <a href="https://gohugo.io/templates/lists/">list templates</a> a few times to fully grok them, but this allowed me to make the <a href="https://gilliganondata.netlify.app/image-randomize/">page(s) of thumbnails</a> showing before and after images. The source for that is in the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html"><code>/layouts/image-randomize</code></a> folder, and the path and the filename for that are key. There is logic in that template that says to “just use the files that are of”type" (from the YAML header) of “image-randomization” and then use the <code>img_original</code> and <code>img_transformed</code> values to actually create the thumbnails. This…is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but is loading the full images, so the page weight is heavier than it needs to be; that’s a fix for another day)</p></li>
+</ul>
 </div>
 <div id="tweeting-the-result" class="section level2">
 <h2>Tweeting the Result</h2>
+<p>(I’ll add this in a bit—it’s a little circular, in that I have to get that working first, and once it’s working, someone may be following links in it and coming to this page. I <em>seriously</em> doubt anyone is reading down this far, though, so I should be able to buy myself some time to actually write this piece up!)</p>
 </div>
 <div id="automating-all-of-this" class="section level2">
 <h2>Automating All of This</h2>
@@ -112,4 +121,5 @@ tags:
 </div>
 <div id="some-examples" class="section level2">
 <h2>Some Examples</h2>
+<p>(To be added when I get a few that seem worth sharing!)</p>
 </div>
