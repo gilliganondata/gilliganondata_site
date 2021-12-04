@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-04
+slug: random-image-i-8zH6j4S-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-8zH6j4S-X4_original_2021-12-04.jpg
+img_transformed: images/i-8zH6j4S-X4_transformed_2021-12-04.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-8zH6j4S/0/X4/i-8zH6j4S-X4.jpg
+
+ ![](/image-randomize/images/i-8zH6j4S-X4_original_2021-12-04.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #78347e | Opacity 39% 
+ * Median (magick) -> Pixels: 31 
+ * Quantize (magick) -> Max Colors in Image: 13 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-8zH6j4S-X4_transformed_2021-12-04.jpg){width=100%}
+
