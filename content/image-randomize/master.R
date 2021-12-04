@@ -20,7 +20,6 @@ library(magick)    # For playing with the images
 library(sketcher)  # Line art / sketching of the images
 library(scales)    # Show some percentages cleanly
 library(blogdown)  # Added so can run serve_site() at the end
-library(rtweet)    # For tweeting out the results
 
 # This is just for GitHub Actions
 options(blogdown.files_filter = filter_newfile("/content/image-randomize/output"))

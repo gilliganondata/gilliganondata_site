@@ -1,3 +1,6 @@
+# Pretty simple: one package needed!
+library(rtweet)
+
 # Get the Twitter token
 twitter_token <- create_token(
   app = Sys.getenv("TWITTER_APPNAME"),
