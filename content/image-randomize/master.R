@@ -20,6 +20,7 @@ library(magick)    # For playing with the images
 library(sketcher)  # Line art / sketching of the images
 library(scales)    # Show some percentages cleanly
 library(blogdown)  # Added so can run serve_site() at the end
+library(rtweet)    # For tweeting out the results
 
 # This is just for GitHub Actions
 options(blogdown.files_filter = filter_newfile("/content/image-randomize/output"))
@@ -27,11 +28,11 @@ options(blogdown.files_filter = filter_newfile("/content/image-randomize/output"
 # Needed for Github actions run
 install_hugo("0.88.1")
 
-# The client ID and secret are stored in .Renviron
+# The SmugMug client ID and secret are stored in .Renviron
 sm_key <- Sys.getenv("SMUGMUG_KEY")
 sm_secret <- Sys.getenv("SMUGMUG_SECRET")
 
-# Set the account of interest
+# Set the SmugMug account of interest
 sm_user <- "twilson"
 
 # Set the max image width in pixels

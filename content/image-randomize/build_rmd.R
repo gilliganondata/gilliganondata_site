@@ -45,6 +45,11 @@ trans_perf <- paste("Transformations performed:\n",
 # Show the final image
 final_img <- paste0("![](/image-randomize/",gsub(rel_path,"",img_trans_out_path),"){width=100%}\n")
 
+# Create the file path—one for where to put it in the repo and one
+# that will be the final URL (used in the tweet)
+file_write_path <- paste0(rel_path, "output/", Sys.Date(), "-", img_id, ".Rmd")
+final_url <- paste0("https://gilliganondata.netlify.app/image-randomize/output/random-image-", img_id, "/")
+
 # Create the output file
 write(paste(yaml, 
             intro,
