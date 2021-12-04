@@ -1,13 +1,20 @@
 # Pretty simple: one package needed!
 library(rtweet)
 
-# Get the Twitter token
+# Get token values
+app = Sys.getenv("TWITTER_APPNAME")
+consumer_key = Sys.getenv("TWITTER_KEY")
+consumer_secret = Sys.getenv("TWITTER_SECRET")
+access_token = Sys.getenv("TWITTER_ACCESS_TOKEN")
+access_secret = Sys.getenv("TWITTER_ACCESS_SECRET")
+
+# Create the Twitter token
 twitter_token <- create_token(
-  app = Sys.getenv("TWITTER_APPNAME"),
-  consumer_key = Sys.getenv("TWITTER_KEY"),
-  consumer_secret = Sys.getenv("TWITTER_SECRET"),
-  access_token = Sys.getenv("TWITTER_ACCESS_TOKEN"),
-  access_secret = Sys.getenv("TWITTER_ACCESS_SECRET"),
+  app = app,
+  consumer_key = consumer_key,
+  consumer_secret = consumer_secret,
+  access_token = access_token,
+  access_secret = access_secret,
   set_renv = FALSE)
 
 # Post the tweet!
