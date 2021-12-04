@@ -15,7 +15,7 @@ twitter_token <- create_token(
   consumer_secret = consumer_secret,
   access_token = access_token,
   access_secret = access_secret,
-  set_renv = FALSE)
+  set_renv = TRUE)
 
 # Post the tweet!
 post_tweet(status = paste("My daily diversion: a random picture I took with a",
