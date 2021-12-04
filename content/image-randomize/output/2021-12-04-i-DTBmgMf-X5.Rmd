@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-04
+slug: random-image-i-DTBmgMf-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-DTBmgMf-X5_original_2021-12-04.jpg
+img_transformed: images/i-DTBmgMf-X5_transformed_2021-12-04.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-DTBmgMf/0/X5/i-DTBmgMf-X5.jpg
+
+ ![](/image-randomize/images/i-DTBmgMf-X5_original_2021-12-04.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 5 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 2 | Contrast: 41 | Shadow: 0.92930701863952 | Gain: 0.900058997794986 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-DTBmgMf-X5_transformed_2021-12-04.jpg){width=100%}
+
