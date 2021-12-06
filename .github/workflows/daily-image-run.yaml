@@ -46,7 +46,9 @@ jobs:
         env:
           SMUGMUG_KEY: ${{ secrets.SMUGMUG_KEY }}
           SMUGMUG_SECRET: ${{ secrets.SMUGMUG_SECRET }}
-        run: Rscript content/image-randomize/master.R
+        run: |
+          source("content/image-randomize/master.R")
+        shell: Rscript {0}
 
       - name: Build Site
         run: |
@@ -74,4 +76,6 @@ jobs:
           TWITTER_SECRET: ${{ secrets.TWITTER_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
           TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
-        run: Rscript content/image-randomize/post_tweet.R
+        run: |
+          source("content/image-randomize/post_tweet.R")
+        shell: Rscript {0}
