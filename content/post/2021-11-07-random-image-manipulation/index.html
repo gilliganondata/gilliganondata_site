@@ -12,6 +12,7 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me.</p>
@@ -93,7 +94,14 @@ tags:
 </div>
 <div id="tweeting-the-result" class="section level2">
 <h2>Tweeting the Result</h2>
-<p>(I’ll add this in a bit—it’s a little circular, in that I have to get that working first, and once it’s working, someone may be following links in it and coming to this page. I <em>seriously</em> doubt anyone is reading down this far, though, so I should be able to buy myself some time to actually write this piece up!)</p>
+<p>The wrinkle with tweeting the result is that the tweet shouldn’t occur until <em>after</em> the web page with the results are published. That means the repo has to be committed and pushed back into GitHub (via GitHub Actions) so that Netlify is triggered to actually rebuild and publish the updated site. This happens pretty quickly—a few seconds for the GitHub commit and push, and then less than 30 seconds for Netlify to republish the site.</p>
+<p>I <em>could</em> simply have a process whereby a daily tweet has a broken link for less than a minute. While I’ve certainly cut a few corners here and there on this effort, that’s a small bridge too far.</p>
+<p>So, instead:</p>
+<ul>
+<li><p>A couple of lines of code at the very end of the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/build_rmd.R">script that builds the <code>.Rmd</code> file for the web page</a> create a list with three items: the ultimate URL for the new page, the path to the original image, and the path to the transformed image. The script then writes that to a file using <code>saveRDS</code>.</p></li>
+<li><p>The <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/.github/workflows/daily-image-run.yaml">GitHub Action workflow YAML</a> sleeps for 5 minutes (which I may shorten), loads up the various keys and secrets (stored as GitHub secrets in the repo) needed to access the Twitter API, and then calls a script that reads the RDS file and tweets the result.</p></li>
+</ul>
+<p>The inaugural tweet of this process is <a href="https://twitter.com/tgwilson/status/1468179886133022720">here</a>.</p>
 </div>
 <div id="automating-all-of-this" class="section level2">
 <h2>Automating All of This</h2>
@@ -120,5 +128,31 @@ tags:
 </div>
 <div id="some-examples" class="section level2">
 <h2>Some Examples</h2>
-<p>(To be added when I get a few that seem worth sharing!)</p>
+<p>A few examples that are at least in the general direction of interesting:</p>
+<table style="border: 0px">
+<tr>
+<td style="border: 0px; padding: 2px">
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_orig.jpeg" title="Crew Before" width="300" /></a>
+</td>
+<td>
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_trans.jpeg" title="Crew After" width="300" /></a>
+</td>
+</tr>
+<tr>
+<td style="border: 0px; padding: 2px">
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_orig.jpeg" title="Egret Before" width="300" /></a>
+</td>
+<td>
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_trans.jpeg" title="Egret After" width="300" /></a>
+</td>
+</tr>
+<tr>
+<td style="border: 0px; padding: 2px">
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_orig.jpeg" title="Dove Before" width="300" /></a>
+</td>
+<td>
+<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_trans.jpeg" title="Dove After" width="300" /></a>
+</td>
+</tr>
+</table>
 </div>
