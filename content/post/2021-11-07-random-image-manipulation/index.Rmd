@@ -164,7 +164,7 @@ A few examples that are at least in the general direction of interesting:
     <td style = "border: 0px; padding: 2px">
       [![](images/crew_orig.jpeg "Crew Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/)
     </td>
-    <td>
+    <td style = "border: 0px; padding: 2px">
       [![](images/crew_trans.jpeg "Crew After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/)
     </td>
   </tr>
@@ -172,7 +172,7 @@ A few examples that are at least in the general direction of interesting:
     <td style = "border: 0px; padding: 2px">
       [![](images/egret_orig.jpeg "Egret Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/)
     </td>
-    <td>
+    <td style = "border: 0px; padding: 2px">
       [![](images/egret_trans.jpeg "Egret After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/)
     </td>
   </tr>
@@ -180,7 +180,7 @@ A few examples that are at least in the general direction of interesting:
     <td style = "border: 0px; padding: 2px">
       [![](images/dove_orig.jpeg "Dove Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/)
     </td>
-    <td>
+    <td style = "border: 0px; padding: 2px">
       [![](images/dove_trans.jpeg "Dove After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/)
     </td>
   </tr>
