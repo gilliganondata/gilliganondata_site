@@ -88,8 +88,6 @@ run_transformations <- function(source_loc){
   source(source_loc)
 }
 
-message("Original File: ", img_out_path)
-
 temp <- map(trans_code, run_transformations)
 
 writeJPEG(img_trans, img_trans_out_path)
