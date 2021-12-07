@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-07
+slug: random-image-i-tcZnCDk-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-tcZnCDk-5K_original_2021-12-07.jpg
+img_transformed: images/i-tcZnCDk-5K_transformed_2021-12-07.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://photos.smugmug.com/photos/i-tcZnCDk/0/5K/i-tcZnCDk-5K.jpg
+
+ ![](/image-randomize/images/i-tcZnCDk-5K_original_2021-12-07.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #4d6d68 | Opacity 33% 
+ * Median (magick) -> Pixels: 41 
+ * Modulation (magick) -> Brightness: 137 | Saturation: 121 | Hue: 90 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 2 | Contrast: 34 | Shadow: 0.629874420817941 | Gain: 0.16507981182076 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-tcZnCDk-5K_transformed_2021-12-07.jpg){width=100%}
+
