@@ -32,7 +32,7 @@ Let's pretend I sketched the above out before I wrote the first line of code and
 
 ## The Motivation
 
-This project qualifies as generative art (or generative "aRt," specifically, but if you're interested in that sort of thing, check out [Danielle Navarro's amazing work](https://art.djnavarro.net/) or [Claus O. Wilke's work](https://clauswilke.com/art/)—including his [NFTs](https://objkt.com/profile/clauswilke/created?search=&sortBy=askAsc)!—or [Koen Derks's aRtsy package that is specifically ggplot-oriented](https://koenderks.github.io/aRtsy/)). 
+This project doesn't qualify as generative art (or generative "aRt," specifically, but if you're interested in that sort of thing, check out [Danielle Navarro's amazing work](https://art.djnavarro.net/) or [Claus O. Wilke's work](https://clauswilke.com/art/)—including his [NFTs](https://objkt.com/profile/clauswilke/created?search=&sortBy=askAsc)!—or [Koen Derks's aRtsy package that is specifically ggplot-oriented](https://koenderks.github.io/aRtsy/)). 
 
 Rather, it was an opportunity for me to combine a couple of my hobbies—[nature photography](https://twilson.smugmug.com/) and R—into a single project and learn along the way! When it comes to doing programmatic (machine?) manipulation of photos, this is nothing nearly as involved as [app.wombo.art](https://app.wombo.art/) or the neural networks employed by [Deep Dream Generator](https://deepdreamgenerator.com/), but, hey, this is me combined with Starry Night in an AI's dream:
 
