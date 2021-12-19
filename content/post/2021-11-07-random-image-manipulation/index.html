@@ -12,19 +12,10 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me. The formula looked something like:</p>
-<p><span class="math display">\[
-[Random] \times [Random] \times [Random] \times ... \times [Random]
-\]</span>
-<span class="math display">\[
-[Random]^{[Something]}
-\]</span>
-<span class="math display">\[
-\approx\infty
-\]</span>
-Obviously, this is not real math. But, tracking down the <em>actual</em> number of possible variations (there are some of the randomizations that set a value between 0 and 1…out to 15 decimal places, which, I think, means a quadrillion variations for that setting alone; practically speaking, it’s probably more like 100 or 1,000 different values that the naked eye would notice, but you get the idea how my head started to hurt and I just moved on).</p>
+<p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me. A lowball, simplified bit of math got me to north of 500,000 quintillion different possible results as of the initial rollout, and <em>that</em> doesn’t factor in a number of things that would increase the number of possible outcomes. That’s what I wanted: wayyyyyy more than anything I could power through the “all.”</p>
 <p>High-level, this is what happens (hurray for simplified flowcharts!):</p>
 <p><img src="images/image-randomizer-flowchart.png" title="Image Randomizer Flowchart" width="700" />
 Let’s pretend I sketched the above out before I wrote the first line of code and then just went step by step through building out the process. It wouldn’t be an unreasonable leap, actually. As I reflect on it now, I pretty much <em>did</em> have this basic sequence of steps in my head, and I <em>did</em> build out the code almost exactly from start to finish in sequence. Wow! Accident, or just a failure to get creative along the way? Who can say?! Read on for details!</p>
@@ -55,17 +46,18 @@ Let’s pretend I sketched the above out before I wrote the first line of code a
 <h2>Pulling a Random Image from SmugMug</h2>
 <p>As of this writing, there is not yet a package built specifically for connecting to SmugMug, so I worked through their pretty comprehensive <a href="https://api.smugmug.com/api/v2/doc">API documentation</a> and then used the <a href="https://httr.r-lib.org/"><code>httr</code></a> to actually query the API.</p>
 <p>Although I was only pulling public images (from <a href="https://twilson.smugmug.com/">my personal SmugMug site</a>, using the API still requires creating and using an API token (specifically, a key and a secret). While doing the initial development, I simply put these in my <code>.Renviron</code> file as <code>SMUGMUG_KEY</code> and <code>SMUGMUG_SECRET</code> and then accessed them using <code>Sys.getenv()</code>. When I shifted to running the script via a GitHub Actions workflow, I simply created <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">GitHub Secrets</a> with the exact same name. And…it worked! I was expecting that I was going to need to update the R script to actually access those values differently when they were set as GitHub Secrets, but, nope! As the workflow ran and established an environment, those values were there and were accessible with the exact same code.</p>
-<p><em>Side note: Ultimately, the R script itself is something I can run locally and make <strong>no</strong> changes to when I check it in for use in the GitHub Actions workflow. The <strong>only</strong> “not needed for local but needed for the workflow run” is an <code>options()</code> setting for blogdown. This is one line in <code>master.R</code> and causes no harm whatsoever when running locally. Overall, I was pretty tickled that this is how things worked out.</em></p>
-<p>What I wanted from SmugMug was pretty simple: a data frame that lists every image on my site.</p>
-<p>What it took to do that was a two-step process:</p>
+<div style="background-color: #EEEEEE; padding: 10px;">
+<em>Side note: Ultimately, the R script itself is something I can run locally and make <strong>no</strong> changes to when I check it in for use in the GitHub Actions workflow. The <strong>only</strong> “not needed for local but needed for the workflow run” is an <code>options()</code> setting for blogdown and an <code>install_hugo()</code> command that I probably should be able to remove, but I hit my “if it ain’t broke…” threshold, so it’s staying for now. Thes are just a couple of lines in <code>master.R</code> and they cause no harm whatsoever when running locally. Overall, I was pretty tickled that this is how things worked out.</em>
+</div>
+<p>What I wanted from SmugMug was pretty simple: a data frame that lists every image on my site. There is no, “Give me all the images” direct API call, so it took a two-step process:</p>
 <ol style="list-style-type: decimal">
 <li>Pull all of the <em>albums</em> on the site</li>
 <li>Go through each album and pull each image in the album</li>
 </ol>
 <p>I accomplished this with a little bit of recursion. The code is pretty straightforward and contained in the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/init_get_list_of_images.R">init_get_list_of_images.R</a> script.</p>
-<p>The result was a data frame with one row for each image on the site. So, then it was just a matter of picking a row at random from that data frame using <code>sample()</code> and then tracking down the actual URL for that image and download and save it. I wound up capping the max width of the images to work with at 4,096 pixels just for file size and consistency reasons (since I record the exact transformations performed, it would be reasonably easy to recreate the same effect with a larger file if I wanted to).</p>
+<p>The result was a data frame with one row for each image on the site. So, then it was just a matter of picking a row at random from that data frame using <code>sample()</code> (soooo much use of <code>sample()</code> in this project!) and then tracking down the actual URL for that image and downloading and saving it. I wound up capping the max width of the images to work with at 4,096 pixels just for file size and consistency reasons (since I record the exact transformations performed, it would be reasonably easy to recreate the same effect with a larger file if I wanted to).</p>
 <p>This was actually a little messier than I expected, so it got its own script called <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/init_get_random_image.R">init_get_random_image.R</a> to perform that work.</p>
-<p>Now it’s time to apply some transformations.</p>
+<p>That’s the work to actually get the base image. Which is the <em>starting</em> point.</p>
 </div>
 <div id="creating-and-applying-a-random-set-of-transformations" class="section level2">
 <h2>Creating and Applying a Random Set of Transformations</h2>
@@ -141,7 +133,7 @@ Let’s pretend I sketched the above out before I wrote the first line of code a
 <div id="some-examples" class="section level2">
 <h2>Some Examples</h2>
 <p>A few examples that are at least in the general direction of interesting:</p>
-<table style = "border: 0px">
+<table style="border: 0px">
 <tr>
 <td style="border: 0px; padding: 2px">
 <a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_orig.jpeg" title="Crew Before" width="300" /></a>
