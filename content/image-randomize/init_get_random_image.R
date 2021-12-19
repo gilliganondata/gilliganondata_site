@@ -15,6 +15,11 @@ img_details <- GET(url ="http://www.smugmug.com",
 # Extract the actual web URL for the image
 img_url <- img_details$Response$LargestImage$Url
 
+# Get the image URL to use in the final web page. This will actually include
+# the album name and make it so a user can get back to the overall SmugMug site
+# more easily
+img_url_rmd <- all_images$WebUri[[random_id]]
+
 # Come up with the file name to save the image as. It's the filename +
 # the current date + the file extension. One filename for the original and
 # one filename for the transformed image

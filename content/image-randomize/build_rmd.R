@@ -29,7 +29,7 @@ yaml <- paste("---",
 intro <- "For details on the nuts and bolts behind this project, see <a href=\"/post/2021/11/07/random-image-manipulation/\" target = \"_blank\">this post</a>.\n"
 
 # Create a string for the original image. 
-orig_loc <- paste0("Original image source: ", img_url, "\n\n")
+orig_loc <- paste0("Original image source: ", img_url_rmd, "\n\n")
 
 # Show the original image. 
 orig_img <- paste0("![](/image-randomize/",gsub(rel_path,"",img_out_path),"){width=100%}\n\n")
