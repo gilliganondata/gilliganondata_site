@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-23
+slug: random-image-i-8csrL4Z-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-8csrL4Z-4K_original_2021-12-23.jpg
+img_transformed: images/i-8csrL4Z-4K_transformed_2021-12-23.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-8csrL4Z
+
+ ![](/image-randomize/images/i-8csrL4Z-4K_original_2021-12-23.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #c8ab53 | Opacity 31% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 53 | Shadow: 0.512457474833354 | Gain: 0.581427586497739 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-8csrL4Z-4K_transformed_2021-12-23.jpg){width=100%}
+
