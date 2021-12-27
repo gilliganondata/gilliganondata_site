@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2021-12-27
+slug: random-image-i-p5nk4Rt-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-p5nk4Rt-X3_original_2021-12-27.jpg
+img_transformed: images/i-p5nk4Rt-X3_transformed_2021-12-27.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-p5nk4Rt
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_original_2021-12-27.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 67 | Saturation: 120 | Hue: 25 
+ * Median (magick) -> Pixels: 22 
+ * Colorize (magick) -> Color: #98df8b | Opacity 52% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_transformed_2021-12-27.jpg){width=100%}
+
