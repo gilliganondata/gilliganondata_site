@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-01-03
+slug: random-image-i-pZBDpbs-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-pZBDpbs-4K_original_2022-01-03.jpg
+img_transformed: images/i-pZBDpbs-4K_transformed_2022-01-03.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-pZBDpbs
+
+ ![](/image-randomize/images/i-pZBDpbs-4K_original_2022-01-03.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 1 | Contrast: 57 | Shadow: 0.546844870783389 | Gain: 0.29761437792331 
+ * Modulation (magick) -> Brightness: 111 | Saturation: 103 | Hue: 137 
+ * Median (magick) -> Pixels: 44 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-pZBDpbs-4K_transformed_2022-01-03.jpg){width=100%}
+
