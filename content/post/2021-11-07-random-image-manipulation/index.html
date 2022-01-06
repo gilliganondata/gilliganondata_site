@@ -12,6 +12,7 @@ tags:
   - ImageMagick
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>This is a process that runs daily and applies a <strong>random number of transformations</strong> in a <strong>random order</strong> with <strong>random settings</strong> to a <strong>randomly selected image</strong> from my <a href="https://twilson.smugmug.com/">SmugMug site</a>. You can see a <a href="/image-randomize/">list of the results</a> that are currently available. I started to try to do the math as to the number of possible outcomes and…it’s beyond me. A lowball, simplified bit of math got me to north of 500,000 quintillion different possible results as of the initial rollout, and <em>that</em> doesn’t factor in a number of things that would increase the number of possible outcomes. That’s what I wanted: wayyyyyy more than anything I could power through the “all.”</p>
@@ -92,7 +93,7 @@ Let’s pretend I sketched the above out before I wrote the first line of code a
 <li><p>I just needed to make a <a href="https://github.com/gilliganondata/gilliganondata_site/tree/main/content/image-randomize">dedicated folder under the ‘content’ folder</a> and put all of the scripts and details there. This is a sibling folder of the default <code>post</code> folder, which is where straight-up posts (like the one you’re reading now) get built)</p></li>
 <li><p>I needed to create an R script that would actually build the .Rmd file that would display the before and after images and the transformations applied. That script is <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/content/image-randomize/build_rmd.R">here</a>, but <a href="https://www.youtube.com/watch?v=nBIzgdUBDOk">this short video</a> from CradleToGraveR was really helpful in getting the details right on that.</p></li>
 <li><p>When building that .Rmd file, I included a couple of handy things in the YAML header for when I built my list template (see the next item): a <code>type</code> parameter that simply populated with “image-randomization,” and then <code>img_original</code> and <code>img_transformed</code> parameters that contained the relative paths to the original and final/transformed images.</p></li>
-<li><p>I had to read/watch the Hugo documentation on <a href="https://gohugo.io/templates/lists/">list templates</a> a few times to fully grok them, but this allowed me to make the <a href="https://gilliganondata.netlify.app/image-randomize/">page(s) of thumbnails</a> showing before and after images. The source for that is in the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html"><code>/layouts/image-randomize</code></a> folder, and the path and the filename for that are key. There is logic in that template that says to “just use the files that are of a”type" (from the YAML header) of “image-randomization” and then use the <code>img_original</code> and <code>img_transformed</code> values to actually create the thumbnails. This…is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but it is loading the full images, so the page weight is heavier than it needs to be; that’s a fix for another day)</p></li>
+<li><p>I had to read/watch the Hugo documentation on <a href="https://gohugo.io/templates/lists/">list templates</a> a few times to fully grok them, but this allowed me to make the <a href="https://gilliganondata.com/image-randomize/">page(s) of thumbnails</a> showing before and after images. The source for that is in the <a href="https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html"><code>/layouts/image-randomize</code></a> folder, and the path and the filename for that are key. There is logic in that template that says to “just use the files that are of a”type" (from the YAML header) of “image-randomization” and then use the <code>img_original</code> and <code>img_transformed</code> values to actually create the thumbnails. This…is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but it is loading the full images, so the page weight is heavier than it needs to be; that’s a fix for another day)</p></li>
 </ul>
 </div>
 <div id="tweeting-the-result" class="section level2">
@@ -131,30 +132,38 @@ Let’s pretend I sketched the above out before I wrote the first line of code a
 </div>
 <div id="some-examples" class="section level2">
 <h2>Some Examples</h2>
-<p>A few examples that are at least in the general direction of interesting (but you can see everything that has been generated <a href="https://gilliganondata.netlify.app/image-randomize/">here</a>:</p>
-<table style = "border: 0px">
+<p>A few examples that are at least in the general direction of interesting (but you can see everything that has been generated <a href="https://gilliganondata.com/image-randomize/">here</a>:</p>
+<table style="border: 0px">
 <tr>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_orig.jpeg" title="Crew Before" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_orig.jpeg" title="Crew Before" width="300" /></a>
 </td>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_trans.jpeg" title="Crew After" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-xmjjsxh-5k/"><img src="images/crew_trans.jpeg" title="Crew After" width="300" /></a>
 </td>
 </tr>
 <tr>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_orig.jpeg" title="Egret Before" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-cnv26lz-4k/"><img src="images/lensball_orig.jpeg" title="Crew Before" width="300" /></a>
 </td>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_trans.jpeg" title="Egret After" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-cnv26lz-4k/"><img src="images/lensball_trans.jpeg" title="Crew After" width="300" /></a>
 </td>
 </tr>
 <tr>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_orig.jpeg" title="Dove Before" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_orig.jpeg" title="Egret Before" width="300" /></a>
 </td>
 <td style="border: 0px; padding: 2px">
-<a href="https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_trans.jpeg" title="Dove After" width="300" /></a>
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-n8nflzq-4k/"><img src="images/egret_trans.jpeg" title="Egret After" width="300" /></a>
+</td>
+</tr>
+<tr>
+<td style="border: 0px; padding: 2px">
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_orig.jpeg" title="Dove Before" width="300" /></a>
+</td>
+<td style="border: 0px; padding: 2px">
+<a href="https://gilliganondata.com/image-randomize/output/random-image-i-kgjtnxs-x5/"><img src="images/dove_trans.jpeg" title="Dove After" width="300" /></a>
 </td>
 </tr>
 </table>
