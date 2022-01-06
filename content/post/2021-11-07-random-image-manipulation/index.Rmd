@@ -103,7 +103,7 @@ The main things that took me a while to figure out were:
 
 * When building that .Rmd file, I included a couple of handy things in the YAML header for when I built my list template (see the next item): a `type` parameter that simply populated with "image-randomization," and then `img_original` and `img_transformed` parameters that contained the relative paths to the original and final/transformed images.
 
-* I had to read/watch the Hugo documentation on [list templates](https://gohugo.io/templates/lists/) a few times to fully grok them, but this allowed me to make the [page(s) of thumbnails](https://gilliganondata.netlify.app/image-randomize/) showing before and after images. The source for that is in the [`/layouts/image-randomize`](https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html) folder, and the path and the filename for that are key. There is logic in that template that says to "just use the files that are of a "type" (from the YAML header) of "image-randomization" and then use the `img_original` and `img_transformed` values to actually create the thumbnails. This...is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but it is loading the full images, so the page weight is heavier than it needs to be; that's a fix for another day)
+* I had to read/watch the Hugo documentation on [list templates](https://gohugo.io/templates/lists/) a few times to fully grok them, but this allowed me to make the [page(s) of thumbnails](https://gilliganondata.com/image-randomize/) showing before and after images. The source for that is in the [`/layouts/image-randomize`](https://github.com/gilliganondata/gilliganondata_site/blob/main/layouts/image-randomize/image-randomize.html.html) folder, and the path and the filename for that are key. There is logic in that template that says to "just use the files that are of a "type" (from the YAML header) of "image-randomization" and then use the `img_original` and `img_transformed` values to actually create the thumbnails. This...is pretty cool! (There is some inefficiency with the images themselves, as it currently just changes the dimensions of the images, but it is loading the full images, so the page weight is heavier than it needs to be; that's a fix for another day)
 
 ## Tweeting the Result
 
@@ -154,31 +154,39 @@ There are definitely still some aspects of the YAML that I don't fully understan
 
 ## Some Examples
 
-A few examples that are at least in the general direction of interesting (but you can see everything that has been generated [here](https://gilliganondata.netlify.app/image-randomize/):
+A few examples that are at least in the general direction of interesting (but you can see everything that has been generated [here](https://gilliganondata.com/image-randomize/):
 
 <table style = "border: 0px">
   <tr>
     <td style = "border: 0px; padding: 2px">
-      [![](images/crew_orig.jpeg "Crew Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/)
+      [![](images/crew_orig.jpeg "Crew Before"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-xmjjsxh-5k/)
     </td>
     <td style = "border: 0px; padding: 2px">
-      [![](images/crew_trans.jpeg "Crew After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-xmjjsxh-5k/)
-    </td>
-  </tr>
-  <tr>
-    <td style = "border: 0px; padding: 2px">
-      [![](images/egret_orig.jpeg "Egret Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/)
-    </td>
-    <td style = "border: 0px; padding: 2px">
-      [![](images/egret_trans.jpeg "Egret After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-n8nflzq-4k/)
+      [![](images/crew_trans.jpeg "Crew After"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-xmjjsxh-5k/)
     </td>
   </tr>
   <tr>
     <td style = "border: 0px; padding: 2px">
-      [![](images/dove_orig.jpeg "Dove Before"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/)
+      [![](images/lensball_orig.jpeg "Crew Before"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-cnv26lz-4k/)
     </td>
     <td style = "border: 0px; padding: 2px">
-      [![](images/dove_trans.jpeg "Dove After"){width=300px}](https://gilliganondata.netlify.app/image-randomize/output/random-image-i-kgjtnxs-x5/)
+      [![](images/lensball_trans.jpeg "Crew After"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-cnv26lz-4k/)
+    </td>
+  </tr>
+  <tr>
+    <td style = "border: 0px; padding: 2px">
+      [![](images/egret_orig.jpeg "Egret Before"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-n8nflzq-4k/)
+    </td>
+    <td style = "border: 0px; padding: 2px">
+      [![](images/egret_trans.jpeg "Egret After"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-n8nflzq-4k/)
+    </td>
+  </tr>
+  <tr>
+    <td style = "border: 0px; padding: 2px">
+      [![](images/dove_orig.jpeg "Dove Before"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-kgjtnxs-x5/)
+    </td>
+    <td style = "border: 0px; padding: 2px">
+      [![](images/dove_trans.jpeg "Dove After"){width=300px}](https://gilliganondata.com/image-randomize/output/random-image-i-kgjtnxs-x5/)
     </td>
   </tr>
 </table>

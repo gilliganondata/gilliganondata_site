@@ -1,4 +1,4 @@
-baseURL = "https://gilliganondata.netlify.com"
+baseURL = "https://gilliganondata.com"
 languageCode = "en-us"
 title = "Gilligan on Data"
 theme = "hugo-theme-noteworthy"
