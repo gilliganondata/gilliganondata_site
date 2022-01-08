@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-01-08
+slug: random-image-i-NqSxqQX-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-NqSxqQX-5K_original_2022-01-08.jpg
+img_transformed: images/i-NqSxqQX-5K_transformed_2022-01-08.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/The-Great-Outdoors/i-NqSxqQX
+
+ ![](/image-randomize/images/i-NqSxqQX-5K_original_2022-01-08.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 11 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-NqSxqQX-5K_transformed_2022-01-08.jpg){width=100%}
+
