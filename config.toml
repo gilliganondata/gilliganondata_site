@@ -7,7 +7,8 @@ paginate = 10 # Set the number of posts to show before overflowing to the next p
 summaryLength = 10 # Configure how long the post summary should be on the homepage.
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
-googleAnalytics = "UA-2629617-13" 
+# Should not be needed because loading GTM
+# googleAnalytics = "UA-2629617-13" 
 
 # Add your Disqus shortname here.
 # disqusShortname = ""    
@@ -29,6 +30,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\
 	math = true
 	# Google Tag Manager ID
 	gtm_id = "GTM-MDWQCZC"
+	
+	# Add a basic datalayer
+	gtm_datalayer = "basic"
 	
 	# Blog description at the top of the homepage. Supports markdown.
 	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, [podcasts regularly now](https://analyticshour.io), and now occasionally scratches idle analysis itches."
