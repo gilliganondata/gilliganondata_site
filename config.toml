@@ -93,7 +93,7 @@ url = "https://analyticshour.io"
 [[languages.en.menu.main]]
 name = "Blog"
 weight = 3
-url = "posts/"
+url = "post/"
 
 [[languages.en.menu.main]]
 name = "Projects"
