@@ -1,16 +1,18 @@
-{{ define "main" }}
-<div class = "article-content">
-        <h2>Randomly Manipulated Images from SmugMug</h2>
+{{ define "content" }}
+<section class="container list">
+  <h1 class="title">Randomly Manipulated Images from SmugMug</h1>
+  {{ .Content }}
+          <h2></h2>
         <p>Below are images that have been generated randomly by applying a random number of
         image transformations in a random order with random settings to a <a href="https://twilson.smugmug.com/" 
         target = "_blank">random photo I took</a>. The results are mostly terrible, but if 
         we give a room of monkeys a bunch of paint, occasionally they will produce something 
         interesting. Details on the approach and process are in 
         <a href="../post/2021/11/07/random-image-manipulation/">this post</a>.</p>
-        <!-- Range over the pages and only include the ones that are a post type -->
-        {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
-        {{ range (.Paginate $pages).Pages }}
-        <article>
+
+   <!-- Range over the pages and only include the ones that are a post type -->
+   {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
+   {{ range .Paginator.Pages }}
            <table style = "border: 0px">
              <tr>
                  <td style = "border: 0px; padding: 2px">
@@ -31,39 +33,7 @@
                 </td>
              </tr>
             </table>
-        </article>
-        {{ end }}
-    </div>
-        <!-- Custom paginator -->
-        <div class="paginator">
-        {{ $paginator := .Paginator }}
-        {{ if gt .Paginator.TotalPages 1 }}
-        <p>Page {{ $paginator.PageNumber}} of {{ $paginator.TotalPages }}</p>
-        <div class="paginator-group">
-            {{ if $paginator.HasPrev }}
-            <a class="color-link" href="{{ $paginator.Prev.URL | relLangURL }}">
-                    <svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                        <g class="color-arrow" fill="#63BDA2" fill-rule="nonzero">
-                            <polygon id="Path" points="1.75929935 4.50000282 5.3292523 7.62371165 4.6707477 8.37628835 0.240700645 4.49999718 4.67081049 0.623709205 5.32930951 1.37629079"></polygon>
-                            <polygon id="Path" points="13 4 13 5 1 5 1 4"></polygon>
-                        </g>
-                </svg>  
-                Newer          
-            </a>
-            {{ end }}
-            {{ if $paginator.HasNext }}
-                <a class="color-link older" href="{{ $paginator.Next.URL | relLangURL }}">
-                    Older
-                    <svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
-                            <g class="color-arrow" fill="#63BDA2" fill-rule="nonzero">
-                                <polygon points="7.6707477 1.37628835 8.3292523 0.623711653 12.7592994 4.50000282 8.32918951 8.37629079 7.67069049 7.62370921 11.2407006 4.49999718"></polygon>
-                                <polygon id="Path" points="0 5 0 4 12 4 12 5"></polygon>
-                            </g>
-                    </svg>
-                        
-                </a>
-            {{ end }}
-        </div>
-        {{ end }}
-    </div>
+     {{ end }}
+  {{ partial "pagination.html" . }}
+</section>
 {{ end }}

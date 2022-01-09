@@ -26,7 +26,7 @@ yaml <- paste("---",
 
 
 # Intro text
-intro <- "For details on the nuts and bolts behind this project, see <a href=\"/post/2021/11/07/random-image-manipulation/\" target = \"_blank\">this post</a>.\n"
+intro <- "For details on the nuts and bolts behind this project, see <a href=\"/projects/random-image-manipulation/\" target = \"_blank\">this post</a>.\n"
 
 # Create a string for the original image. 
 orig_loc <- paste0("Original image source: ", img_url_rmd, "\n\n")

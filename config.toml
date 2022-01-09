@@ -1,112 +1,101 @@
-baseURL = "https://gilliganondata.com"
-languageCode = "en-us"
+baseurl = "https://gilliganondata.com"
 title = "Gilligan on Data"
-theme = "hugo-theme-noteworthy"
-enableRobotsTXT = true
-paginate = 10 # Set the number of posts to show before overflowing to the next page.
-summaryLength = 10 # Configure how long the post summary should be on the homepage.
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
+paginate = 20
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableEmoji = true
 
-# Add your Google Analytics identifier: UA-XXXXXXXX-X
-# Should not be needed because loading GTM
-# googleAnalytics = "UA-2629617-13" 
-
-# Add your Disqus shortname here.
-# disqusShortname = ""    
-
-# Files to ignore (recommended for blogdown)
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 
-[taxonomies]
-  tag = "tags"
-
-[author]
-	name = "Tim Wilson"
-
-# Set to false to disallow raw HTML in markdown files
-[markup.goldmark.renderer]
-    unsafe = true
-
 [params]
-	math = true
-	# Google Tag Manager ID
-	gtm_id = "GTM-MDWQCZC"
-	
-	# Add a basic datalayer
-	gtm_datalayer = "basic"
-	
-	# Blog description at the top of the homepage. Supports markdown.
-	description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, [podcasts regularly now](https://analyticshour.io), and now occasionally scratches idle analysis itches."
+gtm_id= "GTM-MDWQCZC"
+gtm_datalayer = "basic"
 
-    showReadMore = false
+author = "Tim Wilson"
+info = ["Analytics Curmudgeon","Perpetual Self-Doubter"]
+description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, podcasts regularly now, and now occasionally scratches idle analysis itches."
+keywords = "blog,analytics,personal"
+avatarURL = "images/gilligan_oilpaint.jpg"
+#gravatar = "john.doe@example.com"
+dateFormat = "January 2, 2006"
+since = 2019
+# Git Commit in Footer, uncomment the line below to enable it
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+# Right To Left, shift content direction for languagues such as Arabic
+rtl = false
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "auto"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = false
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = []
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
+# Custom JS
+customJS = []
 
-    # Set enableKofi to true to enable the Ko-fi support button. Add your Ko-fi ID to link to your account.
-    enableKofi = false
-    kofi = ""
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
 
-	# Add links to your accounts. Remove the ones you don't want to include.
-	# Main
-  twitter = "https://twitter.com/tgwilson"
-	instagram = "https://www.instagram.com/timwilson7/"
-	linkedin = "https://www.linkedin.com/in/tgwilson/"
+# Social links
+[[params.social]]
+name = "Github"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/gilliganondata/"
 
-	# Programming
-  github = "https://github.com/gilliganondata"
-  
-  # Highlights in Code
-  highlightjsVersion = "9.11.0"
-  highlightjsCDN = "//cdn.bootcss.com"
-  highlightjsLang = ["r", "yaml"]
-  highlightjsTheme = "github"
-  MathJaxCDN = "//cdn.bootcss.com"
-  MathJaxVersion = "2.7.1"
-  
-  # Define the main sections -- what posts will get listed on the home homepage
-  # This is so the daily randomized image doesn't flood the home page list
-  mainSections = "post"
+[[params.social]]
+name = "Twitter"
+icon = "fa fa-twitter fa-2x"
+weight = 3
+url = "https://twitter.com/tgwilson/"
 
-# Menu links along the sidebar navigation.
-[[menu.main]]
-identifier = "imgrandomize"
-name = "Image Randomizer"
-url = "/image-randomize/"
-weight = 1 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+weight = 3
+url = "https://linkedin.com/in/tgwilson/"
 
-[[menu.main]]
-	identifier = "tags"
-	name = "Tags"
-	url = "/tags/"
-	weight = 2
+[[params.social]]
+name = "RSS"
+icon = "fa fa-2x fa-rss"
+weight = 6
+url = "https://gilliganondata.com/index.xml"
+rel = "alternate"
+type = "application/rss+xml"
 
-# [[menu.main]]
-#	name = "Archives"
-#	identifier = "archives"
-#	url = "/archives/"
-#	weight = 3
+[languages.en]
+languageName = ":uk:"
 
-# Privacy configurations: https://gohugo.io/about/hugo-and-gdpr/
-[privacy]
-  [privacy.disqus]
-    disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = false
-    respectDoNotTrack = false
-    useSessionStorage = false
-  [privacy.instagram]
-    disable = false
-    simple = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = false
-    simple = false
-  [privacy.vimeo]
-    disable = false
-    simple = false
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = true
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
 
-# Format for the slugs
-[permalinks]
-    post = "/post/:year/:month/:day/:slug/"
-    imgrandomize = "/image-randomization/:slug/"
+[[languages.en.menu.main]]
+name = "Podcast"
+weight = 2
+url = "https://analyticshour.io"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 3
+url = "projects/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
