@@ -1,0 +1,90 @@
+baseurl = "https://gilliganondata.com"
+title = "Gilligan on Data"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+enableEmoji = true
+
+# Files to ignore (recommended for blogdown)
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
+
+[params]
+  author = "Tim Wilson"
+  info = "Analytics Curmudgeon and Perpetual Self-Doubter"
+  description = "Miscellaneous musings and projects from a fellow who blogged regularly in the past, podcasts regularly now, and now occasionally scratches idle analysis itches."
+  keywords = "blog,analytics,personal"
+  avatarurl = "images/gilligan_oilpaint.jpg"
+
+  gtm_id: "GTM-MDWQCZC"
+  gtm_datalayer: "basic"
+
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2020
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  customCSS = ["css/custom.css"]
+  customSCSS = ["scss/custom.scss"]
+  customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/gilliganondata/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/tgwilson/"
+
+# Menu links
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url  = "about/"
+[[menu.main]]
+  name = "Podcast"
+  weight = 2
+  url = "https://analyticshour.io"
+[[menu.main]]
+  name = "Blog"
+  weight = 3
+  url = "post/"
+[[menu.main]]
+  name = "Projects"
+  weight = 4
+  url = "projects/"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
