@@ -15,7 +15,7 @@ img_original: images/i-zGbS3TD-4K_original_2021-12-15.jpg
 img_transformed: images/i-zGbS3TD-4K_transformed_2021-12-15.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://photos.smugmug.com/photos/i-zGbS3TD/0/4K/i-zGbS3TD-4K.jpg
 
  ![](/image-randomize/images/i-zGbS3TD-4K_original_2021-12-15.jpg){width=100%}

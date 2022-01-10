@@ -15,7 +15,7 @@ img_original: images/i-MCpN7TT-X5_original_2021-12-16.jpg
 img_transformed: images/i-MCpN7TT-X5_transformed_2021-12-16.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://photos.smugmug.com/photos/i-MCpN7TT/0/X5/i-MCpN7TT-X5.jpg
 
  ![](/image-randomize/images/i-MCpN7TT-X5_original_2021-12-16.jpg){width=100%}

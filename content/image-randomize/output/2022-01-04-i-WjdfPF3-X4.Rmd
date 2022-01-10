@@ -15,7 +15,7 @@ img_original: images/i-WjdfPF3-X4_original_2022-01-04.jpg
 img_transformed: images/i-WjdfPF3-X4_transformed_2022-01-04.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Mammals-in-the-Wild/i-WjdfPF3
 
  ![](/image-randomize/images/i-WjdfPF3-X4_original_2022-01-04.jpg){width=100%}

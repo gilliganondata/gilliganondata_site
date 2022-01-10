@@ -15,7 +15,7 @@ img_original: images/i-3QjWHKP-4K_original_2021-12-26.jpg
 img_transformed: images/i-3QjWHKP-4K_transformed_2021-12-26.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Quirky-Signage/i-3QjWHKP
 
  ![](/image-randomize/images/i-3QjWHKP-4K_original_2021-12-26.jpg){width=100%}

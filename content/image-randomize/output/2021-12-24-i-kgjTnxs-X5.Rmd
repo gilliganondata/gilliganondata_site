@@ -15,7 +15,7 @@ img_original: images/i-kgjTnxs-X5_original_2021-12-24.jpg
 img_transformed: images/i-kgjTnxs-X5_transformed_2021-12-24.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Birds-of-Ohio/i-kgjTnxs
 
  ![](/image-randomize/images/i-kgjTnxs-X5_original_2021-12-24.jpg){width=100%}

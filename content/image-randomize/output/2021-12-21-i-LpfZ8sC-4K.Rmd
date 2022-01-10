@@ -15,7 +15,7 @@ img_original: images/i-LpfZ8sC-4K_original_2021-12-21.jpg
 img_transformed: images/i-LpfZ8sC-4K_transformed_2021-12-21.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-LpfZ8sC
 
  ![](/image-randomize/images/i-LpfZ8sC-4K_original_2021-12-21.jpg){width=100%}

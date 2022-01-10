@@ -15,7 +15,7 @@ img_original: images/i-jbgGKBV-X5_original_2021-12-28.jpg
 img_transformed: images/i-jbgGKBV-X5_transformed_2021-12-28.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-jbgGKBV
 
  ![](/image-randomize/images/i-jbgGKBV-X5_original_2021-12-28.jpg){width=100%}

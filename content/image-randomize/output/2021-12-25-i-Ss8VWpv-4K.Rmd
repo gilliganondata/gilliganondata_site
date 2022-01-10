@@ -15,7 +15,7 @@ img_original: images/i-Ss8VWpv-4K_original_2021-12-25.jpg
 img_transformed: images/i-Ss8VWpv-4K_transformed_2021-12-25.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-Ss8VWpv
 
  ![](/image-randomize/images/i-Ss8VWpv-4K_original_2021-12-25.jpg){width=100%}

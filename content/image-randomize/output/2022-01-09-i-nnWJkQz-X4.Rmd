@@ -15,7 +15,7 @@ img_original: images/i-nnWJkQz-X4_original_2022-01-09.jpg
 img_transformed: images/i-nnWJkQz-X4_transformed_2022-01-09.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Birds-of-Ohio/i-nnWJkQz
 
  ![](/image-randomize/images/i-nnWJkQz-X4_original_2022-01-09.jpg){width=100%}

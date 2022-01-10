@@ -15,7 +15,7 @@ img_original: images/i-WKx34Nn-4K_original_2021-11-29.jpg
 img_transformed: images/i-WKx34Nn-4K_transformed_2021-11-29.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://photos.smugmug.com/photos/i-WKx34Nn/0/4K/i-WKx34Nn-4K.jpg
 
  ![](/image-randomize/images/i-WKx34Nn-4K_original_2021-11-29.jpg){width=100%}

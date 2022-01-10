@@ -15,7 +15,7 @@ img_original: images/i-pZBDpbs-4K_original_2022-01-03.jpg
 img_transformed: images/i-pZBDpbs-4K_transformed_2022-01-03.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Dogs/i-pZBDpbs
 
  ![](/image-randomize/images/i-pZBDpbs-4K_original_2022-01-03.jpg){width=100%}
