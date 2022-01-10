@@ -47,35 +47,35 @@ In no particular order:
 
 18. Dates should be in rows in the data; not across columns.
 
-19. Pie charts almost always add unnecessary cognitive load.
+19. Pie charts almost always add unnecessary cognitive load. Doughnut charts are just as bad as pie charts.
 
-20. Doughnut charts are just as bad as pie charts.
+20. Waterfall charts are amazing...in situations where they are appropriate.
 
-21. Waterfall charts are amazing...in situations where they are appropriate.
+21. In-cell bar charts are amazing...unless terribly implemented by a digital analytics platform.
 
-22. In-cell bar charts are amazing...unless terribly implemented by a digital analytics platform.
+22. Heatmaps are amazing...as long as they don't use a red-to-green palette.
 
-23. Heatmaps are amazing...as long as they don't use a red-to-green palette.
+23. Learning to program with data (R or Python) is worth the investment.
 
-24. Learning to program with data (R or Python) is worth the investment.
+24. Fluency with VLOOKUP, INDEX, MATCH, pivot tables, and named ranges is a must.
 
-25. Fluency with VLOOKUP, INDEX, MATCH, pivot tables, and named ranges is a must.
+25. Many analytics and BI platforms are shockingly rigid and terrible at data visualization.
 
-26. Many analytics and BI platforms are shockingly rigid and terrible at data visualization.
+26. No report or analysis should be distributed without some form of QA.
 
-27. No report or analysis should be distributed without some form of QA.
+27. Most detected anomalies in the data should not be investigated.
 
-28. Most detected anomalies in the data should not be investigated.
+28. Any visualization that would not work if printed grayscale is problematic.
 
-29. Any visualization that would not work if printed grayscale is problematic.
+29. If a recurring report requires manually updating chart references, the analyst is doing it wrong.
 
-30. If a recurring report requires manually updating chart references, the analyst is doing it wrong.
+30. No data set is as straightforward as it is initially believed to be.
 
-31. No data set is as straightforward as it is initially believed to be.
+31. The unplanned destruction/loss of a computer should result in the loss of less than 2 hours of analytics work.
 
-32. The unplanned destruction/loss of a computer should result in the loss of less than 2 hours of analytics work.
+32. The process and methods used in any analysis should be documented while the analysis is being done.
 
-33. The process and methods used in any analysis should be documented while the analysis is being done. Impressions are not awareness.
+33. Impressions are not awareness.
 
 34. Awareness is measurable (but there is a cost).
 
