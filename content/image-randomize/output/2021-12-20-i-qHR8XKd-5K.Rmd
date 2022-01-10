@@ -15,7 +15,7 @@ img_original: images/i-qHR8XKd-5K_original_2021-12-20.jpg
 img_transformed: images/i-qHR8XKd-5K_transformed_2021-12-20.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-qHR8XKd
 
  ![](/image-randomize/images/i-qHR8XKd-5K_original_2021-12-20.jpg){width=100%}

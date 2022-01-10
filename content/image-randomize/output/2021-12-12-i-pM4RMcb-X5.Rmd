@@ -15,7 +15,7 @@ img_original: images/i-pM4RMcb-X5_original_2021-12-12.jpg
 img_transformed: images/i-pM4RMcb-X5_transformed_2021-12-12.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://photos.smugmug.com/photos/i-pM4RMcb/0/X5/i-pM4RMcb-X5.jpg
 
  ![](/image-randomize/images/i-pM4RMcb-X5_original_2021-12-12.jpg){width=100%}

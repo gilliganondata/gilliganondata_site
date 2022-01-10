@@ -15,7 +15,7 @@ img_original: images/i-hNJdp3h-4K_original_2022-01-02.jpg
 img_transformed: images/i-hNJdp3h-4K_transformed_2022-01-02.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Views-from-the-Airplane/i-hNJdp3h
 
  ![](/image-randomize/images/i-hNJdp3h-4K_original_2022-01-02.jpg){width=100%}

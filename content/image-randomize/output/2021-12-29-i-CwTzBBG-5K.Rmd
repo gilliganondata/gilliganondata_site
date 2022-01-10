@@ -15,7 +15,7 @@ img_original: images/i-CwTzBBG-5K_original_2021-12-29.jpg
 img_transformed: images/i-CwTzBBG-5K_transformed_2021-12-29.jpg
 ---
 
- For details on the nuts and bolts behind this project, see <a href="/post/2021/11/07/random-image-manipulation/" target = "_blank">this post</a>.
+ For details on the nuts and bolts behind this project, see <a href="/random-image-manipulation/" target = "_blank">this post</a>.
  Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-CwTzBBG
 
  ![](/image-randomize/images/i-CwTzBBG-5K_original_2021-12-29.jpg){width=100%}
