@@ -9,6 +9,7 @@ tags:
   - SpeedTest
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>It’s all well and good to go to <a href="https://www.speedtest.net/" class="uri">https://www.speedtest.net/</a> and run a SpeedTest. But, that’s just one server at one point in time.</p>
@@ -19,7 +20,7 @@ tags:
 <li><code>visualize-speedtest.Rmd</code> (RNotebook) and/or <code>visualize-speedtest-flex.Rmd</code> – an RNotebook and/or a Shiny app that will read the results from that Google Sheet and provide plots of the recorded bandwidth over time.</li>
 </ul>
 <p>The source code for these components is available <a href="https://github.com/gilliganondata/speedtest-log">on Github</a>. In this post, we’ll walk through the code to actually run the speed test (<code>run-speedtest.R</code>) and will then simply show examples of the results of the Shiny app:</p>
-<p><img src="/post/post_images/shiny-download.png" /></p>
+<p><img src="images/shiny-download.png" /></p>
 <div id="requirements" class="section level2">
 <h2>Requirements</h2>
 <p>In addition to the packages used (as commented in the <code>run-speedtest.R</code> file, they are not all on CRAN as of this writing), a Google Sheet needs to be created with two tabs:</p>
@@ -109,7 +110,7 @@ if(nrow(upload_data_check) == 0){
   sheet_append(gsheet, upload_test, &quot;Upload Data&quot;)
 }</code></pre>
 <p>Running the script, if all goes well, will populate the Google Sheet with something like the following:</p>
-<p><img src="/post/post_images/speedtest_google_sheet.png" /></p>
+<p><img src="images/speedtest_google_sheet.png" /></p>
 </div>
 <div id="scheduling-the-tests-to-run" class="section level2">
 <h2>Scheduling the Tests to Run</h2>
@@ -124,18 +125,18 @@ if(nrow(upload_data_check) == 0){
 <h2>Output - RNotebook</h2>
 <p>The output of the <code>visualize-speedtest.Rmd</code> file will include both time-series charts and histograms of the recorded data.</p>
 <p>The time-series plots look something like the following:</p>
-<p><img src="/post/post_images/download_ex.png" /></p>
-<p><img src="/post/post_images/upload_ex.png" /></p>
+<p><img src="images/download_ex.png" /></p>
+<p><img src="images/upload_ex.png" /></p>
 <p>The histograms look something like the following:</p>
-<p><img src="/post/post_images/download_hist_ex.png" /></p>
-<p><img src="/post/post_images/upload_hist_ex.png" /></p>
+<p><img src="images/download_hist_ex.png" /></p>
+<p><img src="images/upload_hist_ex.png" /></p>
 </div>
 <div id="output---shiny" class="section level2">
 <h2>Output - Shiny</h2>
 <p>The Shiny app is more interactive and allows subsetting the data using a simple slider. And, it supports some simple adjustments to the visualization: turning on/off the quartile bands.</p>
 <p>It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).</p>
-<p><img src="/post/post_images/shiny-download.png" /></p>
-<p><img src="/post/post_images/shiny-upload.png" /></p>
+<p><img src="images/shiny-download.png" /></p>
+<p><img src="images/shiny-upload.png" /></p>
 </div>
 <div id="source-code" class="section level2">
 <h2>Source Code</h2>

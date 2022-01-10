@@ -20,7 +20,7 @@ There are two parts to this:
 
 The source code for these components is available [on Github](https://github.com/gilliganondata/speedtest-log). In this post, we'll walk through the code to actually run the speed test (`run-speedtest.R`) and will then simply show examples of the results of the Shiny app:
 
-![](/post/post_images/shiny-download.png)
+![](images/shiny-download.png)
 
 ## Requirements
 
@@ -135,7 +135,7 @@ if(nrow(upload_data_check) == 0){
 
 Running the script, if all goes well, will populate the Google Sheet with something like the following:
 
-![](/post/post_images/speedtest_google_sheet.png)
+![](images/speedtest_google_sheet.png)
 
 ## Scheduling the Tests to Run
 
@@ -153,15 +153,15 @@ The output of the `visualize-speedtest.Rmd` file will include both time-series c
 
 The time-series plots look something like the following:
 
-![](/post/post_images/download_ex.png)
+![](images/download_ex.png)
 
-![](/post/post_images/upload_ex.png)
+![](images/upload_ex.png)
 
 The histograms look something like the following:
 
-![](/post/post_images/download_hist_ex.png)
+![](images/download_hist_ex.png)
 
-![](/post/post_images/upload_hist_ex.png)
+![](images/upload_hist_ex.png)
 
 ## Output - Shiny
 
@@ -169,9 +169,9 @@ The Shiny app is more interactive and allows subsetting the data using a simple 
 
 It also includes a plot by hour-of-day (my son theorized that bandwidth may vary based on peak usage times, similar to electricity).
 
-![](/post/post_images/shiny-download.png)
+![](images/shiny-download.png)
 
-![](/post/post_images/shiny-upload.png)
+![](images/shiny-upload.png)
 
 ## Source Code
 
