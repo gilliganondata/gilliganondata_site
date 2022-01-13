@@ -1,13 +1,13 @@
 ---
 title: 50 Things I Believe About Analytics
 author: Tim Wilson
-date: '2022-01-10'
+date: '2020-05-01'
 slug: fifty-things-i-believe-about-analytics
 categories: analytics
 tags: analytics
 ---
 
-*This post was originally [posted on LinkedIn](https://www.linkedin.com/pulse/50-things-i-believe-analytics-tim-wilson/ "50 Things I Believe About Analytics") on 2020-05-01.*
+*This post was originally [posted on LinkedIn](https://www.linkedin.com/pulse/50-things-i-believe-analytics-tim-wilson/ "50 Things I Believe About Analytics") .*
 
 In no particular order:
 

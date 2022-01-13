@@ -2,7 +2,6 @@
 <section class="container list">
   <h1 class="title">Randomly Manipulated Images from SmugMug</h1>
   {{ .Content }}
-          <h2></h2>
         <p>Below are images that have been generated randomly by applying a random number of
         image transformations in a random order with random settings to a <a href="https://twilson.smugmug.com/" 
         target = "_blank">random photo I took</a>. The results are mostly terrible, but if 
@@ -13,9 +12,9 @@
    <!-- Range over the pages and only include the ones that are a post type -->
    {{ $pages := where site.RegularPages "Type" "in" "image-randomization" }}
    {{ range .Paginator.Pages }}
-           <table style = "border: 0px">
+           <table style = "border: 0px; margin-left: auto; margin-right: auto;">
              <tr>
-                 <td style = "border: 0px; padding: 2px">
+                 <td style = "border: 0px; padding-right: 20px;">
                     <h3>
                          <a href="{{ .Permalink }}">
                              {{ .Date.Format "2006-01-02" }}<br>Randomized Image
@@ -26,7 +25,7 @@
                     <img src = "/image-randomize/{{ .Params.img_original }}" style = "width:175px">
                     </a>
                 </td>
-                <td style = "border: 0px; padding: 2px">--&gt;</td>
+                <td style = "border: 0px; padding-left: 20px; padding-right: 20px">&#8594;</td>
                 <td style = "border: 0px; padding: 2px"><a href="{{ .Permalink }}">
                     <img src = "/image-randomize/{{ .Params.img_transformed }}" style = "width:175px">
                     </a>

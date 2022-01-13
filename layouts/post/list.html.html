@@ -1,0 +1,18 @@
+{{ define "content" }}
+<section class="container list">
+  <h1 class="title">
+    <a class="title-link" href="{{ .Permalink | safeURL }}">Blog Posts</a>
+  </h1>
+  {{ .Content }}
+      <p>I've written a lot over the years, and I am slowly collecting some of my favorites (that I still feel like are relevant) with the expectation that I'll pen fresh content here and there as time marches on.</p>
+  <ul>
+    {{ range .Paginator.Pages }}
+    <li>
+      <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+      <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}
