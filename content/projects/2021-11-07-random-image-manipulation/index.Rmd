@@ -17,6 +17,7 @@ This is a process that runs daily and applies a **random number of transformatio
 High-level, this is what happens (hurray for simplified flowcharts!):
 
 ![](images/image-randomizer-flowchart.png "Image Randomizer Flowchart"){width=700px}
+
 Let's pretend I sketched the above out before I wrote the first line of code and then just went step by step through building out the process. It wouldn't be an unreasonable leap, actually. As I reflect on it now, I pretty much _did_ have this basic sequence of steps in my head, and I _did_ build out the code almost exactly from start to finish in sequence. Wow! Accident, or just a failure to get creative along the way? Who can say?! Read on for details!
 
 ## The Motivation
