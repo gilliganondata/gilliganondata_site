@@ -55,7 +55,7 @@ I went through a 5-year long-haired phase, but I'm over that now. I'm not the ki
   </tr>
   <tr>
     <td style="border:0;"><img src="/images/superweek_w_yehoshua.jpeg" width="250"></td>
-    <td style="border:0;"><img src="/images/speaking_face_mic.jpeg" width="250"></td>
+    <td style="border:0;"><img src="/images/speaking.jpeg" width="250"></td>
     <td style="border:0;"><img src="/images/hand_up.jpeg" width="250"></td>
   </tr>
   <tr>
