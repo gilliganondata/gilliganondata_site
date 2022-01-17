@@ -30,8 +30,6 @@ I've been a data visualization and data storytelling evangelist for over two dec
 
 I've been based in Columbus, Ohio, in the U.S., since 2007, but I lived in Austin, Texas, for 13 years leading up to that and maintain a deep connection to that city (I still have many friends and family there). My wife and I fully expect to leave Ohio in the not-too-distant future, but we're not yet settled on where that will take us (we're taking recommendations).
 
-On the personal front, I've been married since the mid-1990s and have three kids, of which only one is still living at home. And we have had 1-2 dogs uninterrupted since the mid-1990s. When I'm not in front of a computer screen, I'm in my workshop (woodworking) or on the water in a kayak armed with my Nikon Z6.
-
 ## Where Does "Gilligan" Come From?
 
 This is a two-parter:
