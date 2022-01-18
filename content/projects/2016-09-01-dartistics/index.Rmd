@@ -1,0 +1,24 @@
+---
+title: dartistics.com: R and Statistics for the Digital Analyst
+author: Tim Wilson
+date: '2016-09-01'
+slug: random-image-manipulation
+categories:
+  - project
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+  - rstats
+---
+
+As I was learning R, I had the opportunity to co-teach a day-long class on the subject with [Mark Edmondson](https://twitter.com/holomarked). He was _wildly_ more skilled with the language and convinced me that my relative newness would help me clearly communicate and teach the basics to a small group of digital analysts.
+
+Mark had the idea (I didn't even know it was possible) to use [blogdown](https://bookdown.org/yihui/blogdown/) to create a site that could be both the in-class content (augmented by lecture, live demos, and in-class exercises), as well as a post-class reference that could also be used by other analysts who were looking to learn R (and, ideally, some foundational statistical concepts and methods).
+
+We later expanded that 1-day training to be a 3-day training that we conducted in the U.S., which gave us the opportunity to refresh and expand the site.
+
+Since then, our maintenance has been pretty sporadic, but we continue to get feedback that it is a useful resource.
+
+**The Site**: [dartistics.com](https://dartistics.com)

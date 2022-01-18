@@ -1,0 +1,18 @@
+{{ define "content" }}
+<section class="container list">
+  <h1 class="title">
+    <a class="title-link" href="{{ .Permalink | safeURL }}">Blog Posts</a>
+  </h1>
+  {{ .Content }}
+      <p>Below are descriptions and/or links to various projects that I've tackled. Mostly, these were side efforts to scratch some sort of curiosity itch. Occasionally, they were sufficiently tied to my day job that they could be considered "work." But usually not!</p>
+  <ul>
+    {{ range .Paginator.Pages }}
+    <li>
+      <span class="date">{{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
+      <a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}
