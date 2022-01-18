@@ -23,4 +23,4 @@ Since then, our maintenance has been pretty sporadic, but we continue to get fee
 
 **The Site**: [dartistics.com](https://dartistics.com)
 
-[![](images/dartistics.jpg)](https://dartistics.com)
+[![](images/dartistics.png)](https://dartistics.com)
