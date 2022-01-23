@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-01-23
+slug: random-image-i-h7SqGwR-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-h7SqGwR-5K_original_2022-01-23.jpg
+img_transformed: images/i-h7SqGwR-5K_transformed_2022-01-23.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-h7SqGwR
+
+ ![](/image-randomize/images/i-h7SqGwR-5K_original_2022-01-23.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 113 | Saturation: 143 | Hue: 143 
+ * Median (magick) -> Pixels: 50 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 3 | Contrast: 39 | Shadow: 0.870391410309821 | Gain: 0.564256430137902 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-h7SqGwR-5K_transformed_2022-01-23.jpg){width=100%}
+
