@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-02-09
+slug: random-image-i-jZNQWNV-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-jZNQWNV-4K_original_2022-02-09.jpg
+img_transformed: images/i-jZNQWNV-4K_transformed_2022-02-09.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-jZNQWNV
+
+ ![](/image-randomize/images/i-jZNQWNV-4K_original_2022-02-09.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 23 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-jZNQWNV-4K_transformed_2022-02-09.jpg){width=100%}
+
