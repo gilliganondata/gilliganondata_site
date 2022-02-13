@@ -23,7 +23,7 @@ In this presentation, I stood on the shoulders of Stephen Few, Edward Tufte, Col
 * Why horizontal bar charts, conversely, are often pretty awesome
 * A quick review of some non-standard data visualizations that can be very effective: slopegraphs, heatmap tables, scatterplots, and network diagrams
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/1exydVOSfB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/1exydVOSfB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 

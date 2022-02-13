@@ -14,5 +14,5 @@ My brain hurt for a while when I started thinking about where "confidence interv
 
 For giggles, I built the entire presentation with R using the [xaringan](https://bookdown.org/yihui/rmarkdown/xaringan.html) and [xkcd](https://cran.r-project.org/web/packages/xkcd/index.html) packages so that the slides would be in the style of [xkcd.com](https://xkcd.com).
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/ZmJdv2JiBgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/ZmJdv2JiBgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

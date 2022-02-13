@@ -23,4 +23,4 @@ The code...not the cleanest, as I was only a couple of years into learning R, bu
 
 It's an over-simplification of the Holt-Winters forecasting method, but it does a pretty solid job of explaining the basics of time-series composition (which had blown my mind earlier that year and, I will claim, continues to blow the minds of analysts the first time it's explained to them):
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/eGB5x77qnco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/eGB5x77qnco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

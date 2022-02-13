@@ -23,5 +23,5 @@ At [Superweek](https://superweek.hu) in 2018, I drew a line from the world of Mi
 * "Uncertainty" is a _really_ important concept...that many marketers and analysts don't actually think with enough clarity about
 
 <div style="text-align: center;">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/6WqcQr496Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/6WqcQr496Fw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

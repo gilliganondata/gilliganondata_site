@@ -18,5 +18,5 @@ So..._then_ I spent a year or so exploring the idea of "being data science-y." E
 Still, I did the presentation below at [Superweek](https://superweek.hu) in January 2017, and the material has held up!
 
 <div style="text-align: center;">
-<iframe width="800" height="450" src="https://www.youtube.com/embed/NfRUhvfyiLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/NfRUhvfyiLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

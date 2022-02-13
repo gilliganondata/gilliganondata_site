@@ -29,6 +29,6 @@ It's a quick and fun little video. I actually was approached after presenting it
 
 <div style = "text-align: center;">
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/vqxxwQbM7fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/vqxxwQbM7fY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </div>
