@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-02-17
+slug: random-image-i-WznjKX7-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-WznjKX7-4K_original_2022-02-17.jpg
+img_transformed: images/i-WznjKX7-4K_transformed_2022-02-17.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Australia-Outdoors/i-WznjKX7
+
+ ![](/image-randomize/images/i-WznjKX7-4K_original_2022-02-17.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #0cde15 | Opacity 60% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-WznjKX7-4K_transformed_2022-02-17.jpg){width=100%}
+
