@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-02-18
+slug: random-image-i-jJBSfrn-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-jJBSfrn-4K_original_2022-02-18.jpg
+img_transformed: images/i-jJBSfrn-4K_transformed_2022-02-18.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-jJBSfrn
+
+ ![](/image-randomize/images/i-jJBSfrn-4K_original_2022-02-18.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #5f9d49 | Opacity 60% 
+ * Median (magick) -> Pixels: 48 
+ * Quantize (magick) -> Max Colors in Image: 4 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 4 | Contrast: 13 | Shadow: 0.175230214139447 | Gain: 0.786820303183049 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-jJBSfrn-4K_transformed_2022-02-18.jpg){width=100%}
+
