@@ -20,6 +20,16 @@ High-level, this is what happens (hurray for simplified flowcharts!):
 
 Let's pretend I sketched the above out before I wrote the first line of code and then just went step by step through building out the process. It wouldn't be an unreasonable leap, actually. As I reflect on it now, I pretty much _did_ have this basic sequence of steps in my head, and I _did_ build out the code almost exactly from start to finish in sequence. Wow! Accident, or just a failure to get creative along the way? Who can say?! Read on for details!
 
+## In Video Form
+
+I entered the project in the "Golden Punchcard" at [Superweek](https://superweek.hu) in Hungary early in 2022. It wasn't a contender, but it gave me an excuse to create a brief presentation to describe the project and the results. I recorded a shortened version (8.5 minutes) of that presentation afterwards, which you can watch below if you'd prefer that to reading about the details. 
+
+<div style = "text-align: center;">
+
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/EzTRkXLR1Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+
 ## The Motivation
 
 This project doesn't qualify as generative art (or generative "aRt," specifically, but if you're interested in that sort of thing, check out [Danielle Navarro's amazing work](https://art.djnavarro.net/) or [Claus O. Wilke's work](https://clauswilke.com/art/)—including his [NFTs](https://objkt.com/profile/clauswilke/created?search=&sortBy=askAsc)!—or [Koen Derks's aRtsy package that is specifically ggplot-oriented](https://koenderks.github.io/aRtsy/)). 
