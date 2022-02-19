@@ -1,0 +1,111 @@
+---
+title: An Introduction and Visual Framing of the In(put)s and Out(put)s of R Shiny
+author: Tim WIlson
+date: '2022-02-19'
+slug: introduction-and-visual-framing-of-the-inputs-and-outputs-of-r-shiny
+categories:
+  - R
+tags:
+  - rstats
+description: 'An attempt to clearly explain and illustrate the relationship between inputs and outputs in R Shiny, including a diagram that shows how the model is actually quite symmetrical, even if it can feel confusing.'
+---
+
+<script src="{{< blogdown/postref >}}index.en_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Like many moderately-fluent-but-not-advanced analysts using R, I have something of a tortured relationship with Shiny:</p>
+<ul>
+<li>When I haven’t built anything with it in a while, it takes a period of frustration to get the basics of a new Shiny app working and re-remember the ins and outs of reactivity</li>
+<li>Once I’ve gotten through that period of frustration, I get blissfully lost in the process of tweaking the project and adding functionality and shifting around the layout and experience small waves of euphoria with each passing iteration</li>
+</ul>
+<p>A few examples of apps that I created (which you can use as a gauge to the worth of everything that comes after in this post) are:</p>
+<ul>
+<li><a href="https://sdidev.shinyapps.io/randomization_explorer/">This simulator</a> that explores how randomization does wonderful things when it comes to observable and unobservable covariates (with the central limit theorem, lurking, unspoken, in the background)</li>
+<li><a href="https://sdidev.shinyapps.io/test-result-simulator/">This A/B Test Result simulator</a> that I built because I was really just trying to understand binomial distributions (and, as it happens, also employs the central limit theorem)</li>
+<li><a href="https://bit.ly/bill-splitter">This Bill Splitter</a> that wound up being a bit more math (but fun math) behind the scenes than I’d thought it would be when I built it; but, it tries to illustrate the gender pay gap in different countries by providing one tiny way to illustrate and think about it when dining in mixed company</li>
+</ul>
+<p>Every time I tackle a new app, I have to refresh my brain on the basics of Shiny. And, recently, when providing an overview of the package to some colleagues, I found myself drawing up a diagram that seemed…useful.</p>
+<div id="there-are-plenty-of-existing-shiny-resources" class="section level2">
+<h2>There Are Plenty of Existing Shiny Resources</h2>
+<p>This post is by no means attempting to replace the wealth of information at <a href="https://shiny.rstudio.com/">shiny.rstudio.com</a> and elsewhere. I regularly use the articles and the galleries there for both reference and inspiration. And there is the <a href="https://raw.githubusercontent.com/rstudio/cheatsheets/main/pngs/shiny.png">R Shiny Cheatsheet</a>, which, like many cheatsheets, is most useful as a reference once you have a pretty solid understanding of the underlying material.</p>
+<p>And, these days, almost everything I build with Shiny uses <a href="https://pkgs.rstudio.com/flexdashboard/">flexdashboard</a>, and I wind up on the <a href="https://rstudio.github.io/flexdashboard/articles/shiny.html">same post every time</a> to refresh myself on how to go about incorporating Shiny components into that world. I particularly like the fact that, with flexdashboard apps, I can put the output definitions (server) right next to the actual output display (ui) without having to worry about “server” vs. “ui”…although I think there is real value in having a basic intuition about the “ui” (front-end) of the app versus the “server” (back-end) of the app, which is something that this post addresses!</p>
+<p>In short, yes, there are <em>lots</em> of existing resources. This post is simply meant to be a useful addition to that overall corpus.</p>
+<p>Let’s get to it.</p>
+</div>
+<div id="starting-at-the-end" class="section level2">
+<h2>Starting at the End</h2>
+<p>Ultimately, this is the “complete” diagram that I came up with:</p>
+<p><img src="images/r_shiny_7_complete.png" />
+If you’re thinking, “Um…well…duh!” then…great! First, that means it’s accurate. But, second, that means you’ve got intuition and clarity around Shiny that it took me a while to get to.</p>
+<p>If you’re thinking, “Oh…interesting. That seems a lot simpler than I’d thought things were. Do tell me more!” Well, then it might be useful to build this one piece at a time and describe each piece as we go. And…there’s a little bit of a bonus observation at the very end.</p>
+</div>
+<div id="inputs-and-outputs" class="section level2">
+<h2>Inputs and Outputs</h2>
+<p>Let’s start with the basic idea of Shiny: it’s interactive. This means it’s got a stimulus/response paradigm at its core: the inputs are interactions by the user, and the outputs are the result of applying those inputs in some fashion.</p>
+<p><img src="images/r_shiny_1_inputs_outputs.png" /></p>
+</div>
+<div id="creating-the-inputs" class="section level2">
+<h2>Creating the Inputs</h2>
+<p>The user interaction is through input controls, and the big (relatively speaking) decisions there are:</p>
+<ul>
+<li>What type of control is it (a checkbox, a dropdown, a slider, etc.)?</li>
+<li>What the options and default values are for the control</li>
+<li>The <em>name</em> of the control. This is the <code>inputId</code> that you specify and then reference elsewhere</li>
+</ul>
+<p><img src="images/r_shiny_2_inputs_create.png" /></p>
+</div>
+<div id="referencing-using-the-inputs" class="section level2">
+<h2>Referencing / Using the Inputs</h2>
+<p>Separate from creating the inputs, you then want to actually <em>use</em> the selected values from them. That’s a separate operation, and it’s an entirely different syntax—<code>input$[inputId]</code>—but, at its core, it’s linked back to the appropriate input using whatever <code>inputId</code> value you decided on when creating the input.</p>
+<p><img src="images/r_shiny_3_inputs_use.png" /></p>
+</div>
+<div id="creating-outputs" class="section level2">
+<h2>Creating Outputs</h2>
+<p>When it comes to the output—what you actually want to show the user as a result of their selections—things work similarly to inputs, but kind of in a reverse order.</p>
+<p>You start by creating/defining the output. The two big things you have to do here are:</p>
+<ul>
+<li><p>Figure out the <em>name</em> you will use to refer to the output. This is the <code>outputId</code> and actually gets defined as <code>output$[outputId]</code> (this is the “similar…but in reverse” part when compared to inputs: you actually <em>set the name</em> by putting some value for <code>outputId</code> in <code>output$[outputId]</code>; remember that, for inputs, when using <code>input$[inputId]</code> you are simply <em>referring to the <code>inputId</code> value you had already defined</em>).</p></li>
+<li><p>Figure out the <em>type of output</em> you’re creating. Or, the type of output that you’re <em>going to render</em>. This winds up being defined using a <code>render...</code> function: <code>renderPlot</code>, <code>renderText</code>, etc. It’s a <em>little</em> tricky, in that you’re not <em>actually displaying (rendering) anything with this</em>. You are simply defining what <em>will be rendered</em> for the user in the next step.</p></li>
+</ul>
+<p>The key here is that, since the output will be dynamic based on what the user has selected/set through the inputs, the <em>inputs</em> are actually used in the logic and code that defines the outputs. We’ll come back to that very shortly.</p>
+<p><img src="images/r_shiny_4_outputs_create.png" /></p>
+</div>
+<div id="display-the-output" class="section level2">
+<h2>Display the Output</h2>
+<p>The last piece of the puzzle is actually displaying the resulting output to the user. This is accomplished using the <code>...Output("[outputId])</code> functions (<code>textOutput()</code>, <code>plotOutput()</code>, etc.). The primary argument for each of these functions is simply the <code>outputId</code> defined in the previous step.</p>
+<p><img src="images/r_shiny_5_outputs_use.png" /></p>
+</div>
+<div id="the-miracle-of-reactivity" class="section level2">
+<h2>The Miracle of Reactivity</h2>
+<p>You simply cannot develop a healthy and satisfying relationship with Shiny without having a proper level of awe and appreciation for reactivity. You actually…can’t read very far on any documentation or tutorial about Shiny without hitting the topic pretty hard.</p>
+<p>Functionally, reactivity is simply the link between the inputs and the outputs: when the user changes an input, all of the affected outputs will automatically reprocess and get updated. There are lots of tips and tricks for tweaking exactly what, how, and where reactivity comes into play. Those are important, but they are beyond the scope of this post. We can make one small addition to the diagram to reflect where reactivity sits (right between the inputs and outputs):</p>
+<p><img src="images/r_shiny_6_reactivity.png" /></p>
+</div>
+<div id="front-end-and-back-end" class="section level2">
+<h2>Front End and Back End</h2>
+<p>It’s useful to add one more layer to the diagram, and that is to recognize that, while we’ve been looking at it thus far as being two <em>rows</em> of operations, we can also think about it as two <em>columns</em>:</p>
+<ul>
+<li><p>The <em>left column</em> is actually the “front end.” It’s everything to do with the <em>user interface</em>. Or…in developer shorthand, the “UI.” And that’s why, in the early versions of Shiny, when you had to have two files for a single app, one of them was <code>ui.R</code>. That was “the left column.” In a “single file Shiny app,” you define a <code>ui</code> object (by convention) that then gets passed as the value for the <code>ui</code> argument in the <code>shinyApp()</code> function. In a <strong>flexdashboard</strong> file that is Shiny-enabled…the “UI” concept is just implicitly there, but is never explicitly referenced in the code.</p></li>
+<li><p>The <em>right column</em> is the “back end.” It’s where the actual crunching work happens—where the inputs get embedded into all manner of code so that useful outputs can be defined for rendering. You can think of this as being the “server” that’s doing the heavy lifting. You don’t <em>have</em> to think of it that way…but Shiny does! In a traditional, two-file Shiny app, the <code>server.R</code> file is where everything from the right column goes. In a single-file Shiny app, a <code>server</code> object typically gets defined and then used in the <code>shinyApp()</code> function as the value for the <code>server</code> argument. Again, in <strong>flexdashboard</strong> this distinction still exists, but it’s never explicitly referenced in the code.</p></li>
+</ul>
+<p><img src="images/r_shiny_7_complete.png" /></p>
+<p>And that’s really it.</p>
+<p>Except…<a href="https://www.youtube.com/watch?v=T_d6_CdNEVA">there’s just one more thing</a>…</p>
+</div>
+<div id="the-symmetry-of-diagonal-definitions" class="section level2">
+<h2>The Symmetry of Diagonal Definitions</h2>
+<p>It wasn’t until I started drawing up the diagram that I fully clicked on a few things. The “rows” (inputs vs outputs) and the “columns” (front end/UI vs. back end/server) were part of that. But there is one other piece that I referenced in passing earlier that I think bears calling out directly.</p>
+<p>First, a quick reminder of two basic points:</p>
+<ul>
+<li><p>The first step for both inputs and outputs is <em>defining</em> them. That’s where you give them an ID—an <code>inputId</code> for inputs and an <code>outputId</code> for outputs.</p></li>
+<li><p>This definition occurs in the <em>front end</em> (the UI) for inputs and the <em>back end</em> (the server) for outputs</p></li>
+</ul>
+<p>What’s interesting…but I realized can be a little confusing, even though it actually sorta’ makes sense, is that the underlying <em>syntax</em> for how those definitions are effected is quite different:</p>
+<ul>
+<li><p><strong>Inputs</strong> have their <code>inputId</code> values defined <em>as an argument inside a function</em> (one of the <code>...Input()</code> functions)</p></li>
+<li><p><strong>Outputs</strong> have their <code>outputId</code> values defined <em>as a value following the dollar sign in an <code>output$...</code> object definition</em></p></li>
+</ul>
+<p>The <em>definition</em> of inputs and outputs are operations that occur in the “top left” and “bottom right” of our diagram, which, really, is why their syntax is so different.</p>
+<p><img src="images/r_shiny_8_complete_plus.png" /></p>
+<p>I think (hope) this is helpful. It certainly has made the picture clearer in my mind as to how these four underlying components work together and how and why the specific syntax of each component falls as it does!</p>
+</div>
