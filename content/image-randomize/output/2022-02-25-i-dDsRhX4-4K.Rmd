@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-02-25
+slug: random-image-i-dDsRhX4-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-dDsRhX4-4K_original_2022-02-25.jpg
+img_transformed: images/i-dDsRhX4-4K_transformed_2022-02-25.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Views-from-the-Airplane/i-dDsRhX4
+
+ ![](/image-randomize/images/i-dDsRhX4-4K_original_2022-02-25.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 11 
+ * Median (magick) -> Pixels: 20 
+ * Colorize (magick) -> Color: #354799 | Opacity 49% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 5 | Contrast: 55 | Shadow: 0.863950894214213 | Gain: 0.571553615154698 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-dDsRhX4-4K_transformed_2022-02-25.jpg){width=100%}
+
