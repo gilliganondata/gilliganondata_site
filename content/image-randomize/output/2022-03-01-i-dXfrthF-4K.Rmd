@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-03-01
+slug: random-image-i-dXfrthF-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-dXfrthF-4K_original_2022-03-01.jpg
+img_transformed: images/i-dXfrthF-4K_transformed_2022-03-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-dXfrthF
+
+ ![](/image-randomize/images/i-dXfrthF-4K_original_2022-03-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 15 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 5 | Contrast: 30 | Shadow: 0.613466786686331 | Gain: 0.318216533400118 
+ * Colorize (magick) -> Color: #22dfd5 | Opacity 52% 
+ * Modulation (magick) -> Brightness: 78 | Saturation: 112 | Hue: 65 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-dXfrthF-4K_transformed_2022-03-01.jpg){width=100%}
+
