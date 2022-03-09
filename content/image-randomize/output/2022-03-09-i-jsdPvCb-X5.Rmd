@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-03-09
+slug: random-image-i-jsdPvCb-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-jsdPvCb-X5_original_2022-03-09.jpg
+img_transformed: images/i-jsdPvCb-X5_transformed_2022-03-09.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-jsdPvCb
+
+ ![](/image-randomize/images/i-jsdPvCb-X5_original_2022-03-09.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 1 | Contrast: 55 | Shadow: 0.970791374100372 | Gain: 0.622834500623867 
+ * Median (magick) -> Pixels: 22 
+ * Modulation (magick) -> Brightness: 67 | Saturation: 53 | Hue: 172 
+ * Quantize (magick) -> Max Colors in Image: 6 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-jsdPvCb-X5_transformed_2022-03-09.jpg){width=100%}
+
