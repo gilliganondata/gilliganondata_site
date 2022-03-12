@@ -1,0 +1,74 @@
+---
+title: Analytics, Statistics, Inference, and the Evidence Ladder
+author: Tim Wilson
+date: '2022-03-12'
+slug: evidence-ladder
+categories:
+  - analytics
+tags:
+  - evidence
+  - inference
+  - statistics
+---
+
+I often feel like my professional development has been a series of iterative cycles around various ideas, techniques, or technologies:
+
+1. Total obliviousness to its existence
+2. A vague (but incredibly fuzzy) awareness of it
+3. A clearer understanding of it by which I feel like I'm _just_ on the cusp of understanding
+4. Multiple years spent in the previous step
+5. Finding some explanation or framing that makes it snap _totally_ into focus
+6. Realizing that I've simply uncovered a whole bunch of branches of new things that drop me back at step #2
+
+This post lands squarely on #5 above, and it has to do with a combination of words that are similar, but which actually have some pretty profound differences. And I think it matters because they get muddled together in the minds and behaviors of many analysts and marketers. The words:
+
+* Statistic
+* Statistics
+* Statistical Inference
+* Causal Inference
+
+_(Warning: these terms quickly brand out to include quasi-experiments, counterfactuals, natural experiments, randomized controlled trials, A/B testing, field experiments, matched market experiments, and more!)_
+
+I hit #5 when a colleague recently shared a [post from Shopify](https://shopify.engineering/using-quasi-experiments-counterfactuals) that included a diagram showing the "levels of evidence ladder for causal inference methods," which the authors had derived (visually the same...but with altered "rungs" on the ladder) from an [nc233 post](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/).
+
+I'm not going to include either diagram here...because I don't _quite_ follow (agree with?[^1]) some of the ways both posts split up the rungs of the ladder.
+
+[^1]: I'm not looking to start any trouble here. Both posts have 4 levels, but the nc233 has a "top" level that is omitted from the Shopify ladder, and the Shopify post has a "bottom" level that is not part of the nc233 one. This post you're reading now attempts to simplify the ladder to _three_ levels, and if the authors of either post--or anyone, for that matter--would like to eviscerate my simplification, let me go ahead and say it, "You're right. I'm wrong. Please let this footnote suffice as my admission of such rather than insisting that I update this post to add the clarifications you would like to see." (And a gratuitous hat tip to [Benn Stancil](https://twitter.com/bennstancil/) for reminding me, through [his Substack](https://benn.substack.com/), how much fun footnotes can be. And a further hat tip to you, dear reader, for reading the footnotes.)
+
+## A Three-Level Evidence Ladder
+
+Here's the TL;DR:[^2]
+
+[^2]: Clearly, TL;DR is not my forte, given how far into the post we already were before I even tried to declare it.
+
+* A **statistic** is descriptive an (reasonably) deterministic
+* **Statistics** are about making predictions about a population from a sample of observations from that population
+* **Statistical inference** is about describing relationships between different characteristics within a data set
+* **Causal inference** is about describing the impact that one (or multiple) things have (or will have) on something else
+
+Boiling that down to Gilligan's Simplified Evidence Ladder^TM^:
+
+ADD DIAGRAM
+
+## Level 1: Descriptive Statistics
+
+asdfasdf
+
+### Silly Car Example
+
+How many miles I've driven on this trip
+How much fuel is left in the tank
+
+### Marketing Example
+
+How much traffic came to the website last month
+What the sources of that traffic were
+How many orders were placed on the webiste
+
+## Level 2: Quasi Experiments
+
+
+
+
+
+

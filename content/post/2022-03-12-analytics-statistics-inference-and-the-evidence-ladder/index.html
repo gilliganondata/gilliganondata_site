@@ -1,0 +1,72 @@
+---
+title: Analytics, Statistics, Inference, and the Evidence Ladder
+author: Tim Wilson
+date: '2022-03-12'
+slug: evidence-ladder
+categories:
+  - analytics
+tags:
+  - evidence
+  - inference
+  - statistics
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>I often feel like my professional development has been a series of iterative cycles around various ideas, techniques, or technologies:</p>
+<ol style="list-style-type: decimal">
+<li>Total obliviousness to its existence</li>
+<li>A vague (but incredibly fuzzy) awareness of it</li>
+<li>A clearer understanding of it by which I feel like I’m <em>just</em> on the cusp of understanding</li>
+<li>Multiple years spent in the previous step</li>
+<li>Finding some explanation or framing that makes it snap <em>totally</em> into focus</li>
+<li>Realizing that I’ve simply uncovered a whole bunch of branches of new things that drop me back at step #2</li>
+</ol>
+<p>This post lands squarely on #5 above, and it has to do with a combination of words that are similar, but which actually have some pretty profound differences. And I think it matters because they get muddled together in the minds and behaviors of many analysts and marketers. The words:</p>
+<ul>
+<li>Statistic</li>
+<li>Statistics</li>
+<li>Statistical Inference</li>
+<li>Causal Inference</li>
+</ul>
+<p><em>(Warning: these terms quickly brand out to include quasi-experiments, counterfactuals, natural experiments, randomized controlled trials, A/B testing, field experiments, matched market experiments, and more!)</em></p>
+<p>I hit #5 when a colleague recently shared a <a href="https://shopify.engineering/using-quasi-experiments-counterfactuals">post from Shopify</a> that included a diagram showing the “levels of evidence ladder for causal inference methods,” which the authors had derived (visually the same…but with altered “rungs” on the ladder) from an <a href="http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/">nc233 post</a>.</p>
+<p>I’m not going to include either diagram here…because I don’t <em>quite</em> follow (agree with?<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>) some of the ways both posts split up the rungs of the ladder.</p>
+<div id="a-three-level-evidence-ladder" class="section level2">
+<h2>A Three-Level Evidence Ladder</h2>
+<p>Here’s the TL;DR:<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<ul>
+<li>A <strong>statistic</strong> is descriptive an (reasonably) deterministic</li>
+<li><strong>Statistics</strong> are about making predictions about a population from a sample of observations from that population</li>
+<li><strong>Statistical inference</strong> is about describing relationships between different characteristics within a data set</li>
+<li><strong>Causal inference</strong> is about describing the impact that one (or multiple) things have (or will have) on something else</li>
+</ul>
+<p>Boiling that down to Gilligan’s Simplified Evidence Ladder<sup>TM</sup>:</p>
+<p>ADD DIAGRAM</p>
+</div>
+<div id="level-1-descriptive-statistics" class="section level2">
+<h2>Level 1: Descriptive Statistics</h2>
+<p>asdfasdf</p>
+<div id="silly-car-example" class="section level3">
+<h3>Silly Car Example</h3>
+<p>How many miles I’ve driven on this trip
+How much fuel is left in the tank</p>
+</div>
+<div id="marketing-example" class="section level3">
+<h3>Marketing Example</h3>
+<p>How much traffic came to the website last month
+What the sources of that traffic were
+How many orders were placed on the webiste</p>
+</div>
+</div>
+<div id="level-2-quasi-experiments" class="section level2">
+<h2>Level 2: Quasi Experiments</h2>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>I’m not looking to start any trouble here. Both posts have 4 levels, but the nc233 has a “top” level that is omitted from the Shopify ladder, and the Shopify post has a “bottom” level that is not part of the nc233 one. This post you’re reading now attempts to simplify the ladder to <em>three</em> levels, and if the authors of either post–or anyone, for that matter–would like to eviscerate my simplification, let me go ahead and say it, “You’re right. I’m wrong. Please let this footnote suffice as my admission of such rather than insisting that I update this post to add the clarifications you would like to see.” (And a gratuitous hat tip to <a href="https://twitter.com/bennstancil/">Benn Stancil</a> for reminding me, through <a href="https://benn.substack.com/">his Substack</a>, how much fun footnotes can be. And a further hat tip to you, dear reader, for reading the footnotes.)<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Clearly, TL;DR is not my forte, given how far into the post we already were before I even tried to declare it.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
