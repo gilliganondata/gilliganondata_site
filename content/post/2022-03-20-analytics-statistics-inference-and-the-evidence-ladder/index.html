@@ -35,20 +35,21 @@ tags:
 </ul>
 <p><em>Causation</em> is where marketers (and analysts) tend to make dangerous leaps between what a given data set can and cannot do. When it comes to <em>making decisions</em>, arguably, <em>causation is key</em>. We want to know, <em>given a set of options when it comes to what we are going to <strong>do</strong>, which one will have the greatest positive <strong>effect</strong>?</em> (See how “effect” worked it’s way in there? You know the phrase: “cause and effect.” Boom! There’s “cause!”)</p>
 <p>This doesn’t mean that the <em>only</em> reason we use data is to find causation and make decisions, but it’s one of the main expectations we tend to have of the data.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
-<p>There <em>is</em> a use of the data that does not have a reliance on causation. That use is simply <em>measuring performance</em>: how much traffic came to the website last month? How many leads have converted to opportunities this quarter? How many customers churned last year?</p>
-<p>With a “causation first” focus, we can boil the subject of this post down to Gilligan’s Simplified Causal Evidence Ladder<sup>TM</sup>:</p>
+<p>There <em>is</em> a perfectly valid use of data that does not have a reliance on causation. That use is simply <em>measuring performance</em>: how much traffic came to the website last month? How many leads have converted to opportunities this quarter? How many customers churned last year?</p>
+<p>With a “causation first” focus, though, we can boil the subject of this post down to Gilligan’s Simplified Causal Evidence Ladder:<sup>TM</sup></p>
 <p><img src="images/evidence-ladder.png" />
-THAT was the TL;DR! (I told you I sucked at that.) Let’s dive into each level.</p>
+THAT was the TL;DR! Let’s dive into each level of this “evidence ladder” (with a couple of important diversions along the way).</p>
 </div>
 <div id="level-1-descriptive-statistics" class="section level2">
 <h2>Level 1: Descriptive Statistics</h2>
+<p><img src="images/evidence-ladder-1.png" /></p>
 <p>Descriptive statistics are the bread and butter of the marketing analyst, and they live in the world of <em>facts</em>: facts about a given data set. It turns out that what a given data set represents can start to bend your brain a bit: is the data set representing a <em>population</em>, or is it representing a <em>sample from a population</em>? It…depends on your perspective!</p>
 <p>Consider digital analytics data from last month. Descriptive statistics can describe a lot of facts:</p>
 <ul>
 <li>How much traffic came to the site</li>
 <li>The average (mean) traffic per day</li>
 <li>The total revenue of orders placed on the site</li>
-<li>To what extent are traffic to the website and revenue from the website correlated with each other?</li>
+<li>To what extent traffic to the website and revenue from the website were correlated with each other</li>
 </ul>
 <p>Putting aside the fact that website analytics data is inherently messy to collect, these “statistics” are all simply <em>facts</em> about the website’s performance <em>last month</em>.</p>
 <p>If we are tasked with <em>reporting the performance of the website</em>, then last month’s data can be considered a <em>population</em>, and everything is nice and clean (and, I’m afraid, some will make the case that these are not actually descriptive statistics at all, but, rather, become <em>parameters</em>; technically, these folks are likely right, but we’re more concerned with the underlying concepts here).</p>
@@ -58,22 +59,23 @@ THAT was the TL;DR! (I told you I sucked at that.) Let’s dive into each level.
 </div>
 <div id="an-important-off-the-ladder-concept-counterfactuals" class="section level2">
 <h2>An Important Off-the-Ladder Concept: Counterfactuals</h2>
-<p>The terminology starts to add some syllables when we move to Level 2 and Level 3, so let’s step off the ladder for am minute to hit one of those key terms: <strong>counterfactual</strong>.</p>
-<p>The basic idea of a counterfactual is that, if we had our ’druthers, and if we weren’t limited by the current constraints of our ability to manipulate the space-time continuum, any time we had an important decision to make with multiple choices, we would make… <em>all of them</em>. We would split the universe, try a different option in each universe, see which one works out best, and then toss out the other universes and proceed with the choice (the decision!) that yielded the best results.</p>
+<p>The terminology starts to add some syllables when we move to Level 2 and Level 3, so let’s step off the ladder for a minute to hit one of those key terms: <strong>counterfactual</strong>. (Don’t worry, we’re only one rung off the ground at this point, so stepping off the ladder seems pretty safe.)</p>
+<p>The basic idea of a counterfactual is that, if we had our ’druthers, and if we weren’t dealing with limitations in our ability to manipulate the space-time continuum, any time we had an important decision to make with multiple choices, we would make… <em>all of them</em>. We would split the universe, try a different option in each universe, see which one works out best, and then toss out the other universes and proceed with the choice (the decision!) that yielded the best results.</p>
 <p>Say you are considering your overall investment in Google Adwords, and you’ve narrowed it down to three options:</p>
 <ul>
 <li>Continue with the same monthly spend you have been running with year-to-date</li>
 <li>Increase your monthly spend by 20% (and reduce your Paid Social spend by the same amount)</li>
-<li>Decrease your monthly spend by 20% (and increase your Paid Social spend)</li>
+<li>Decrease your monthly spend by 20% (and increase your Paid Social spend accordingly)</li>
 </ul>
 <p>Unfortunately, you can’t split the universe and try all three to see which one yields the greatest overall revenue for the organization, so you have to pick one of the above. The <em>other two options are “counterfactuals”</em>—the roads not taken.</p>
 <p>This is where we step back onto our ladder, as Level 2 (Inferential Statistics) and Level 3 (Experimentation) are all about <em>estimating the counterfactuals</em>. In both cases, we’re attempting to get at causation, but we do so in very different ways.</p>
 </div>
 <div id="level-2-inferential-statistics" class="section level2">
 <h2>Level 2: Inferential Statistics</h2>
+<p><img src="images/evidence-ladder-2.png" /></p>
 <p>This level is, arguably, the messiest. But, it’s also the most alluring, as it’s where the idea that, given a sufficient volume of data fed into the right model, “the truth” will emerge. This is… not true.</p>
 <p>But, inferential statistics<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> is all about taking a big pile of data that has already been generated and drawing conclusions (inferences) about the way the world works. The techniques for doing this are so broad and so deep that the posts linked to at the beginning of this post split this level into multiple levels!</p>
-<p>When we start to look at historically generated data through a counterfactual lens, we start to see that data in two parts:</p>
+<p>When we start to look at historically generated data through a counterfactual lens, we can start to see the data in two different ways:</p>
 <ul>
 <li>We did a bunch of things and observed the results (descriptive statistics), but</li>
 <li>What <em>would have happened</em> if we had done some different things (counterfactuals!)</li>
@@ -82,15 +84,16 @@ THAT was the TL;DR! (I told you I sucked at that.) Let’s dive into each level.
 <p>But we can’t.</p>
 <p>So, instead, we’re asked to simply <em>look at the data we do have</em> and try to <em>infer</em> relevant relationships. Basically look at the <em>facts</em> and try to establish the… <em>counterfact(ual)s</em>.</p>
 <p>This is…hard.</p>
-<p>We have to try to use statistical modeling to try to make an informed guess as to the relationship between our Google Adwords spend, our Paid Social spend, and our overall results (revenue). Pretty quickly, we’ll likely decide we need to look at more data than just last month’s—can we get a year or two’s worth, maybe? Then, we set about trying to tease apart and account for as many things as we can think of (this is why “domain expertise” is so important for both the analyst and the data scientist).</p>
+<p>We have to use statistical modeling to make informed opinions (inferences) as to the relationship between our Google Adwords spend, our Paid Social spend, and our overall results (revenue). Pretty quickly, we’ll likely decide we need to look at more data than just last month’s—can we get a year or two’s worth, maybe? Then, we set about trying to tease apart and account for as many things as we can think of (this is why “domain expertise” is so important for both the analyst and the data scientist).</p>
 <p>There are many, many different approaches for this, and they can get quite complicated. Although, they can also start out quite simple! If done well, most of these approaches will make an attempt to quantify how much <em>uncertainty</em> there is in their estimates (we won’t be able to eliminate uncertainty until we’re able to do that universe-splitting trick described earlier).</p>
 <p>If this all sounds quite messy, that’s because it is. Unfortunately, it’s messiness that, at least in marketing, there has been an aversion to accepting. My take is that this is because we thought that the arrival of “digital” to the world of marketing in the early aughts was going to give us “all the data,” and that would then lead us to “the truth.” Alas! It only gave us data for <em>a single universe</em>: the counterfactuals have continued to be spawned at an infinite pace with ’nary a single piece of data being collected for them!</p>
 <p>Except…</p>
 </div>
 <div id="level-3-experimentation" class="section level2">
 <h2>Level 3: Experimentation</h2>
+<p><img src="images/evidence-ladder-3.png" /></p>
 <p>This is the golden rung of the evidence ladder: controlled experimentation is the closest we can get to gathering direct data for our counterfactuals and actually honing in on a cause-and-effect relationship between “things we do” and “the outcomes they produce” (“stimulus-response” is another way to put this; as is “the effect of an intervention”).</p>
-<p>Let’s get out of the way right now that this level goes by <em>many</em> different names. A (likely incomplete) list:<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>This level of the evidence ladder goes by <em>many</em> different names. A (likely incomplete) list:<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 <ul>
 <li>Randomized Controlled Trials</li>
 <li>Field Experiments</li>
@@ -112,7 +115,10 @@ THAT was the TL;DR! (I told you I sucked at that.) Let’s dive into each level.
 <div id="briefly-back-to-level-2-forquasi-experimentation" class="section level2">
 <h2>Briefly Back to Level 2 for…Quasi-Experimentation</h2>
 <p>As it turns out, Level 2 (Inferential Statistics) can be considered <em>quasi-experimentation</em>. I’m not making this up, and I’m a bit torn when it comes to using the term, as it’s open to gross misinterpretation.</p>
-<p>What quasi-experimentation is <em>not</em> is just a half-assed experiment: “Yeah… I know I should’ve randomly assigned which DMAs received the media and which ones did not when I did my matched market test, but I just listed them in numerical order and used the first half of the list as my treatment DMAs and the second half of the list as my control.”</p>
+<p>What quasi-experimentation is <em>not</em> is just a half-assed experiment:</p>
+<blockquote>
+<em>“Yeah… I know I should’ve randomly assigned which DMAs received the media and which ones did not when I did my matched market test, but we really wanted the media to run in our top 5 largest markets, so we forced all of those into the treatment group and then randomized what was left.”</em>
+</blockquote>
 <p>This is <em>not</em> a quasi-experiment. This is a half-assed experiment, for which the results will be incredibly suspect!</p>
 <p>Rather, quasi-experimentation simply means that we’re doing our best to create the <em>conditions</em> and <em>results</em> that we would have gotten from a true controlled experiment…without actually running an experiment. This is hard (remember, we said that Level 2 is messy), but it’s where techniques such as two-stage least squares regression (2SLS), diff-in-diff, Bayesian time-series modeling, instrumental variables, and many other techniques fall. They’re all, under the hood, trying to estimate counterfactuals, which, by now, we realize is at the root of causal inference, which, in turn, is at the root of making data-informed decisions!</p>
 </div>
@@ -132,9 +138,9 @@ THAT was the TL;DR! (I told you I sucked at that.) Let’s dive into each level.
 <ol>
 <li id="fn1"><p>I’m not looking to start any trouble here. Both posts have 4 levels, but the nc233 one has a “top” level that is omitted from the Shopify ladder, and the Shopify post has a “bottom” level that is not part of the nc233 one. <em>This</em> post you’re reading now attempts to simplify the ladder to <em>three</em> levels, and if the authors of either post–or anyone, for that matter–would like to eviscerate my simplification, let me go ahead and say it, “You’re right. I’m wrong. Please let this footnote suffice as my admission of such rather than insisting that I update this post to add the clarifications you would like to see.” I do hope to get comments enabled on this site at some point so that you can weigh in here directly. (And a gratuitous hat tip to <a href="https://twitter.com/bennstancil/">Benn Stancil</a> for reminding me, through <a href="https://benn.substack.com/">his Substack</a>, how much fun footnotes can be. And a further hat tip to you, dear reader, for reading the footnotes.)<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Clearly, TL;DR is not my forte, given how far into the post we already were before I even tried to declare it.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>I absolutely <em>loathe</em> the phrase “actionable insights,” as it gets tossed around with a frequency and abandon that rivals the consumption of frankfurters on Dollar Dog Night at the ballpark. I’m coming to believe that my reaction to the phrase is because I’ve actually had the correct intuition as to what different reports and analyses could (and could <em>not</em>) reasonably deliver. The phrase implies that there is <em>actionability</em> (a decision can be made) based on an <em>insight</em>…which means there is an underlying <em>causal finding</em>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Is “inferential statistics” <em>the right term</em> for this? I’m not entirely sure (but I’m getting increasingly comfortable with uncertainty). It’s the broadest term I’ve found for what I’ve described in this section.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>I’m going to ahead and put “natural experiments” on this level, too, but just in a footnote rather than in the main list. In a nutshell, a natural experiment is a case where there just <em>happened</em> to be something that caused randomization of “treatment,” so the analyst or researcher wound up having an as-if-it-was-designed-as-a-controlled experiment land in their lap. Natural experiments require a bit of luck, a lot of diligence to ensure they truly meet the requirements, and, often, some extra data crunching because they’ll still just be a bit messier than a formally designed experiment.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>I absolutely <em>loathe</em> the phrase “actionable insights,” as it gets tossed around with a frequency and reckless abandon that rivals the consumption of frankfurters on Dollar Dog Night at the ballpark. I’m coming to believe that my reaction to the phrase is because I’ve actually had the correct intuition as to what different reports and analyses could (and could <em>not</em>) reasonably deliver. The phrase implies that there is <em>actionability</em> (a decision can be made) based on an <em>insight</em>…which means there is an underlying <em>causal finding</em>. And, as this post tries to point out: those do <em>not</em> come from mere descriptive statistics.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Is “inferential statistics” <em>the right term</em> for this? I’m not entirely sure (but I’m getting increasingly comfortable with uncertainty). It’s the broadest term I’ve found for what is described for this level.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>I’m going to go ahead and put “natural experiments” on this level, too, but just in a footnote rather than in the main list. In a nutshell, a natural experiment is a case where there just <em>happened</em> to be something that caused randomization of “treatment,” so the analyst or researcher wound up having an as-if-it-was-designed-as-a-controlled experiment land in their lap. Natural experiments require a bit of luck, a lot of diligence to ensure they truly meet the requirements, and, often, some extra data crunching because they’ll still just be a bit messier than a formally designed experiment.<a href="#fnref5" class="footnote-back">↩︎</a></p></li>
 <li id="fn6"><p>If you’re determined to tell me that these are <em>not</em> the same thing…please see footnote #1 above.<a href="#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
