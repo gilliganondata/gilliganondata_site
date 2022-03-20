@@ -11,7 +11,7 @@ tags:
   - statistics
 ---
 
-"Statistics" is a tricky word. Subtract a letter or add one of several modifiers, and the meaning of the term (or phrase) changes. And yet, these different meanings are related to each other. I will boldly claim that there is value in trying to get some clarity as to these differences, as they get muddled together in the minds and behaviors of many analysts and marketers in ways that lead to dangerously misaligned expectations when it comes to what "the data" can deliver in different scenarios 
+"Statistics" is a tricky word. Subtract a letter or add one of several modifiers, and the meaning of the term (or phrase) changes. And yet, these different meanings are related to each other. I will boldly claim that there is value in trying to get some clarity as to these differences, as they get muddled together in the minds and behaviors of many analysts and marketers in ways that lead to dangerously misaligned expectations when it comes to what "the data" can deliver in different scenarios. 
 
 Consider:
 
@@ -20,7 +20,7 @@ Consider:
 * Inferential Statistics
 * Causal Inference (I know...this doesn't have "statistics," but chain it to the "inferential" bit above and we're in the same family of confusion)
 
-_(Warning: these terms quickly brand out to include quasi-experiments, counterfactuals, natural experiments, randomized controlled trials, A/B testing, field experiments, matched market experiments, and more!)_
+_(Warning: these terms quickly branch out to include quasi-experiments, counterfactuals, natural experiments, randomized controlled trials, A/B testing, field experiments, matched market experiments, and more!)_
 
 A colleague recently shared a [post from Shopify](https://shopify.engineering/using-quasi-experiments-counterfactuals) that included a diagram showing the "levels of evidence ladder for causal inference methods," which the authors had derived (visually the same...but with altered "rungs" on the ladder) from an [nc233 post](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/).
 
