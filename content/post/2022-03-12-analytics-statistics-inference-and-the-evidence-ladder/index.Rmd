@@ -11,29 +11,22 @@ tags:
   - statistics
 ---
 
-I often feel like my professional development has been a series of iterative cycles around various ideas, techniques, or technologies:
+"Statistics" is a tricky word. Subtracting a letter or add one of several modifiers, and the meaning of the term (or phrase) changes. And, yet, these different meanings are related to each other. I will boldly claim that there is value in trying to get some clarity as to these differences, as they get muddled together in the minds and behaviors of many analysts and marketers in ways that lead to dangerously misaligned expectations when it comes to what "the data" can deliver in different scenarios 
 
-1. Total obliviousness to its existence
-2. A vague (but incredibly fuzzy) awareness of it
-3. A clearer understanding of it by which I feel like I'm _just_ on the cusp of understanding
-4. Multiple years spent in the previous step
-5. Finding some explanation or framing that makes it snap _totally_ into focus
-6. Realizing that I've simply uncovered a whole bunch of branches of new things that drop me back at step #2
-
-This post lands squarely on #5 above, and it has to do with a combination of words that are similar, but which actually have some pretty profound differences. And I think it matters because they get muddled together in the minds and behaviors of many analysts and marketers. The words:
+Consider:
 
 * Statistic
-* Statistics
-* Statistical Inference
-* Causal Inference
+* Statistic*s*
+* Inferential Statistics
+* Causal Inference (I know...this doesn't have "statistics," but chain it to the "inferential" bit above and we're in the same family of confusion)
 
 _(Warning: these terms quickly brand out to include quasi-experiments, counterfactuals, natural experiments, randomized controlled trials, A/B testing, field experiments, matched market experiments, and more!)_
 
-I hit #5 when a colleague recently shared a [post from Shopify](https://shopify.engineering/using-quasi-experiments-counterfactuals) that included a diagram showing the "levels of evidence ladder for causal inference methods," which the authors had derived (visually the same...but with altered "rungs" on the ladder) from an [nc233 post](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/).
+A colleague recently shared a [post from Shopify](https://shopify.engineering/using-quasi-experiments-counterfactuals) that included a diagram showing the "levels of evidence ladder for causal inference methods," which the authors had derived (visually the same...but with altered "rungs" on the ladder) from an [nc233 post](http://nc233.com/2020/04/causal-inference-cheat-sheet-for-data-scientists/).
 
 I'm not going to include either diagram here...because I don't _quite_ follow (agree with?[^1]) some of the ways both posts split up the rungs of the ladder.
 
-[^1]: I'm not looking to start any trouble here. Both posts have 4 levels, but the nc233 has a "top" level that is omitted from the Shopify ladder, and the Shopify post has a "bottom" level that is not part of the nc233 one. This post you're reading now attempts to simplify the ladder to _three_ levels, and if the authors of either post--or anyone, for that matter--would like to eviscerate my simplification, let me go ahead and say it, "You're right. I'm wrong. Please let this footnote suffice as my admission of such rather than insisting that I update this post to add the clarifications you would like to see." (And a gratuitous hat tip to [Benn Stancil](https://twitter.com/bennstancil/) for reminding me, through [his Substack](https://benn.substack.com/), how much fun footnotes can be. And a further hat tip to you, dear reader, for reading the footnotes.)
+[^1]: I'm not looking to start any trouble here. Both posts have 4 levels, but the nc233 one has a "top" level that is omitted from the Shopify ladder, and the Shopify post has a "bottom" level that is not part of the nc233 one. _This_ post you're reading now attempts to simplify the ladder to _three_ levels, and if the authors of either post--or anyone, for that matter--would like to eviscerate my simplification, let me go ahead and say it, "You're right. I'm wrong. Please let this footnote suffice as my admission of such rather than insisting that I update this post to add the clarifications you would like to see." (And a gratuitous hat tip to [Benn Stancil](https://twitter.com/bennstancil/) for reminding me, through [his Substack](https://benn.substack.com/), how much fun footnotes can be. And a further hat tip to you, dear reader, for reading the footnotes.)
 
 ## A Three-Level Evidence Ladder
 
@@ -41,18 +34,25 @@ Here's the TL;DR:[^2]
 
 [^2]: Clearly, TL;DR is not my forte, given how far into the post we already were before I even tried to declare it.
 
-* A **statistic** is descriptive an (reasonably) deterministic
-* **Statistics** are about making predictions about a population from a sample of observations from that population
-* **Statistical inference** is about describing relationships between different characteristics within a data set
-* **Causal inference** is about describing the impact that one (or multiple) things have (or will have) on something else
+* A **statistic** is descriptive and (reasonably) deterministic
+* **Inferential statistics** are about making predictions about a population from a sample of observations from that population and about describing relationships between different characteristics within a data set
+* **Causal inference** is about describing the impact that one (or multiple) factors have (or will have) on something else
 
-Boiling that down to Gilligan's Simplified Evidence Ladder^TM^:
+_Causation_ is where marketers (and analysts) tend to make dangerous leaps between what a given data set can and cannot do. When it comes to _making decisions_, arguably, _causation is key_. We want to know, _given a set of options when it comes to what we are going to **do**, which one will have the greatest positive **effect**?_
 
-ADD DIAGRAM
+This doesn't mean that the _only_ reason we use data is to find causation and make decisions, but it's one of the main expectations we tend to have of the data.
+
+I absolutely _loathe_ the phrase "actionable insights," as it gets tossed around with a frequency and abandon that rivals the consumption of frankfurters on Dollar Dog Night at the ballpark. I'm coming to believe that my reaction to the phrase is because I've actually had the correct intuition as to what different reports and analyses could (and could _not_) reasonably deliver. The phrase implies that there is _actionability_ (a decision can be made) based on an _insight_...which means there is an underlying _causal finding_.
+
+There _is_ a use of the data that does not have a reliance on causation. That use is simply _measuring performance_: how much traffic came to the website last month? How many leads have converted to opportunities this quarter? How many customers churned last year?
+
+With a "causation first" focus, we can boil the subject of this post down to Gilligan's Simplified Causal Evidence Ladder^TM^:
+
+![](images/evidence-ladder.png)
 
 ## Level 1: Descriptive Statistics
 
-Descriptive statistics is the bread and butter of the marketing analyst, and it lives in the world of _facts_: facts about a given data set. It turns out, what a given data set represents can start to bend your brain a bit: is the data set representing a _population_, or is it representing a _sample from a population_? It...depends on your perspective, I think.
+Descriptive statistics are the bread and butter of the marketing analyst, and they live in the world of _facts_: facts about a given data set. It turns out that what a given data set represents can start to bend your brain a bit: is the data set representing a _population_, or is it representing a _sample from a population_? It...depends on your perspective!
 
 Consider digital analytics data from last month. Descriptive statistics can describe a lot of facts:
 
@@ -61,10 +61,11 @@ Consider digital analytics data from last month. Descriptive statistics can desc
 * How many orders were placed on the site
 * The total revenue of orders placed on the site
 * The average order value (AOV) for orders placed on the site
-* That maximum daily revenue from the site
-* The _minimum_ daily revenue from the site
+* The maximum daily revenue from the site
+* The minimum daily revenue from the site
+* To what extent are traffic to the website and revenue from the website correlated with each other?
 
-The list goes on and on and on. And, putting aside the fact that website analytics data is inherently messy to collect, these statistics are all _facts_ about the website's performance last month.
+The list goes on and on and on. And, putting aside the fact that website analytics data is inherently messy to collect, these "statistics" are all simply _facts_ about the website's performance last month.
 
 If we are tasked with _reporting the performance of the website_, then last month's data can be considered a _population_, and everything is nice and clean (and, I'm afraid, some will make the case that these are not actually descriptive statistics at all, but, rather, become _parameters_; technically, these folks are likely right, but we're more concerned with the underlying concepts here).
 
@@ -72,9 +73,9 @@ Notice, in this scenario, there is _nothing_ about "prediction" (we have the fac
 
 What if, though, we consider the _population_ to be "all past, present, and future traffic to the site?" In that case, the data from last month is simply a _sample_ from the population. And, it is decidely _not_ a _random sample_, which means we need to proceed with _extreme caution_ if we want to use last month's data to make claims about this broader population. If there was \$2,000,000 of orders on the website last month, does that mean we can expect \$2,000,000 this month? The answer is a big, fat "maybe." We're moving _beyond_ descriptive statistics and need to move up our evidence ladder if we want to use that data to predict revenue for this month, much less explain what the drivers ("causal factors") of revenue are.
 
-## Level 2: Quasi-Experiments and Counterfactuals
+## Level 2: Inferential Statistics
 
-The terminology starts to add a lot syllables at this next level. And, this level is, arguably, the messiest. It's actually so broad and so deep that the posts linked to above split this level into multiple levels!
+The terminology starts to add some syllables at this next level. And, this level is, arguably, the messiest. It's actually so broad and so deep that the posts linked to above split this level into multiple levels!
 
 The basic idea of a counterfactual is that, if we truly had our 'druthers, and if we weren't limited by the current constraints of our ability to manipulate the space-time continuum, any time we had an important decision to make with multiple choices, we would make..._all of them_. We would, simply, split the universe, try a different option in each universe, see which one works out best, and then toss out the other universes and proceed with the best choice.
 
@@ -117,7 +118,7 @@ If this all sounds quite messy, that's because it is. Unfortunately, it's messin
 
 Except...
 
-## Level 3: Controlled Experimentation
+## Level 3: Experimentation
 
 This is the golden rung of the evidence ladder: controlled experimentation is the closest we can get to gathering direct data for our counterfactuals and actually honing in on a cause-and-effect relationship between "things we do" and "the outcomes they produce" ("stimulus-response" is another way to put this; as is "the effect of an intervention").
 
