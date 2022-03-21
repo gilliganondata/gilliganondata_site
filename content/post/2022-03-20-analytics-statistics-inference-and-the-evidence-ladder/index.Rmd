@@ -11,7 +11,7 @@ tags:
   - statistics
 ---
 
-"Statistics" is a tricky word. Subtract a letter or add one of several modifiers, and the meaning of the term (or phrase) changes. And yet, these different meanings are related to each other. I will boldly claim that there is value in trying to get some clarity as to these differences, as they get muddled together in the minds and behaviors of many analysts and marketers in ways that lead to dangerously misaligned expectations when it comes to what "the data" can deliver in different scenarios. 
+"Statistics" is a tricky word. Subtract a letter or add one of several modifiers, and the meaning of the term (or phrase) changes. And yet, these different meanings are related to each other. There is value in trying to get some clarity as to these differences, as they get muddled together in the minds and behaviors of many analysts and marketers in ways that lead to dangerously misaligned expectations when it comes to what "the data" can deliver in different scenarios. 
 
 Consider:
 
@@ -94,9 +94,9 @@ This is where we step back onto our ladder, as Level 2 (Inferential Statistics) 
 
 ![](images/evidence-ladder-2.png)
 
-This level is, arguably, the messiest. But, it's also the most alluring, as it's where the idea comes fromthat, given a sufficient volume of data fed into the right model, "the truth" will emerge. This is... not true. But, as "thought leaders" pontificate about "descriptive vs. predictive vs. prescriptive," there _should be_ a link drawn to this level of the ladder.  
+This level is, arguably, the messiest. But, it's also the most alluring, as it's where the idea comes from that, given a sufficient volume of data fed into the right model, "the truth" will emerge. This is... not true. But, as "thought leaders" pontificate about "descriptive vs. predictive vs. prescriptive" analytics, there _should be_ a link drawn to this level of the ladder.  
 
-Inferential statistics[^4] is all about taking a big pile of data that has already been generated and drawing conclusions (inferences) about the way the world works. The techniques for doing this are so broad and so deep that the posts linked to at the beginning of this post split this level into multiple levels!
+Inferential statistics[^4] is all about taking a big pile of data that has already been generated and drawing conclusions (inferences) about the way the world works. The techniques for doing this are so broad and so deep that the articles linked to at the beginning of this post split this level into multiple levels!
 
 [^4]: Is "inferential statistics" _the right term_ for this? I'm not entirely sure (but I'm getting increasingly comfortable with uncertainty). It's the broadest term I've found for what is described for this level.
 
