@@ -38,7 +38,7 @@ Here's the TL;DR:[^2]
 * **Inferential statistics** are about making predictions about a population from a sample of observations from that population and about describing relationships between different characteristics within a data set. This is where things get messy.
 * **Causal inference** is about describing the impact that one (or multiple) factors have (or will have) on something else. Or, at least, as best we can tell from the data we're working with and how we're working with it.
 
-_Causation_ is where marketers (and analysts) tend to make dangerous leaps between what a given data set can and cannot do. When it comes to _making decisions_, arguably, _causation is key_. We want to know, _given a set of options when it comes to what we are going to **do**, which one will have the greatest positive **effect**?_ (See how "effect" worked it's way in there? You know the phrase: "cause and effect." Boom! There's "cause!")
+_Causation_ is where marketers (and analysts) tend to make dangerous leaps between what a given data set can and cannot do. When it comes to _making decisions_, arguably, _causation is key_. We want to know, _given a set of options when it comes to what we are going to **do**, which one will have the greatest positive **effect**?_ (See how "effect" worked its way in there? You know the phrase: "cause and effect." Boom! There's "cause!")
 
 This doesn't mean that the _only_ reason we use data is to find causation and make decisions, but it's one of the main expectations we tend to have of the data.[^3]
 
