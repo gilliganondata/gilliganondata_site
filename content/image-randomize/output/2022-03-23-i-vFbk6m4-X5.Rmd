@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-03-23
+slug: random-image-i-vFbk6m4-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-vFbk6m4-X5_original_2022-03-23.jpg
+img_transformed: images/i-vFbk6m4-X5_transformed_2022-03-23.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/The-Great-Outdoors/i-vFbk6m4
+
+ ![](/image-randomize/images/i-vFbk6m4-X5_original_2022-03-23.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 6 | Contrast: 60 | Shadow: 0.457274393877015 | Gain: 0.0293736702296883 
+ * Modulation (magick) -> Brightness: 57 | Saturation: 127 | Hue: 29 
+ * Colorize (magick) -> Color: #c6e7a9 | Opacity 41% 
+ * Quantize (magick) -> Max Colors in Image: 12 
+ * Median (magick) -> Pixels: 47 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-vFbk6m4-X5_transformed_2022-03-23.jpg){width=100%}
+
