@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-03-31
+slug: random-image-i-x7KHn83-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-x7KHn83-5K_original_2022-03-31.jpg
+img_transformed: images/i-x7KHn83-5K_transformed_2022-03-31.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-x7KHn83
+
+ ![](/image-randomize/images/i-x7KHn83-5K_original_2022-03-31.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 10 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-x7KHn83-5K_transformed_2022-03-31.jpg){width=100%}
+
