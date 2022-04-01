@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-04-01
+slug: random-image-i-VtCf2VV-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-VtCf2VV-5K_original_2022-04-01.jpg
+img_transformed: images/i-VtCf2VV-5K_transformed_2022-04-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-VtCf2VV
+
+ ![](/image-randomize/images/i-VtCf2VV-5K_original_2022-04-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 31 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 4 | Contrast: 21 | Shadow: 0.397213436663151 | Gain: 0.467422564979643 
+ * Colorize (magick) -> Color: #e4e917 | Opacity 52% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-VtCf2VV-5K_transformed_2022-04-01.jpg){width=100%}
+
