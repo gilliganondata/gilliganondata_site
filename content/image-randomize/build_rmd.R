@@ -10,7 +10,7 @@ yaml <- paste("---",
               "title: Random Manipulation of a Random SmugMug Image",
               "author: Tim Wilson",
               paste0("date: ", as.character(Sys.Date())),
-              paste0("slug: random-image-", img_id),
+              paste0("slug: random-image-", as.character(Sys.Date), "-", img_id),
               "categories:",
               "  - R",
               "tags:",
@@ -48,7 +48,8 @@ final_img <- paste0("![](/image-randomize/",gsub(rel_path,"",img_trans_out_path)
 # Create the file path—one for where to put it in the repo and one
 # that will be the final URL (used in the tweet)
 file_write_path <- paste0(rel_path, "output/", Sys.Date(), "-", img_id, ".Rmd")
-final_url <- paste0("https://gilliganondata.com/image-randomize/output/random-image-", img_id, "/")
+final_url <- paste0("https://gilliganondata.com/image-randomize/output/random-image-", 
+                    as.character(Sys.Date), "-", img_id, "/")
 
 # Create the output file
 write(paste(yaml, 
