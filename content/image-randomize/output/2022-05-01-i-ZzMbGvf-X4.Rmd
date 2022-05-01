@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-05-01
+slug: random-image-2022-05-01-i-ZzMbGvf-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-ZzMbGvf-X4_original_2022-05-01.jpg
+img_transformed: images/i-ZzMbGvf-X4_transformed_2022-05-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-ZzMbGvf
+
+ ![](/image-randomize/images/i-ZzMbGvf-X4_original_2022-05-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 20 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 4 | Contrast: 24 | Shadow: 0.776638372801244 | Gain: 0.286523490212858 
+ * Modulation (magick) -> Brightness: 88 | Saturation: 65 | Hue: 190 
+ * Quantize (magick) -> Max Colors in Image: 13 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-ZzMbGvf-X4_transformed_2022-05-01.jpg){width=100%}
+
