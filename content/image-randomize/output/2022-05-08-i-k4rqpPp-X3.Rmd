@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-05-08
+slug: random-image-2022-05-08-i-k4rqpPp-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-k4rqpPp-X3_original_2022-05-08.jpg
+img_transformed: images/i-k4rqpPp-X3_transformed_2022-05-08.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Mammals-in-the-Wild/i-k4rqpPp
+
+ ![](/image-randomize/images/i-k4rqpPp-X3_original_2022-05-08.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 13 
+ * Modulation (magick) -> Brightness: 141 | Saturation: 64 | Hue: 191 
+ * Median (magick) -> Pixels: 21 
+ * Colorize (magick) -> Color: #5f64ba | Opacity 45% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-k4rqpPp-X3_transformed_2022-05-08.jpg){width=100%}
+
