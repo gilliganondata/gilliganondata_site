@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-05-12
+slug: random-image-2022-05-12-i-Xs7RhTW-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-Xs7RhTW-5K_original_2022-05-12.jpg
+img_transformed: images/i-Xs7RhTW-5K_transformed_2022-05-12.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-Xs7RhTW
+
+ ![](/image-randomize/images/i-Xs7RhTW-5K_original_2022-05-12.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #b06afc | Opacity 32% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 3 | Contrast: 21 | Shadow: 0.77804326498881 | Gain: 0.925605414900929 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-Xs7RhTW-5K_transformed_2022-05-12.jpg){width=100%}
+
