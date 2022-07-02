@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-07-02
+slug: random-image-2022-07-02-i-HnKk5fp-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-HnKk5fp-5K_original_2022-07-02.jpg
+img_transformed: images/i-HnKk5fp-5K_transformed_2022-07-02.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-HnKk5fp
+
+ ![](/image-randomize/images/i-HnKk5fp-5K_original_2022-07-02.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 40 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-HnKk5fp-5K_transformed_2022-07-02.jpg){width=100%}
+
