@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-07-03
+slug: random-image-2022-07-03-i-CJ5psbn-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-CJ5psbn-5K_original_2022-07-03.jpg
+img_transformed: images/i-CJ5psbn-5K_transformed_2022-07-03.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-CJ5psbn
+
+ ![](/image-randomize/images/i-CJ5psbn-5K_original_2022-07-03.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 128 | Saturation: 142 | Hue: 127 
+ * Median (magick) -> Pixels: 20 
+ * Colorize (magick) -> Color: #270f42 | Opacity 42% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-CJ5psbn-5K_transformed_2022-07-03.jpg){width=100%}
+
