@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-07-19
+slug: random-image-2022-07-19-i-JCfZktW-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-JCfZktW-4K_original_2022-07-19.jpg
+img_transformed: images/i-JCfZktW-4K_transformed_2022-07-19.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-JCfZktW
+
+ ![](/image-randomize/images/i-JCfZktW-4K_original_2022-07-19.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 4 | Contrast: 57 | Shadow: 0.769014564109966 | Gain: 0.386416155612096 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-JCfZktW-4K_transformed_2022-07-19.jpg){width=100%}
+
