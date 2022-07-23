@@ -20,6 +20,10 @@ img_url <- img_details$Response$LargestImage$Url
 # more easily
 img_url_rmd <- all_images$WebUri[[random_id]]
 
+# Write the image URL details to the console (for troubleshooting)
+cat("img_url:", img_url, "\n")
+cat("img_url_rmd", img_url_rmd, "\n")
+
 # Come up with the file name to save the image as. It's the filename +
 # the current date + the file extension. One filename for the original and
 # one filename for the transformed image
