@@ -2,17 +2,20 @@
 library(rtweet)
 
 # Create the Twitter token
-twitter_token <- create_token(
-  app = Sys.getenv("TWITTER_APPNAME"),
-  consumer_key = Sys.getenv("TWITTER_KEY"),
-  consumer_secret = Sys.getenv("TWITTER_SECRET"),
+twitter_token <- rtweet_bot(
+  api_key = Sys.getenv("TWITTER_KEY"),
+  api_secret = Sys.getenv("TWITTER_SECRET"),
   access_token = Sys.getenv("TWITTER_ACCESS_TOKEN"),
-  access_secret = Sys.getenv("TWITTER_ACCESS_SECRET"),
-  set_renv = FALSE)
+  access_secret = Sys.getenv("TWITTER_ACCESS_SECRET"))
+
+cat("twitter_token created.\n")
 
 # Get the tweet details. If this file doesn't exist, then the Tweet post
 # will error out...which is sloppy error handling, but it works
 tweet_details <- readRDS("content/image-randomize/output/tweet_details.rds")
+
+cat("Original Image Path:", tweet_details$orig_img_path, "\n")
+cat("Transformed Image Path:", tweet_details$trans_img_path, "\n")
 
 # Post the tweet!
 post_tweet(status = paste("My daily diversion: a random picture I took with a",
@@ -21,4 +24,5 @@ post_tweet(status = paste("My daily diversion: a random picture I took with a",
                           "but occasionally interesting. Details for this one at:",
                           tweet_details$page_url),
            media = c(tweet_details$orig_img_path, tweet_details$trans_img_path),
+           media_alt_text = c("Original Image", "Transformed Image"),
            token = twitter_token)
