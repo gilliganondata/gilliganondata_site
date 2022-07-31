@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-07-31
+slug: random-image-2022-07-31-i-NP4z79b
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-NP4z79b_original_2022-07-31.jpg
+img_transformed: images/i-NP4z79b_transformed_2022-07-31.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-NP4z79b
+
+ ![](/image-randomize/images/i-NP4z79b_original_2022-07-31.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 1 | Contrast: 47 | Shadow: 0.845172528643161 | Gain: 0.510418233461678 
+ * Quantize (magick) -> Max Colors in Image: 5 
+ * Modulation (magick) -> Brightness: 70 | Saturation: 65 | Hue: 45 
+ * Colorize (magick) -> Color: #f487e5 | Opacity 36% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-NP4z79b_transformed_2022-07-31.jpg){width=100%}
+
