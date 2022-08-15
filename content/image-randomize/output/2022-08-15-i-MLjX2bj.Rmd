@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-08-15
+slug: random-image-2022-08-15-i-MLjX2bj
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-MLjX2bj_original_2022-08-15.jpg
+img_transformed: images/i-MLjX2bj_transformed_2022-08-15.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-MLjX2bj
+
+ ![](/image-randomize/images/i-MLjX2bj_original_2022-08-15.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 114 | Saturation: 58 | Hue: 114 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 2 | Contrast: 35 | Shadow: 0.591868879273534 | Gain: 0.0069763152860105 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-MLjX2bj_transformed_2022-08-15.jpg){width=100%}
+
