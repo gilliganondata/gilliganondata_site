@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-08-16
+slug: random-image-2022-08-16-i-ZcBwJMT-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-ZcBwJMT-X3_original_2022-08-16.jpg
+img_transformed: images/i-ZcBwJMT-X3_transformed_2022-08-16.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/North-Carolina-Outdoors/i-ZcBwJMT
+
+ ![](/image-randomize/images/i-ZcBwJMT-X3_original_2022-08-16.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 7 
+ * Median (magick) -> Pixels: 38 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-ZcBwJMT-X3_transformed_2022-08-16.jpg){width=100%}
+
