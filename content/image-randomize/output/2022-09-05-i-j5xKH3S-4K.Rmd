@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-09-05
+slug: random-image-2022-09-05-i-j5xKH3S-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-j5xKH3S-4K_original_2022-09-05.jpg
+img_transformed: images/i-j5xKH3S-4K_transformed_2022-09-05.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-j5xKH3S
+
+ ![](/image-randomize/images/i-j5xKH3S-4K_original_2022-09-05.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 39 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 5 | Contrast: 51 | Shadow: 0.133076993981376 | Gain: 0.0157972639426589 
+ * Modulation (magick) -> Brightness: 92 | Saturation: 65 | Hue: 102 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-j5xKH3S-4K_transformed_2022-09-05.jpg){width=100%}
+
