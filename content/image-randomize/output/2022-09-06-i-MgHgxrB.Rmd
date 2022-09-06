@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-09-06
+slug: random-image-2022-09-06-i-MgHgxrB
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-MgHgxrB_original_2022-09-06.jpg
+img_transformed: images/i-MgHgxrB_transformed_2022-09-06.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-MgHgxrB
+
+ ![](/image-randomize/images/i-MgHgxrB_original_2022-09-06.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 110 | Saturation: 54 | Hue: 200 
+ * Quantize (magick) -> Max Colors in Image: 4 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-MgHgxrB_transformed_2022-09-06.jpg){width=100%}
+
