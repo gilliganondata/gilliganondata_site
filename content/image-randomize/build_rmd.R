@@ -66,5 +66,7 @@ write(paste(yaml,
 # referenced for the tweeting
 tweet_details <- list(page_url = final_url,
                       orig_img_path = img_out_path, 
-                      trans_img_path = img_trans_out_path)
+                      trans_img_path = img_trans_out_path,
+                      date_taken = img_date_taken,
+                      image_title = img_title)
 saveRDS(tweet_details, paste0(rel_path, "output/tweet_details.rds"))

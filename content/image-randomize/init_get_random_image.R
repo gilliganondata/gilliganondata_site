@@ -1,6 +1,11 @@
 # Pick a random row
 random_id <- sample(nrow(all_images), 1)
 
+# Get the title and date taken. This will be used later for the ALT text in the 
+# Twitter image
+img_title <- all_images[random_id,]$Title
+img_date_taken <- all_images[random_id,]$DateTimeOriginal |> as.Date() |> as.character()
+
 # We'll need to make one more API call to get the image URL
 img_uri <- all_images$LargestImgUri[[random_id]]
 
