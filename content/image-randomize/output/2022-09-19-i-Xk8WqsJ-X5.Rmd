@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-09-19
+slug: random-image-2022-09-19-i-Xk8WqsJ-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-Xk8WqsJ-X5_original_2022-09-19.jpg
+img_transformed: images/i-Xk8WqsJ-X5_transformed_2022-09-19.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-Xk8WqsJ
+
+ ![](/image-randomize/images/i-Xk8WqsJ-X5_original_2022-09-19.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 2 | Contrast: 33 | Shadow: 0.0888902053702623 | Gain: 0.341873482102528 
+ * Quantize (magick) -> Max Colors in Image: 14 
+ * Modulation (magick) -> Brightness: 66 | Saturation: 124 | Hue: 11 
+ * Median (magick) -> Pixels: 21 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-Xk8WqsJ-X5_transformed_2022-09-19.jpg){width=100%}
+
