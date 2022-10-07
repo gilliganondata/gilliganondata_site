@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-10-07
+slug: random-image-2022-10-07-i-Vk7Q64c-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-Vk7Q64c-4K_original_2022-10-07.jpg
+img_transformed: images/i-Vk7Q64c-4K_transformed_2022-10-07.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-Vk7Q64c
+
+ ![](/image-randomize/images/i-Vk7Q64c-4K_original_2022-10-07.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 5 | Contrast: 46 | Shadow: 0.83233853476122 | Gain: 0.391383772483096 
+ * Colorize (magick) -> Color: #5a842f | Opacity 32% 
+ * Median (magick) -> Pixels: 19 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-Vk7Q64c-4K_transformed_2022-10-07.jpg){width=100%}
+
