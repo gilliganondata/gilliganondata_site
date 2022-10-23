@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-10-23
+slug: random-image-2022-10-23-i-fZwzbnj-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-fZwzbnj-X5_original_2022-10-23.jpg
+img_transformed: images/i-fZwzbnj-X5_transformed_2022-10-23.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-fZwzbnj
+
+ ![](/image-randomize/images/i-fZwzbnj-X5_original_2022-10-23.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #0ebee1 | Opacity 56% 
+ * Quantize (magick) -> Max Colors in Image: 10 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-fZwzbnj-X5_transformed_2022-10-23.jpg){width=100%}
+
