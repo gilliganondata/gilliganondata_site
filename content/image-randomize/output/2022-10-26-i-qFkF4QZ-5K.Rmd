@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-10-26
+slug: random-image-2022-10-26-i-qFkF4QZ-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-qFkF4QZ-5K_original_2022-10-26.jpg
+img_transformed: images/i-qFkF4QZ-5K_transformed_2022-10-26.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-qFkF4QZ
+
+ ![](/image-randomize/images/i-qFkF4QZ-5K_original_2022-10-26.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #5021dc | Opacity 58% 
+ * Median (magick) -> Pixels: 39 
+ * Modulation (magick) -> Brightness: 150 | Saturation: 86 | Hue: 85 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-qFkF4QZ-5K_transformed_2022-10-26.jpg){width=100%}
+
