@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-10-30
+slug: random-image-2022-10-30-i-MLnhhDK-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-MLnhhDK-5K_original_2022-10-30.jpg
+img_transformed: images/i-MLnhhDK-5K_transformed_2022-10-30.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-MLnhhDK
+
+ ![](/image-randomize/images/i-MLnhhDK-5K_original_2022-10-30.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 108 | Saturation: 147 | Hue: 102 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-MLnhhDK-5K_transformed_2022-10-30.jpg){width=100%}
+
