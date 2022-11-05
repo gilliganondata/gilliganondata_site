@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-11-05
+slug: random-image-2022-11-05-i-mNxG2K5-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-mNxG2K5-4K_original_2022-11-05.jpg
+img_transformed: images/i-mNxG2K5-4K_transformed_2022-11-05.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-mNxG2K5
+
+ ![](/image-randomize/images/i-mNxG2K5-4K_original_2022-11-05.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #5a78b9 | Opacity 39% 
+ * Median (magick) -> Pixels: 18 
+ * Modulation (magick) -> Brightness: 141 | Saturation: 77 | Hue: 95 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 3 | Contrast: 44 | Shadow: 0.872028123121709 | Gain: 0.0767017821781337 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-mNxG2K5-4K_transformed_2022-11-05.jpg){width=100%}
+
