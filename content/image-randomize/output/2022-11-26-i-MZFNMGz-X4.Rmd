@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-11-26
+slug: random-image-2022-11-26-i-MZFNMGz-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-MZFNMGz-X4_original_2022-11-26.jpg
+img_transformed: images/i-MZFNMGz-X4_transformed_2022-11-26.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-MZFNMGz
+
+ ![](/image-randomize/images/i-MZFNMGz-X4_original_2022-11-26.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 6 | Contrast: 21 | Shadow: 0.589267045492306 | Gain: 0.320319546153769 
+ * Median (magick) -> Pixels: 40 
+ * Colorize (magick) -> Color: #ddba9f | Opacity 50% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-MZFNMGz-X4_transformed_2022-11-26.jpg){width=100%}
+
