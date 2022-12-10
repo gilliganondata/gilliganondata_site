@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2022-12-10
+slug: random-image-2022-12-10-i-CsXkNRQ
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-CsXkNRQ_original_2022-12-10.jpg
+img_transformed: images/i-CsXkNRQ_transformed_2022-12-10.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-CsXkNRQ
+
+ ![](/image-randomize/images/i-CsXkNRQ_original_2022-12-10.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #7cbdcc | Opacity 46% 
+ * Quantize (magick) -> Max Colors in Image: 12 
+ * Median (magick) -> Pixels: 17 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 2 | Contrast: 20 | Shadow: 0.621859229635447 | Gain: 0.165782283991575 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-CsXkNRQ_transformed_2022-12-10.jpg){width=100%}
+
