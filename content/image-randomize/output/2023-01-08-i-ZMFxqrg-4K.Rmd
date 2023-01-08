@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-01-08
+slug: random-image-2023-01-08-i-ZMFxqrg-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-ZMFxqrg-4K_original_2023-01-08.jpg
+img_transformed: images/i-ZMFxqrg-4K_transformed_2023-01-08.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-ZMFxqrg
+
+ ![](/image-randomize/images/i-ZMFxqrg-4K_original_2023-01-08.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 11 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 5 | Contrast: 43 | Shadow: 0.932312393561006 | Gain: 0.466824823291972 
+ * Modulation (magick) -> Brightness: 100 | Saturation: 93 | Hue: 27 
+ * Colorize (magick) -> Color: #1dcae9 | Opacity 52% 
+ * Median (magick) -> Pixels: 24 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-ZMFxqrg-4K_transformed_2023-01-08.jpg){width=100%}
+
