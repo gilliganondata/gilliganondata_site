@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-01-25
+slug: random-image-2023-01-25-i-StPDBbs-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-StPDBbs-X3_original_2023-01-25.jpg
+img_transformed: images/i-StPDBbs-X3_transformed_2023-01-25.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-StPDBbs
+
+ ![](/image-randomize/images/i-StPDBbs-X3_original_2023-01-25.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Modulation (magick) -> Brightness: 127 | Saturation: 119 | Hue: 151 
+ * Colorize (magick) -> Color: #71cbb9 | Opacity 58% 
+ * Median (magick) -> Pixels: 28 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-StPDBbs-X3_transformed_2023-01-25.jpg){width=100%}
+
