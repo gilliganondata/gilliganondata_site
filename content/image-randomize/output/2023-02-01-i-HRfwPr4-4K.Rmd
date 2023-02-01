@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-02-01
+slug: random-image-2023-02-01-i-HRfwPr4-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-HRfwPr4-4K_original_2023-02-01.jpg
+img_transformed: images/i-HRfwPr4-4K_transformed_2023-02-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-HRfwPr4
+
+ ![](/image-randomize/images/i-HRfwPr4-4K_original_2023-02-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #c8105a | Opacity 53% 
+ * Modulation (magick) -> Brightness: 68 | Saturation: 56 | Hue: 41 
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 5 | Contrast: 57 | Shadow: 0.66003120969981 | Gain: 0.280444147065282 
+ * Median (magick) -> Pixels: 46 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-HRfwPr4-4K_transformed_2023-02-01.jpg){width=100%}
+
