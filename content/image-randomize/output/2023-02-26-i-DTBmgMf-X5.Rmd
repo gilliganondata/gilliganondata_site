@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-02-26
+slug: random-image-2023-02-26-i-DTBmgMf-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-DTBmgMf-X5_original_2023-02-26.jpg
+img_transformed: images/i-DTBmgMf-X5_transformed_2023-02-26.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-DTBmgMf
+
+ ![](/image-randomize/images/i-DTBmgMf-X5_original_2023-02-26.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #ac1540 | Opacity 52% 
+ * Modulation (magick) -> Brightness: 135 | Saturation: 99 | Hue: 187 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 5 | Contrast: 28 | Shadow: 0.922329802066088 | Gain: 0.24477279279381 
+ * Median (magick) -> Pixels: 24 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-DTBmgMf-X5_transformed_2023-02-26.jpg){width=100%}
+
