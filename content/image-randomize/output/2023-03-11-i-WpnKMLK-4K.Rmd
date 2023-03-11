@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-03-11
+slug: random-image-2023-03-11-i-WpnKMLK-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-WpnKMLK-4K_original_2023-03-11.jpg
+img_transformed: images/i-WpnKMLK-4K_transformed_2023-03-11.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Views-from-the-Airplane/i-WpnKMLK
+
+ ![](/image-randomize/images/i-WpnKMLK-4K_original_2023-03-11.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 27 
+ * Modulation (magick) -> Brightness: 99 | Saturation: 119 | Hue: 88 
+ * Quantize (magick) -> Max Colors in Image: 16 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-WpnKMLK-4K_transformed_2023-03-11.jpg){width=100%}
+
