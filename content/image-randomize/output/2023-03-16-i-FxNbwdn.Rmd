@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-03-16
+slug: random-image-2023-03-16-i-FxNbwdn
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-FxNbwdn_original_2023-03-16.jpg
+img_transformed: images/i-FxNbwdn_transformed_2023-03-16.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-FxNbwdn
+
+ ![](/image-randomize/images/i-FxNbwdn_original_2023-03-16.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 6 
+ * Modulation (magick) -> Brightness: 76 | Saturation: 139 | Hue: 109 
+ * Colorize (magick) -> Color: #09a5ac | Opacity 25% 
+ * Median (magick) -> Pixels: 40 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 3 | Contrast: 23 | Shadow: 0.228774391347542 | Gain: 0.714161948766559 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-FxNbwdn_transformed_2023-03-16.jpg){width=100%}
+
