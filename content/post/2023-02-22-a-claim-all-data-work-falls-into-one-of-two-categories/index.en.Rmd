@@ -20,6 +20,12 @@ pacman::p_load(tidyverse,
 
 set.seed(112001)
 
+# Get the xkcd font
+download.file("http://simonsoftware.se/other/xkcd.ttf", dest = "xkcd.ttf", mode = "wb")
+font_import(paths = getwd(), pattern = "[X/x]kcd", prompt = FALSE)
+loadfonts(device = "win")
+
+
 mapping <- aes(x, y, scale, ratioxy, angleofspine,
                anglerighthumerus, anglelefthumerus,
                anglerightradius, angleleftradius,
