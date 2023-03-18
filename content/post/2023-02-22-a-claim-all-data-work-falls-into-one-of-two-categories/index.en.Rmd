@@ -11,84 +11,94 @@ tags:
 
 The title of this post says it all, really. I'm a fan of simplicity, and this binary framing is something that came to me, I think, in the spring of 2022 when I was trying to visualize, at a high level, the different skills and activities that data workers could be involved with. That diagram was focused on a subset of all data workers, and it had a bunch of interconnected bubbles and had a particular slant towards the work of the consultancy where I was employed at the time.
 
+![](img_1.png)
+
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.align = 'center'}
 
-if (!require("pacman")) install.packages("pacman")
-pacman::p_load(tidyverse,
-               xkcd,
-               extrafont)
+# Could not get the font working correctly in the cloud build, so cheesed out and
+# just reference static images generated with the code below.
 
-set.seed(112001)
-
-# Get the xkcd font
-download.file("http://simonsoftware.se/other/xkcd.ttf", dest = "xkcd.ttf", mode = "wb")
-font_import(paths = getwd(), pattern = "[X/x]kcd", prompt = FALSE)
-loadfonts(device = "win")
-
-
-mapping <- aes(x, y, scale, ratioxy, angleofspine,
-               anglerighthumerus, anglelefthumerus,
-               anglerightradius, angleleftradius,
-               anglerightleg, angleleftleg, angleofneck)
-
-data_stickfig <- data.frame( x= c(1000,2000), y=800,
-                       scale = 300 ,
-                       ratioxy = 0.8,
-                       angleofspine =  -pi/2  ,
-                       anglerighthumerus = c(-pi/6, -pi/6),
-                       anglelefthumerus = c(-pi/2 - pi/6, -pi/2 - pi/6),
-                       anglerightradius = c(pi/5, 7*pi/6),
-                       angleleftradius = c(pi/5, 3 * pi/4),
-                       angleleftleg = 3*pi/2 + pi / 12 ,
-                       anglerightleg = 3*pi/2 - pi / 12,
-                       angleofneck = runif(1, 3*pi/2-pi/10, 3*pi/2+pi/10))
-
-ggplot() +
-  xkcdman(mapping,
-          data_stickfig) +
-  # Statement 1
-  annotate("text", x=1250, y = 1100, family = "xkcd", size = 7,
-           label = "I assume you mean\n\"reporting\" and \"analysis?\"") +
-  xkcdline(aes(x=1120, y=900, xend=1220, yend=980),
-           data_stickfig, xjitteramount = 10) +
-  # Statement 2
-  annotate("text", x=1800, y = 1100, family = "xkcd", size = 7,
-           label = "Nope.\nNot even close.") +
-  xkcdline(aes(x=1880, y=900, xend=1800, yend=980),
-           data_stickfig, xjitteramount = 10) +
-  # 
-  scale_y_continuous(limits = c(0, 1200)) +
-  scale_x_continuous(limits = c(800, 2200)) +
-  theme_void()
+# if (!require("pacman")) install.packages("pacman")
+# pacman::p_load(tidyverse,
+#                xkcd,
+#                extrafont)
+# 
+# set.seed(112001)
+# 
+# # Get the xkcd font
+# download.file("http://simonsoftware.se/other/xkcd.ttf", dest = "xkcd.ttf", mode = "wb")
+# font_import(paths = getwd(), pattern = "[X/x]kcd", prompt = FALSE)
+# loadfonts(device = "win")
+# 
+# 
+# mapping <- aes(x, y, scale, ratioxy, angleofspine,
+#                anglerighthumerus, anglelefthumerus,
+#                anglerightradius, angleleftradius,
+#                anglerightleg, angleleftleg, angleofneck)
+# 
+# data_stickfig <- data.frame( x= c(1000,2000), y=800,
+#                        scale = 300 ,
+#                        ratioxy = 0.8,
+#                        angleofspine =  -pi/2  ,
+#                        anglerighthumerus = c(-pi/6, -pi/6),
+#                        anglelefthumerus = c(-pi/2 - pi/6, -pi/2 - pi/6),
+#                        anglerightradius = c(pi/5, 7*pi/6),
+#                        angleleftradius = c(pi/5, 3 * pi/4),
+#                        angleleftleg = 3*pi/2 + pi / 12 ,
+#                        anglerightleg = 3*pi/2 - pi / 12,
+#                        angleofneck = runif(1, 3*pi/2-pi/10, 3*pi/2+pi/10))
+# 
+# ggplot() +
+#   xkcdman(mapping,
+#           data_stickfig) +
+#   # Statement 1
+#   annotate("text", x=1250, y = 1100, family = "xkcd", size = 7,
+#            label = "I assume you mean\n\"reporting\" and \"analysis?\"") +
+#   xkcdline(aes(x=1120, y=900, xend=1220, yend=980),
+#            data_stickfig, xjitteramount = 10) +
+#   # Statement 2
+#   annotate("text", x=1800, y = 1100, family = "xkcd", size = 7,
+#            label = "Nope.\nNot even close.") +
+#   xkcdline(aes(x=1880, y=900, xend=1800, yend=980),
+#            data_stickfig, xjitteramount = 10) +
+#   # 
+#   scale_y_continuous(limits = c(0, 1200)) +
+#   scale_x_continuous(limits = c(800, 2200)) +
+#   theme_void()
 
 ```
 
 What struck me from the exercise was not so much the specific bubbles, but the fact that all of those bubbles fell neatly into one of two different categories (which is how I ultimately arranged the diagram): **data collection and management** and **data usage**.
 
+![](img_2.png)
+
 ```{r echo=FALSE, warning=FALSE, message=FALSE, fig.align = 'center'}
 
-data_stickfig <- data.frame( x=1500, y=800,
-                       scale = 300 ,
-                       ratioxy = 0.8,
-                       angleofspine =  -pi/2,
-                       anglerighthumerus = pi/12,
-                       anglelefthumerus = 11/12*pi,
-                       anglerightradius = pi/4,
-                       angleleftradius = 5/6*pi,
-                       angleleftleg = 3*pi/2 + pi / 12 ,
-                       anglerightleg = 3*pi/2 - pi / 12,
-                       angleofneck = runif(1, 3*pi/2-pi/10, 3*pi/2+pi/10))
+# Could not get the font working correctly in the cloud build, so cheesed out and
+# just reference static images generated with the code below.
 
-ggplot() +
-  xkcdman(mapping,
-          data_stickfig) +
-  annotate("text", x=1150, y = 1000, family = "xkcd", size = 9,
-           label = "Data Collection\nand Management") +
-  annotate("text", x=1800, y = 1000, family = "xkcd", size = 9,
-           label = "Data\nUsage") +
-  scale_y_continuous(limits = c(0, 1200)) +
-  scale_x_continuous(limits = c(800, 2200)) +
-  theme_void()
+# data_stickfig <- data.frame( x=1500, y=800,
+#                        scale = 300 ,
+#                        ratioxy = 0.8,
+#                        angleofspine =  -pi/2,
+#                        anglerighthumerus = pi/12,
+#                        anglelefthumerus = 11/12*pi,
+#                        anglerightradius = pi/4,
+#                        angleleftradius = 5/6*pi,
+#                        angleleftleg = 3*pi/2 + pi / 12 ,
+#                        anglerightleg = 3*pi/2 - pi / 12,
+#                        angleofneck = runif(1, 3*pi/2-pi/10, 3*pi/2+pi/10))
+# 
+# ggplot() +
+#   xkcdman(mapping,
+#           data_stickfig) +
+#   annotate("text", x=1150, y = 1000, family = "xkcd", size = 9,
+#            label = "Data Collection\nand Management") +
+#   annotate("text", x=1800, y = 1000, family = "xkcd", size = 9,
+#            label = "Data\nUsage") +
+#   scale_y_continuous(limits = c(0, 1200)) +
+#   scale_x_continuous(limits = c(800, 2200)) +
+#   theme_void()
 
 ```
 
