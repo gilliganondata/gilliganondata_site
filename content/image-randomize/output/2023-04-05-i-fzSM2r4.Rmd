@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-04-05
+slug: random-image-2023-04-05-i-fzSM2r4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-fzSM2r4_original_2023-04-05.jpg
+img_transformed: images/i-fzSM2r4_transformed_2023-04-05.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-fzSM2r4
+
+ ![](/image-randomize/images/i-fzSM2r4_original_2023-04-05.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #c07f7a | Opacity 41% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-fzSM2r4_transformed_2023-04-05.jpg){width=100%}
+
