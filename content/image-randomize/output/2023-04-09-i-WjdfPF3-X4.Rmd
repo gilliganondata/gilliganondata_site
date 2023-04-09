@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-04-09
+slug: random-image-2023-04-09-i-WjdfPF3-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-WjdfPF3-X4_original_2023-04-09.jpg
+img_transformed: images/i-WjdfPF3-X4_transformed_2023-04-09.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Mammals-in-the-Wild/i-WjdfPF3
+
+ ![](/image-randomize/images/i-WjdfPF3-X4_original_2023-04-09.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 8 
+ * Median (magick) -> Pixels: 43 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-WjdfPF3-X4_transformed_2023-04-09.jpg){width=100%}
+
