@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-04-13
+slug: random-image-2023-04-13-i-CwTzBBG-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-CwTzBBG-5K_original_2023-04-13.jpg
+img_transformed: images/i-CwTzBBG-5K_transformed_2023-04-13.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-CwTzBBG
+
+ ![](/image-randomize/images/i-CwTzBBG-5K_original_2023-04-13.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 2 | Contrast: 34 | Shadow: 0.754382093902677 | Gain: 0.40198662225157 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-CwTzBBG-5K_transformed_2023-04-13.jpg){width=100%}
+
