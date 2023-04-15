@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-04-15
+slug: random-image-2023-04-15-i-RP7DxX3-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-RP7DxX3-X5_original_2023-04-15.jpg
+img_transformed: images/i-RP7DxX3-X5_transformed_2023-04-15.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Australia-Outdoors/i-RP7DxX3
+
+ ![](/image-randomize/images/i-RP7DxX3-X5_original_2023-04-15.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 122 | Saturation: 140 | Hue: 77 
+ * Median (magick) -> Pixels: 22 
+ * Quantize (magick) -> Max Colors in Image: 5 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 3 | Contrast: 29 | Shadow: 0.191142367431894 | Gain: 0.411969183711335 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-RP7DxX3-X5_transformed_2023-04-15.jpg){width=100%}
+
