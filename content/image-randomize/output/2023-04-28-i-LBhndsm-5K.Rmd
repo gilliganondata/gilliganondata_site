@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-04-28
+slug: random-image-2023-04-28-i-LBhndsm-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-LBhndsm-5K_original_2023-04-28.jpg
+img_transformed: images/i-LBhndsm-5K_transformed_2023-04-28.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-LBhndsm
+
+ ![](/image-randomize/images/i-LBhndsm-5K_original_2023-04-28.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 48 
+ * Modulation (magick) -> Brightness: 110 | Saturation: 125 | Hue: 136 
+ * Quantize (magick) -> Max Colors in Image: 9 
+ * Colorize (magick) -> Color: #c7f069 | Opacity 43% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-LBhndsm-5K_transformed_2023-04-28.jpg){width=100%}
+
