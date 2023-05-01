@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-05-01
+slug: random-image-2023-05-01-i-26fGGsQ-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-26fGGsQ-5K_original_2023-05-01.jpg
+img_transformed: images/i-26fGGsQ-5K_transformed_2023-05-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Graffiti-and-Pinball/i-26fGGsQ
+
+ ![](/image-randomize/images/i-26fGGsQ-5K_original_2023-05-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 50 | Saturation: 54 | Hue: 42 
+ * Median (magick) -> Pixels: 34 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-26fGGsQ-5K_transformed_2023-05-01.jpg){width=100%}
+
