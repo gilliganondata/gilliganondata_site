@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-05-15
+slug: random-image-2023-05-15-i-WQ3FqQN
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-WQ3FqQN_original_2023-05-15.jpg
+img_transformed: images/i-WQ3FqQN_transformed_2023-05-15.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-WQ3FqQN
+
+ ![](/image-randomize/images/i-WQ3FqQN_original_2023-05-15.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 1 | Contrast: 24 | Shadow: 0.308557150885463 | Gain: 0.0939825356472284 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-WQ3FqQN_transformed_2023-05-15.jpg){width=100%}
+
