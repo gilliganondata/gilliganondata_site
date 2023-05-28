@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-05-28
+slug: random-image-2023-05-28-i-nnWJkQz-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-nnWJkQz-X4_original_2023-05-28.jpg
+img_transformed: images/i-nnWJkQz-X4_transformed_2023-05-28.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Birds-of-Ohio/i-nnWJkQz
+
+ ![](/image-randomize/images/i-nnWJkQz-X4_original_2023-05-28.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Colorize (magick) -> Color: #c3192f | Opacity 56% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 4 | Contrast: 58 | Shadow: 0.401835919823498 | Gain: 0.798416049219668 
+ * Median (magick) -> Pixels: 33 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-nnWJkQz-X4_transformed_2023-05-28.jpg){width=100%}
+
