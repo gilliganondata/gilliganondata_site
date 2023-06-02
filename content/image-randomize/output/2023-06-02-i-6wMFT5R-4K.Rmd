@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-06-02
+slug: random-image-2023-06-02-i-6wMFT5R-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-6wMFT5R-4K_original_2023-06-02.jpg
+img_transformed: images/i-6wMFT5R-4K_transformed_2023-06-02.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-6wMFT5R
+
+ ![](/image-randomize/images/i-6wMFT5R-4K_original_2023-06-02.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 11 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-6wMFT5R-4K_transformed_2023-06-02.jpg){width=100%}
+
