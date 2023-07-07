@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-07-07
+slug: random-image-2023-07-07-i-FSNRmJc-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-FSNRmJc-4K_original_2023-07-07.jpg
+img_transformed: images/i-FSNRmJc-4K_transformed_2023-07-07.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-FSNRmJc
+
+ ![](/image-randomize/images/i-FSNRmJc-4K_original_2023-07-07.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 3 | Contrast: 46 | Shadow: 0.195331256370991 | Gain: 0.449931907234713 
+ * Median (magick) -> Pixels: 37 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-FSNRmJc-4K_transformed_2023-07-07.jpg){width=100%}
+
