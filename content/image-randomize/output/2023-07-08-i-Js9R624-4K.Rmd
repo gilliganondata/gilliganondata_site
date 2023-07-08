@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-07-08
+slug: random-image-2023-07-08-i-Js9R624-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-Js9R624-4K_original_2023-07-08.jpg
+img_transformed: images/i-Js9R624-4K_transformed_2023-07-08.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-Js9R624
+
+ ![](/image-randomize/images/i-Js9R624-4K_original_2023-07-08.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 14 
+ * Colorize (magick) -> Color: #f02175 | Opacity 42% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 46 | Shadow: 0.0122968044597656 | Gain: 0.424630167894065 
+ * Modulation (magick) -> Brightness: 117 | Saturation: 116 | Hue: 43 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-Js9R624-4K_transformed_2023-07-08.jpg){width=100%}
+
