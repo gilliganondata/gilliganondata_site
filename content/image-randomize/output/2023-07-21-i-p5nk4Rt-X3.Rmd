@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-07-21
+slug: random-image-2023-07-21-i-p5nk4Rt-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-p5nk4Rt-X3_original_2023-07-21.jpg
+img_transformed: images/i-p5nk4Rt-X3_transformed_2023-07-21.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-p5nk4Rt
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_original_2023-07-21.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #f4b43a | Opacity 32% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 4 | Contrast: 18 | Shadow: 0.412305149715394 | Gain: 0.190870495513082 
+ * Quantize (magick) -> Max Colors in Image: 13 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_transformed_2023-07-21.jpg){width=100%}
+
