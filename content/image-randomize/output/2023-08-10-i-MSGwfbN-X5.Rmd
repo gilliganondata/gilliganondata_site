@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-08-10
+slug: random-image-2023-08-10-i-MSGwfbN-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-MSGwfbN-X5_original_2023-08-10.jpg
+img_transformed: images/i-MSGwfbN-X5_transformed_2023-08-10.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-MSGwfbN
+
+ ![](/image-randomize/images/i-MSGwfbN-X5_original_2023-08-10.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 3 | Contrast: 19 | Shadow: 0.00648449012078345 | Gain: 0.102705822093412 
+ * Median (magick) -> Pixels: 34 
+ * Modulation (magick) -> Brightness: 61 | Saturation: 74 | Hue: 65 
+ * Colorize (magick) -> Color: #e44f1f | Opacity 41% 
+ * Quantize (magick) -> Max Colors in Image: 7 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-MSGwfbN-X5_transformed_2023-08-10.jpg){width=100%}
+
