@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-08-13
+slug: random-image-2023-08-13-i-DJtML32-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-DJtML32-4K_original_2023-08-13.jpg
+img_transformed: images/i-DJtML32-4K_transformed_2023-08-13.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-DJtML32
+
+ ![](/image-randomize/images/i-DJtML32-4K_original_2023-08-13.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 21 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 5 | Contrast: 14 | Shadow: 0.321044911397621 | Gain: 0.989872493315488 
+ * Modulation (magick) -> Brightness: 64 | Saturation: 60 | Hue: 61 
+ * Colorize (magick) -> Color: #16556d | Opacity 25% 
+ * Quantize (magick) -> Max Colors in Image: 4 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-DJtML32-4K_transformed_2023-08-13.jpg){width=100%}
+
