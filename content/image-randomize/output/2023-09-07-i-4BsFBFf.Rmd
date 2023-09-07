@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-09-07
+slug: random-image-2023-09-07-i-4BsFBFf
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-4BsFBFf_original_2023-09-07.jpg
+img_transformed: images/i-4BsFBFf_transformed_2023-09-07.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-4BsFBFf
+
+ ![](/image-randomize/images/i-4BsFBFf_original_2023-09-07.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #a360c7 | Opacity 36% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-4BsFBFf_transformed_2023-09-07.jpg){width=100%}
+
