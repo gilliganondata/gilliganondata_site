@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-09-15
+slug: random-image-2023-09-15-i-z3zBkc8-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-z3zBkc8-X3_original_2023-09-15.jpg
+img_transformed: images/i-z3zBkc8-X3_transformed_2023-09-15.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Ocean-Grove--New-Jersey/i-z3zBkc8
+
+ ![](/image-randomize/images/i-z3zBkc8-X3_original_2023-09-15.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 68 | Saturation: 105 | Hue: 78 
+ * Median (magick) -> Pixels: 45 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-z3zBkc8-X3_transformed_2023-09-15.jpg){width=100%}
+
