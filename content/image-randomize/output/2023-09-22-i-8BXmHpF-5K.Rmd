@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-09-22
+slug: random-image-2023-09-22-i-8BXmHpF-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-8BXmHpF-5K_original_2023-09-22.jpg
+img_transformed: images/i-8BXmHpF-5K_transformed_2023-09-22.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/The-Great-Outdoors/i-8BXmHpF
+
+ ![](/image-randomize/images/i-8BXmHpF-5K_original_2023-09-22.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #2e1a0e | Opacity 38% 
+ * Median (magick) -> Pixels: 50 
+ * Quantize (magick) -> Max Colors in Image: 12 
+ * Modulation (magick) -> Brightness: 55 | Saturation: 112 | Hue: 63 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 36 | Shadow: 0.459859127178788 | Gain: 0.72268034121953 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-8BXmHpF-5K_transformed_2023-09-22.jpg){width=100%}
+
