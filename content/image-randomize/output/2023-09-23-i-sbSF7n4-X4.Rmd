@@ -1,0 +1,33 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-09-23
+slug: random-image-2023-09-23-i-sbSF7n4-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-sbSF7n4-X4_original_2023-09-23.jpg
+img_transformed: images/i-sbSF7n4-X4_transformed_2023-09-23.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-sbSF7n4
+
+ ![](/image-randomize/images/i-sbSF7n4-X4_original_2023-09-23.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 78 | Saturation: 108 | Hue: 145 
+ * Quantize (magick) -> Max Colors in Image: 9 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-sbSF7n4-X4_transformed_2023-09-23.jpg){width=100%}
+
