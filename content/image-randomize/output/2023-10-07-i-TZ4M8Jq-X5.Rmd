@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-10-07
+slug: random-image-2023-10-07-i-TZ4M8Jq-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-TZ4M8Jq-X5_original_2023-10-07.jpg
+img_transformed: images/i-TZ4M8Jq-X5_transformed_2023-10-07.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Views-from-the-Airplane/i-TZ4M8Jq
+
+ ![](/image-randomize/images/i-TZ4M8Jq-X5_original_2023-10-07.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 11 
+ * Colorize (magick) -> Color: #14820b | Opacity 43% 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 5 | Contrast: 18 | Shadow: 0.214690500870347 | Gain: 0.253031627740711 
+ * Modulation (magick) -> Brightness: 139 | Saturation: 130 | Hue: 38 
+ * Median (magick) -> Pixels: 33 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-TZ4M8Jq-X5_transformed_2023-10-07.jpg){width=100%}
+
