@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-10-08
+slug: random-image-2023-10-08-i-BpZrDx4-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-BpZrDx4-X5_original_2023-10-08.jpg
+img_transformed: images/i-BpZrDx4-X5_transformed_2023-10-08.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-BpZrDx4
+
+ ![](/image-randomize/images/i-BpZrDx4-X5_original_2023-10-08.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 81 | Saturation: 69 | Hue: 64 
+ * Quantize (magick) -> Max Colors in Image: 7 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 23 | Shadow: 0.812684789067134 | Gain: 0.331214643549174 
+ * Median (magick) -> Pixels: 39 
+ * Colorize (magick) -> Color: #91ad72 | Opacity 55% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-BpZrDx4-X5_transformed_2023-10-08.jpg){width=100%}
+
