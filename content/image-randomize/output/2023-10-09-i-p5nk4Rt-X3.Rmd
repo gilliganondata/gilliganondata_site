@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-10-09
+slug: random-image-2023-10-09-i-p5nk4Rt-X3
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-p5nk4Rt-X3_original_2023-10-09.jpg
+img_transformed: images/i-p5nk4Rt-X3_transformed_2023-10-09.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/OShaughnessy-Reservoir/i-p5nk4Rt
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_original_2023-10-09.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 21 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-p5nk4Rt-X3_transformed_2023-10-09.jpg){width=100%}
+
