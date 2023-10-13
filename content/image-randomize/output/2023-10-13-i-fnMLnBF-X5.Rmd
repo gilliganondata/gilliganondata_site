@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-10-13
+slug: random-image-2023-10-13-i-fnMLnBF-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-fnMLnBF-X5_original_2023-10-13.jpg
+img_transformed: images/i-fnMLnBF-X5_transformed_2023-10-13.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Utah-Outdoors/i-fnMLnBF
+
+ ![](/image-randomize/images/i-fnMLnBF-X5_original_2023-10-13.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 16 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 27 | Shadow: 0.310703981667757 | Gain: 0.349925699876621 
+ * Median (magick) -> Pixels: 27 
+ * Colorize (magick) -> Color: #eb2bc2 | Opacity 33% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-fnMLnBF-X5_transformed_2023-10-13.jpg){width=100%}
+
