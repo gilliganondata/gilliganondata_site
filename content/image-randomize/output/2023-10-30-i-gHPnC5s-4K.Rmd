@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-10-30
+slug: random-image-2023-10-30-i-gHPnC5s-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-gHPnC5s-4K_original_2023-10-30.jpg
+img_transformed: images/i-gHPnC5s-4K_transformed_2023-10-30.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Mammals-in-the-Wild/i-gHPnC5s
+
+ ![](/image-randomize/images/i-gHPnC5s-4K_original_2023-10-30.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 9 
+ * Median (magick) -> Pixels: 44 
+ * Modulation (magick) -> Brightness: 117 | Saturation: 101 | Hue: 175 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-gHPnC5s-4K_transformed_2023-10-30.jpg){width=100%}
+
