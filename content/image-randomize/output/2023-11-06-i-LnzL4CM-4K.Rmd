@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-11-06
+slug: random-image-2023-11-06-i-LnzL4CM-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-LnzL4CM-4K_original_2023-11-06.jpg
+img_transformed: images/i-LnzL4CM-4K_transformed_2023-11-06.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/South-Carolina-Outdoors/i-LnzL4CM
+
+ ![](/image-randomize/images/i-LnzL4CM-4K_original_2023-11-06.jpg){width=100%}
+
+ Transformations performed:
+
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Colorize (magick) -> Color: #a0d4ed | Opacity 32% 
+ * Median (magick) -> Pixels: 16 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-LnzL4CM-4K_transformed_2023-11-06.jpg){width=100%}
+
