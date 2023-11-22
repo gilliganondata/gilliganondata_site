@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-11-22
+slug: random-image-2023-11-22-i-Js9R624-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-Js9R624-4K_original_2023-11-22.jpg
+img_transformed: images/i-Js9R624-4K_transformed_2023-11-22.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-Js9R624
+
+ ![](/image-randomize/images/i-Js9R624-4K_original_2023-11-22.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 27 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-Js9R624-4K_transformed_2023-11-22.jpg){width=100%}
+
