@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-11-25
+slug: random-image-2023-11-25-i-XkMW6jv-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-XkMW6jv-X5_original_2023-11-25.jpg
+img_transformed: images/i-XkMW6jv-X5_transformed_2023-11-25.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/South-Carolina-Outdoors/i-XkMW6jv
+
+ ![](/image-randomize/images/i-XkMW6jv-X5_original_2023-11-25.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 72 | Saturation: 119 | Hue: 0 
+ * Quantize (magick) -> Max Colors in Image: 15 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 6 | Contrast: 42 | Shadow: 0.655680733732879 | Gain: 0.48912515048869 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-XkMW6jv-X5_transformed_2023-11-25.jpg){width=100%}
+
