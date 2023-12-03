@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-12-03
+slug: random-image-2023-12-03-i-FSNRmJc-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-FSNRmJc-4K_original_2023-12-03.jpg
+img_transformed: images/i-FSNRmJc-4K_transformed_2023-12-03.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Dogs/i-FSNRmJc
+
+ ![](/image-randomize/images/i-FSNRmJc-4K_original_2023-12-03.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 77 | Saturation: 126 | Hue: 19 
+ * Quantize (magick) -> Max Colors in Image: 14 
+ * Median (magick) -> Pixels: 26 
+ * Colorize (magick) -> Color: #170722 | Opacity 43% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-FSNRmJc-4K_transformed_2023-12-03.jpg){width=100%}
+
