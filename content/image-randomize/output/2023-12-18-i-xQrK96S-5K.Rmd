@@ -1,0 +1,35 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-12-18
+slug: random-image-2023-12-18-i-xQrK96S-5K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-xQrK96S-5K_original_2023-12-18.jpg
+img_transformed: images/i-xQrK96S-5K_transformed_2023-12-18.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Quirky-Signage/i-xQrK96S
+
+ ![](/image-randomize/images/i-xQrK96S-5K_original_2023-12-18.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 20 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 6 | Contrast: 48 | Shadow: 0.983150334795937 | Gain: 0.111309105996042 
+ * Colorize (magick) -> Color: #a88ce2 | Opacity 36% 
+ * Quantize (magick) -> Max Colors in Image: 5 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-xQrK96S-5K_transformed_2023-12-18.jpg){width=100%}
+
