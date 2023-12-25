@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2023-12-25
+slug: random-image-2023-12-25-i-5hrGsxV-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-5hrGsxV-X5_original_2023-12-25.jpg
+img_transformed: images/i-5hrGsxV-X5_transformed_2023-12-25.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Birds-of-Ohio/i-5hrGsxV
+
+ ![](/image-randomize/images/i-5hrGsxV-X5_original_2023-12-25.jpg){width=100%}
+
+ Transformations performed:
+
+ * Colorize (magick) -> Color: #f52af0 | Opacity 57% 
+ * Modulation (magick) -> Brightness: 79 | Saturation: 117 | Hue: 189 
+ * Quantize (magick) -> Max Colors in Image: 16 
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 3 | Contrast: 50 | Shadow: 0.0318069139029831 | Gain: 0.437793481862172 
+ * Median (magick) -> Pixels: 17 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-5hrGsxV-X5_transformed_2023-12-25.jpg){width=100%}
+
