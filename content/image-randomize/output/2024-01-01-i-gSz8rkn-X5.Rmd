@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2024-01-01
+slug: random-image-2024-01-01-i-gSz8rkn-X5
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-gSz8rkn-X5_original_2024-01-01.jpg
+img_transformed: images/i-gSz8rkn-X5_transformed_2024-01-01.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Europe-outoors/i-gSz8rkn
+
+ ![](/image-randomize/images/i-gSz8rkn-X5_original_2024-01-01.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 113 | Saturation: 82 | Hue: 24 
+ * Median (magick) -> Pixels: 24 
+ * Colorize (magick) -> Color: #c09c5b | Opacity 50% 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-gSz8rkn-X5_transformed_2024-01-01.jpg){width=100%}
+
