@@ -1,0 +1,32 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2024-01-03
+slug: random-image-2024-01-03-i-xN5dcRg-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-xN5dcRg-4K_original_2024-01-03.jpg
+img_transformed: images/i-xN5dcRg-4K_transformed_2024-01-03.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/The-Great-Outdoors/i-xN5dcRg
+
+ ![](/image-randomize/images/i-xN5dcRg-4K_original_2024-01-03.jpg){width=100%}
+
+ Transformations performed:
+
+ * Sketching (sketcher) -> Style: 2 | Lineweight: 6 | Contrast: 38 | Shadow: 0.624684256501496 | Gain: 0.380695490399376 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-xN5dcRg-4K_transformed_2024-01-03.jpg){width=100%}
+
