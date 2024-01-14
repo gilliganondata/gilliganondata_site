@@ -1,0 +1,36 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2024-01-14
+slug: random-image-2024-01-14-i-GdGcKhR-X4
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-GdGcKhR-X4_original_2024-01-14.jpg
+img_transformed: images/i-GdGcKhR-X4_transformed_2024-01-14.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/South-Carolina-Outdoors/i-GdGcKhR
+
+ ![](/image-randomize/images/i-GdGcKhR-X4_original_2024-01-14.jpg){width=100%}
+
+ Transformations performed:
+
+ * Median (magick) -> Pixels: 43 
+ * Colorize (magick) -> Color: #83b54d | Opacity 33% 
+ * Quantize (magick) -> Max Colors in Image: 7 
+ * Sketching (sketcher) -> Style: 1 | Lineweight: 3 | Contrast: 23 | Shadow: 0.653385148849338 | Gain: 0.0987819151487201 
+ * Modulation (magick) -> Brightness: 150 | Saturation: 119 | Hue: 85 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-GdGcKhR-X4_transformed_2024-01-14.jpg){width=100%}
+
