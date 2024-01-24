@@ -1,0 +1,34 @@
+---
+title: Random Manipulation of a Random SmugMug Image
+author: Tim Wilson
+date: 2024-01-24
+slug: random-image-2024-01-24-i-xkxj8LG-4K
+categories:
+  - R
+tags:
+  - Github Actions
+  - SmugMug
+  - Twitter
+  - ImageMagick
+type: image-randomization
+img_original: images/i-xkxj8LG-4K_original_2024-01-24.jpg
+img_transformed: images/i-xkxj8LG-4K_transformed_2024-01-24.jpg
+---
+
+ For details on the nuts and bolts behind this project, see <a href="/projects/random-image-manipulation/" target = "_blank">this post</a>.
+ Original image source: https://twilson.smugmug.com/Urban-Outdoors-People/i-xkxj8LG
+
+ ![](/image-randomize/images/i-xkxj8LG-4K_original_2024-01-24.jpg){width=100%}
+
+ Transformations performed:
+
+ * Modulation (magick) -> Brightness: 61 | Saturation: 150 | Hue: 142 
+ * Colorize (magick) -> Color: #3af376 | Opacity 50% 
+ * Median (magick) -> Pixels: 30 
+
+
+
+The resulting image:
+
+ ![](/image-randomize/images/i-xkxj8LG-4K_transformed_2024-01-24.jpg){width=100%}
+
