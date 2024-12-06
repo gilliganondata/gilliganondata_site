@@ -22,7 +22,10 @@ I'm a middle-aged cisgender white guy, so I am societally pre-disposed to think 
 
 I'm an analytics consultant with a history/specialization/focus on the world of digital and marketing analytics. I tend to see that phase of my career starting in ~2001, which was in-house. But, I've been primarily agency/consultancy-side since mid-2007.
 
-You can get a passable CV [on LinkedIn](https://www.linkedin.com/in/tgwilson/). Or you can check out my inconsistent and varied &#8804;280-character thoughts [on Twitter](https://www.linkedin.com/in/tgwilson/). If you're here because you saw something on the photographic front, I try to be somewhat judicious with the photos I post on my [Smugmug site](https://twilson.smugmug.com/).
+You can get a passable CV [on LinkedIn](https://www.linkedin.com/in/tgwilson/). Or you can check out my inconsistent and varied thoughts in long form [on Medium](https://medium.com/@tgwilson) or in &#8804;280-character form [on Bluesky](https://bsky.app/profile/tgwilson.bsky.social). For _really_ long orm thought, I co-authored a whole book—[Analytics the Right Way](https://amazon.com/Analytics-Right-Way-Business-Productive/dp/1394264496)—which, of course, you're welcome to purchase!
+
+
+If you're here because you saw something on the photographic front, I try to be somewhat judicious with the photos I post on my [Smugmug site](https://twilson.smugmug.com/).
 
 I'm a total R nerd, but hold nothing against Python and deeply wish I could muster up the time and motivation to gain a level of proficiency with it. I co-created the [Dartistics site](https://dartistics.com) with [Mark Edmondson](https://twitter.com/HoloMarkeD) as a tool for digital analysts to learn R. We don't keep that nearly as maintained as we would in a perfect world.
 

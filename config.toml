@@ -59,10 +59,10 @@ weight = 1
 url = "https://github.com/gilliganondata/"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter fa-2x"
+name = "Medium"
+icon = "fa fa-medium fa-2x"
 weight = 3
-url = "https://twitter.com/tgwilson/"
+url = "https://medium.com/@tgwilson"
 
 [[params.social]]
 name = "LinkedIn"
