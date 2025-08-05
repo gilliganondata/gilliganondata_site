@@ -16,7 +16,7 @@ Ah...the "About" page. I assume you're here because you came across something el
 
 ## For the First Case
 
-I'm a middle-aged cisgender white guy, so I am societally pre-disposed to think I have something worth sharing. I am *very* on brand on that front, as I also am a co-host of a podcast, [The Analytics Power Hour](https://analyticshour.io), which has been publishing every other week since the beginning of 2016. To go *slightly* against the stereotype, cis white dudes are in the minority of the full panel of co-hosts for the show.
+I'm a middle-aged cisgender white guy, so I am societally pre-disposed to think I have something worth sharing. I am *very* on brand on that front, as I also am a co-host of a podcast, [The Analytics Power Hour](https://analyticshour.io), which has been publishing every other week since the beginning of 2015. To go *slightly* against the stereotype, cis white dudes are in the minority of the full panel of co-hosts for the show.
 
 ## For the Second Case
 
